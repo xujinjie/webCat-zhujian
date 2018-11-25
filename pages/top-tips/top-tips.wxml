@@ -1,0 +1,19 @@
+<view style='margin-top: 30rpx;'>
+        <top-tips title="{{title}}" autoClose="{{autoClose}}" class="toptips" />
+</view>
+<view style='margin-top: 30rpx;box-sizing: border-box;padding: 0 20rpx;'>
+        <button bindtap='showTopTips'>显示</button>
+        <button bindtap='hideTopTips' style='margin-top: 10rpx'>关闭</button>
+        <button bindtap='hideautoClose' style='margin-top: 10rpx'>自动关闭</button>
+</view>
+
+
+
+
+<view style='margin-top: 30rpx'>
+        <table data="{{toptipsData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{toptipsData.method}}" title="方法" />
+</view>

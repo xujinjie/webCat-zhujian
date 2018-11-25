@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "加载中页面",
+  
+  "component": true,
+  "usingComponents": {
+    "my-loading": "../../components/my-loading/my-loading",
+    "table": "../../components/table/table"
+  }
+}

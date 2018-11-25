@@ -1,0 +1,44 @@
+.my-progress {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: #fff;
+  height: auto;
+}
+.type-line,.type-circle{
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center
+}
+.line {
+  flex: 12; 
+  padding-right: 10rpx;
+  position: relative
+}
+.percentage-text{
+  flex: 1.5;
+  text-align: center
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #e5e9f2
+}
+
+.progress{
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  padding-right: 10rpx;
+  z-index: 999
+}
+
+.type-circle{
+
+  justify-content: center
+}

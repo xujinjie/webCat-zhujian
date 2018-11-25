@@ -1,0 +1,24 @@
+<view class="calender">
+  <view class='calender-nav'>
+    <view class='nav-button' catchtap='previousMonth'>
+      <text decode='1'>&lt;</text>
+    </view>
+
+    <view class='calender-nav-text'>{{currentYear}}年{{currentMonth}}月</view>
+
+    <view class='nav-button' catchtap='nextMonth'>
+      <text decode='1'>&gt;</text>
+    </view>
+  </view>
+  <view class='calender-week'>
+    <block wx:for="{{cWeekText}}" wx:key="{{index}}">
+      <view class='week-item'>{{item}}</view>
+    </block>
+  </view>
+
+  <view class='calender-days'>
+    <block wx:for="{{currentMonthData}}" wx:key="{{index}}">
+      <view class='days-item {{index<dayOneIndex || index>=dayOneIndex+currentDays?"disabled":""}} {{index == activeIndex&&currentMonth==activeMonth&&currentYear==activeYear?"active":""}}' data-index='{{index}}' data-month='{{currentMonth}}' data-year='{{currentYear}}' catchtap='{{index<dayOneIndex || index>=dayOneIndex+currentDays?"":"daysTap"}}'>{{item}}</view>
+    </block>
+  </view>
+</view>

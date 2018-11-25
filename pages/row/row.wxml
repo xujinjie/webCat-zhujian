@@ -1,0 +1,79 @@
+<view style='margin-top: 30rpx;'>
+  <my-row>
+    <my-col span="{{24}}">
+      <view class="grid-content bg-purple-dark">span 24</view>
+    </my-col>
+  </my-row>
+</view>
+
+<view style='margin-top: 30rpx;'>
+  <my-row>
+    <my-col span="{{8}}">
+      <view class="grid-content bg-purple-dark">span 8</view>
+    </my-col>
+    <my-col span="{{8}}">
+      <view class="grid-content bg-purple">span 8</view>
+    </my-col>
+    <my-col span="{{8}}">
+      <view class="grid-content bg-purple-dark">span 8</view>
+    </my-col>
+  </my-row>
+</view>
+
+<view style='margin-top: 30rpx;'>
+  <my-row>
+    <my-col span="{{6}}">
+      <view class="grid-content bg-purple-dark">span 6</view>
+    </my-col>
+    <my-col span="{{6}}">
+      <view class="grid-content bg-purple">span 6</view>
+    </my-col>
+    <my-col span="{{6}}">
+      <view class="grid-content bg-purple-dark">span 6</view>
+    </my-col>
+    <my-col span="{{6}}">
+      <view class="grid-content bg-purple">span 6</view>
+    </my-col>
+  </my-row>
+</view>
+
+<view style='margin-top: 30rpx;'>
+  <my-row gutter="{{20}}">
+    <my-col span="{{12}}">
+      <view class="grid-content bg-purple-dark">span:12 gutter:20</view>
+    </my-col>
+    <my-col span="{{12}}">
+      <view class="grid-content bg-purple">span:12 gutter:20</view>
+    </my-col>
+  </my-row>
+</view>
+
+
+<view style='margin-top: 30rpx;'>
+  <my-row bottom="{{20}}">
+    <my-col span="{{12}}" offset="{{6}}">
+      <view class="grid-content bg-purple-dark">span:12 offset:6 bottom:20</view>
+    </my-col>
+    <my-col span="{{12}}" offset="{{12}}">
+      <view class="grid-content bg-purple">span:12 offset:12</view>
+    </my-col>
+  </my-row>
+</view>
+
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{rowAPIData.attributes}}" title="row属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{rowAPIData.method}}" title="row方法"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{colAPIData.attributes}}" title="row属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{colAPIData.method}}" title="row方法"/>
+</view>

@@ -1,0 +1,85 @@
+<view class="account">
+  <scroll-view class='container' scroll-y>
+    <view class='container-scroll'>
+      <view class='address'>
+        <view class='address-container'>
+
+          <view class='address-left-icon'>
+            <my-icon type='dingwei' size='40' color='#333' />
+          </view>
+
+          <view class='address-detail'>
+            <view class='address-detail-text'>
+              <text>地址</text>
+            </view>
+            <view class='address-detail-name'>
+              <text>名字</text>
+              <text>18218523021</text>
+            </view>
+          </view>
+
+          <view class='address-right-icon'>
+            <my-icon type='jiantouyou' size='40' color='#333' />
+          </view>
+
+        </view>
+      </view>
+
+      <view class='account-goods'>
+        <view class='shop-name'>
+          <text>{{orderMsg.shopMsg.name}}</text>
+        </view>
+      </view>
+
+      <view class='cart-about'>
+
+        <view class='cart-about-list'>
+          <block wx:for="{{orderMsg.selectGoodList}}" wx:key="{{index}}">
+            <view class='about-list-item'>
+
+              <view class='about-item-name'>
+                <view class='about-item-title'>
+                  <text>{{item.title}}</text>
+                </view>
+                <view class='about-item-sort' wx:if="{{item.sort}}">
+                  <block wx:for="{{item.sort}}" wx:key="{{index}}" wx:for-item="text">
+                    <text space='1'>{{text.value }} {{index == item.sort.length-1?"":"/"}}</text>
+                  </block>
+                </view>
+              </view>
+              <view class='cart-list-count'>
+                <text>{{item.count}}</text>
+              </view>
+
+              <view class='cart-list-price'>
+                <text>{{item.price.afterPrice*item.count}}</text>
+              </view>
+            </view>
+          </block>
+
+        </view>
+
+      </view>
+      <view class='total-price'>
+        <text>小计：</text>
+        <view class='total-count'>
+          <text>{{totalCount}}</text>
+        </view>
+        <view class='thie-total-price'>
+          <text>{{totalPrice}}</text>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+
+  <!--底部购物车视图-->
+
+
+  <form bindsubmit='formSubmit' report-submit>
+    <button class='cart-nav' form-type="submit">微信支付 {{totalPrice}}</button>
+  </form>
+
+
+  <!--底部购物车视图-->
+</view>

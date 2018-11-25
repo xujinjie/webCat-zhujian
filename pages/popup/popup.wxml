@@ -1,0 +1,21 @@
+<view >
+    <popup direction="{{direction}}" class="popup">
+    <text style='min-width: 300rpx;min-height: 300rpx;display:block'>{{direction}}</text>
+  </popup>
+</view>
+
+<view>
+  <button style='box-sizing: border-box;padding: 0 20rpx;margin-top: 10rpx' catchtap='showPopup' data-direction='right'>right</button>
+  <button style='box-sizing: border-box;padding: 0 20rpx;margin-top: 10rpx' catchtap='showPopup' data-direction='left'>left</button>
+  <button style='box-sizing: border-box;padding: 0 20rpx;margin-top: 10rpx' catchtap='showPopup' data-direction='top'>top</button>
+  <button style='box-sizing: border-box;padding: 0 20rpx;margin-top: 10rpx' catchtap='showPopup' data-direction='bottom'>bottom</button>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{popupAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{popupAPIData.method}}" title="方法" />
+</view>

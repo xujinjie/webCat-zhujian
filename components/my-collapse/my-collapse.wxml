@@ -1,0 +1,4 @@
+<!--plugin/components/my-collapse/my-collapse.wxml-->
+<view class='my-collapse'>
+  <slot></slot>
+</view>

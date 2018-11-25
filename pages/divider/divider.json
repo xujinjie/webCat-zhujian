@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "分割线",    
+  "component": true,
+  "usingComponents": {
+    "my-divider": "../../components/my-divider/my-divider",
+    "table": "../../components/table/table"
+  }
+}

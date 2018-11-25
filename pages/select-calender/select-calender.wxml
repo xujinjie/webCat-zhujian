@@ -1,0 +1,12 @@
+<select-calender bindselect="calenderSelect"/>
+
+
+<view style='margin-top: 100rpx'>
+  <table data="{{selectCalenderAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{selectCalenderAPIData.method}}" title="方法"/>
+</view>
+
+

@@ -1,0 +1,24 @@
+<view style='margin-top: 30rpx'>
+        <my-divider title="默认分隔符" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-divider title="icon分隔符" icon="loading1" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-divider title="调整size" icon="loading1" size="50" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-divider title="调整字体颜色和线条颜色" icon="loading1" text-color="red" line-color="blue" />
+</view>
+
+
+<view style='margin-top: 30rpx'>
+        <table data="{{dividerAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{dividerAPIData.method}}" title="方法" />
+</view>

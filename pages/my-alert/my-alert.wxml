@@ -1,0 +1,60 @@
+<view style='margin-top: 30rpx'>
+        <my-alert title="手动关闭"  isClose="{{true}}"/>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="不显示关闭按钮" closable="{{false}}" isClose="{{true}}" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="不显示关闭按钮，使用button关闭" closable="{{false}}" class="alert1" />
+        <view style='width: 100%;display: flex'>
+                <button bindtap='closeAlert' style='flex: 1'>关闭</button>
+                <button bindtap='showAlert' style='flex: 1'>显示</button>
+        </view>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="自动关闭" closable="{{false}}" autoClose isClose="{{true}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="文本居中" closable="{{false}}" center  isClose="{{true}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="type=success" closable="{{false}}" type="success"  isClose="{{true}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="type=info" closable="{{false}}" type="info"  isClose="{{true}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="type=info" closable="{{true}}" type="error" isClose="{{true}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="type=info 自定义文本颜色" closable="{{true}}" type="error" isClose="{{true}}" text-color="#000"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="type=info 自定义文本颜色，自定义背景色" closable="{{true}}" type="error" isClose="{{true}}" text-color="#000" background-color="#fff"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="type=info 自定义文本颜色，自定义背景色,自定义icon颜色" closable="{{true}}" type="error" isClose="{{true}}" text-color="#000" background-color="#fff" icon-color="#f70"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-alert title="type=info 自定义文本颜色，自定义背景色,自定义icon颜色" closable="{{true}}" type="error" isClose="{{true}}" text-color="#000" background-color="#fff" icon-color="#f70" move/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{myAlertData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{myAlertData.method}}" title="方法" />
+</view>

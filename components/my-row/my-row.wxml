@@ -1,0 +1,3 @@
+<view class='my-row clearfix'>
+    <slot></slot>
+</view>

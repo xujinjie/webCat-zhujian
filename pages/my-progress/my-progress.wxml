@@ -1,0 +1,16 @@
+
+
+
+<view style='margin-top: 30rpx'>
+<my-progress percentage="{{percentage}}" />
+<my-progress percentage="{{percentage}}" type="circle"/>
+  <button bindtap='testPropress'>启动</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{progressAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{progressAPIData.method}}" title="方法"/>
+</view>

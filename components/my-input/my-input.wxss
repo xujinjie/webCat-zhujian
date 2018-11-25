@@ -1,0 +1,92 @@
+/* plugin/components/my-input/my-input.wxss */
+
+/* 最外层 */
+
+.input-content {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        min-height: 100rpx;
+        box-sizing: border-box;
+        padding: 10rpx 0;
+        background-color: #fff;
+}
+
+/* 输入框的title（文本） */
+
+.input-left {
+        height: 100%;
+        box-sizing: border-box;
+        font-size: 28rpx;
+        padding-left: 10rpx;
+        max-width: 160rpx;
+}
+
+/* 输入框input*/
+
+.input-center {
+        height: 100%;
+        box-sizing: border-box;
+        font-size: 28rpx;
+        padding: 0 0 0 10rpx;
+        flex: 1;
+}
+
+/* 最右删除按钮 */
+
+.input-right {
+        height: 100%;
+        z-index: 9999;
+        text-align: center;
+        padding: 0 10rpx;
+}
+
+/* 左边的图片图标 */
+
+.input-image {
+        box-sizing: border-box;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10rpx;
+        width: 50rpx;
+        height: 100%;
+}
+
+.input-image>image {
+        width: 100%;
+        height: 40rpx;
+}
+
+/* 左边的icon图标 */
+
+.input-icon {
+        width: 50rpx;
+        height: 100%;
+        text-align: center;
+}
+
+.input_right {
+        text-align: right;
+}
+
+.input__placeholder {
+        font-size: 28rpx;
+        color: #999;
+}
+
+.input_mode_normal {
+        border-bottom: 1rpx solid #e5e5e5;
+}
+
+.input_mode_wrapped {
+        border: 1rpx solid #e5e5e5;
+}
+
+.input_mode_none {
+        border: none;
+}

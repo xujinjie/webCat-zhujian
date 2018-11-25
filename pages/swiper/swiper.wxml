@@ -1,0 +1,23 @@
+
+<view>
+  <view class='title'>官方指示器</view>
+  <my-swiper src="{{src}}" indicatorDots bindswipertap="swipertap"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>自定义指示器 current为1</view>
+  <my-swiper src="{{src}}" self-dots current='{{1}}' bindswipertap="swipertap"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>自定义指示器 current为0</view>
+  <my-swiper src="{{src}}" self-dots vertical bindswipertap="swipertap"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{swiperAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{swiperAPIData.method}}" title="方法"/>
+</view>

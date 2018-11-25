@@ -1,0 +1,99 @@
+<view style='margin-top: 30rpx'>
+  <view class='title'>手风琴效果</view>
+  <my-collapse >
+    <my-collapse-item name="1">
+      <view slot="title" style='height: 200rpx;line-height: 200rpx'>
+        <text>一致性 Consistency</text>
+      </view>
+      <view slot="content" style='padding-bottom: 20rpx'>
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+      </view>
+
+    </my-collapse-item>
+
+    <my-collapse-item name="2">
+      <view slot="title" class='collapse-title'>
+        <text>一致性 Consistency</text>
+      </view>
+      <view slot="content">
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+      </view>
+    </my-collapse-item>
+
+    <my-collapse-item name="3">
+      <view slot="title" class='collapse-title'>
+        <text>一致性 Consistency</text>
+      </view>
+      <view slot="content">
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+      </view>
+    </my-collapse-item>
+
+  </my-collapse>
+
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>非手风琴效果</view>
+  <my-collapse accordion="{{false}}">
+    <my-collapse-item name="1">
+      <view slot="title" class='collapse-title'>
+        <text>一致性 Consistency</text>
+      </view>
+      <view slot="content">
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+      </view>
+    </my-collapse-item>
+
+    <my-collapse-item name="2">
+      <view slot="title" class='collapse-title'>
+        <text>一致性 Consistency</text>
+      </view>
+      <view slot="content">
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+      </view>
+    </my-collapse-item>
+
+    <my-collapse-item name="3">
+      <view slot="title" class='collapse-title'>
+        <text>一致性 Consistency</text>
+      </view>
+      <view slot="content">
+        <view>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</view>
+        <view>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</view>
+      </view>
+    </my-collapse-item>
+
+  </my-collapse>
+
+</view>
+
+
+
+<view class='title' style='margin-top: 30rpx'>collapse</view>
+<view>
+  <table data="{{collapseAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{collapseAPIData.method}}" title="方法" />
+</view>
+
+
+<view class='title' style='margin-top: 30rpx'>collapse-item</view>
+<view>
+  <table data="{{collapseItemAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{collapseItemAPIData.method}}" title="方法" />
+</view>

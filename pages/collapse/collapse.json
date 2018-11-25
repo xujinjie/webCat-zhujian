@@ -1,0 +1,9 @@
+{
+  "component": true,
+    "navigationBarTitleText": "面板",    
+  "usingComponents": {
+    "my-collapse": "../../components/my-collapse/my-collapse",
+    "table": "../../components/table/table",
+    "my-collapse-item": "../../components/my-collapse-item/my-collapse-item"    
+  }
+}

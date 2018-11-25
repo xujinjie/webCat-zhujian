@@ -1,0 +1,24 @@
+
+
+<view class='select_con'>
+        <view class='title'>
+                <text>{{title}}</text>
+        </view>
+
+        <view class='select_box'>
+                <my-select class="select" />
+        </view>
+
+        <view class='button_item'>
+                <button>默认</button>
+        </view>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+        <table data="{{selectAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{selectAPIData.method}}" title="方法" />
+</view>

@@ -1,0 +1,8 @@
+
+
+<view class='search' bindtap='handleTap' style='padding: 0 20rpx;background-color: {{searchBgc}}'>
+  <view class='searchContent'>
+    <my-icon type='search' color='#bbb' size=''/>
+    <text space='true'>    {{placeholder}}</text>
+  </view>
+</view>

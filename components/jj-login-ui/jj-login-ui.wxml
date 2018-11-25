@@ -1,0 +1,23 @@
+<view class='login-form'>
+  <view class='form'>
+
+    <view class='form-item'>
+      <my-input icon="mobilephone" placeholder='请输入手机号登录' focus maxlength='11' bindinput='phoneInput'/>
+    </view>
+
+    <view class='form-item'>
+      <my-input icon="lock" password='{{true}}' placeholder='登录密码' bindinput="passwordInput"/>
+    </view>
+
+
+    <view>
+      <my-button value="登录" bindtap='buttonTap'/>
+    </view>
+
+    <view class='forget-p-w'>
+      <text bindtap='forgetPassWord'>忘记密码？</text>
+      <text bindtap='doRegistered'>快速注册</text>
+    </view>
+
+  </view>
+</view>

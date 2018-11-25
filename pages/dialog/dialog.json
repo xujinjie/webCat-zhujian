@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "模态窗",    
+  "component": true,
+  "usingComponents": {
+    "dialog": "../../components/dialog/dialog",
+    "table": "../../components/table/table"
+  }
+}

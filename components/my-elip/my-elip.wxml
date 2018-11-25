@@ -1,0 +1,12 @@
+<view class='parent-node parent-node-{{iconDirection}}' bindtap='elipTap' >
+  <view class='my-elip my-elip-{{iconDirection}}' style='-webkit-line-clamp: {{tempLine}};'>
+    <text id='text' wx:if="{{!isSlot}}">{{text}}</text>
+    <view wx:if="{{isSlot}}" calss="{{isSlot?'isSlot':''}}" style='-webkit-line-clamp: {{tempLine}};'>
+      <slot></slot>
+    </view>
+    
+  </view>
+  <view  class='icon icon-{{iconDirection}}' wx:if="{{showIcon}}">
+    <my-icon type='{{arrow}}' size='28'/>
+  </view>
+</view>

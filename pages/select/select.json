@@ -1,0 +1,8 @@
+{
+        "navigationBarTitleText": "选择框",
+        "component": true,
+        "usingComponents": {
+                "my-select": "../../components/my-select/my-select",
+                "table": "../../components/table/table"
+        }
+}

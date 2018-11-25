@@ -1,0 +1,18 @@
+<keyboard keys="{{6}}" class="keyboard" bindconfirm="keyboardconfirm" ablenull="{{ablenull}}"/>
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='showKeyboard'>点击</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='showKeyboard2'>点击 允许为空值提交</button>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{keyboardAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{keyboardAPIData.method}}" title="方法"/>
+</view>

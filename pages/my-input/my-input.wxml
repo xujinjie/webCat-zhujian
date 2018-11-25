@@ -1,0 +1,50 @@
+<view style='margin-top: 30rpx'>
+        <my-input title="标题标题标题标题标题标题标题" placeholder='默认，输入内容显示右边删除按钮' />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input delete-icon="{{false}}" title="标题" placeholder='输入内容不显示右边删除按钮' />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input icon="{{ {type:'gouwuche'} }}" placeholder='左边显示icon' />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input icon="{{ {type:'gouwuche'} }}" placeholder='同时设置标题和icon' title="标题" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input icon="{{ {type:'gouwuche'} }}" placeholder='输入右对齐' right/>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input placeholder='输入右对齐' src="https://www.mirai.site/wx765c79a164bf5da6.o6zAJs_mpZUWhc-WLU6gvaFNgQSk.78BaT1UdTAxbe1530331181053cd88c88e7763ad4316.jpg" placeholder='使用图片' />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input icon="{{ {type:'gouwuche'} }}" placeholder='触发focus' bindfocus='inputFocus' />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input icon="{{ {type:'gouwuche'} }}" placeholder='触发input' bindinput='inputInput' />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input icon="{{ {type:'gouwuche'} }}" placeholder='触发blur' bindblur='inputblur' />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <my-input icon="{{ {type:'gouwuche'} }}" placeholder='触发confirm' bindconfirm='inputconfirm' />
+</view>
+
+
+
+
+<view style='margin-top: 30rpx'>
+        <table data="{{inputAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{inputAPIData.method}}" title="方法" />
+</view>

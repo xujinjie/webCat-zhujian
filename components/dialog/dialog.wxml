@@ -1,0 +1,11 @@
+<view class='dialog {{animatied}}' style='width: {{width}}px;height: {{height}}px' wx:if="{{isShow}}">
+        <view class='diaog-container'>
+                <view class="dialog-header" wx:if="{{title}}">{{title}}</view>
+                <view class="dialog-content {{title?'dialog-content-title':''}}" wx:if="{{content}}">{{content}}</view>
+                <view class="dialog-footer dialog-footer-{{direction}}">
+                        <block wx:for="{{buttons}}" wx:key="{{index}}">
+                                <button class='dialog-button' bindtap='{{item.type=="confirm"?userInfo?"":"buttonTap":"buttonTap"}}' style='color: {{item.color}}' data-type='{{item.type}}' open-type='{{item.type=="confirm"?userInfo?"getUserInfo":"":""}}' bindgetuserinfo="{{item.type=='confirm'?userInfo?'_getuserinfo':'':''}}">{{item.text}}</button>
+                        </block>
+                </view>
+        </view>
+</view>

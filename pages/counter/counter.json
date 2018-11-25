@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "计数器",    
+  "component": true,
+  "usingComponents": {
+    "my-counter": "../../components/my-counter/my-counter",
+    "table": "../../components/table/table"
+  }
+}

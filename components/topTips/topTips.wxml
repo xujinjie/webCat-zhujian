@@ -1,0 +1,3 @@
+<view class='top-tips animated {{animated}}' wx:if="{{isShow}}">
+        <my-alert title="{{title}}" closable="{{false}}" type="{{type}}" center="{{center}}" isClose/>
+</view>

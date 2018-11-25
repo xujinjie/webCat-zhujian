@@ -1,0 +1,13 @@
+<view class='counter2'>
+        <view class='add_con is_display'>
+                <my-icon type="addition_fill" size="50" color="blueviolet" catchtap='countChange' data-value="add"/>
+        </view>
+
+        <view class='count_con is_display animated {{isShowSub?count>0?"fadeIn":"fadeOut":""}}'>
+                <text>{{count}}</text>
+        </view>
+
+        <view class='sub_con is_display {{isShowSub?count>0?"subIn":"subOut":"subOut"}}'  wx:if="{{isShowSub}}">
+                <my-icon type="offline" size="50" color="#666" catchtap='countChange' data-value="sub"/>                
+        </view>
+</view>

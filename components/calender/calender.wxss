@@ -1,0 +1,62 @@
+.calender {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 100rpx;
+  font-size: 28rpx;
+  padding-bottom: 10rpx;
+  text-align: center;
+}
+
+.calender-nav, .calender-week {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+.calender-nav-text {
+  flex: 1;
+}
+
+.nav-button {
+  width: 60rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  height: 100%;
+  font-size: 32rpx;
+}
+
+.week-item {
+  flex: 1;
+}
+
+.week-item:last-child, .week-item:first-child {
+  color: red;
+}
+
+.calender-days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days-item {
+  width: 14.2857%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.days-item:nth-child(7n), .days-item:nth-child(7n+1) {
+  color: red;
+}
+
+.disabled {
+  color: rgba(0, 0, 0, 0.3)!important;
+  background-color: #f7f7f7!important;
+}
+.active{
+  color: #fff;
+  background-color: #e64340;
+  border-radius: 10rpx;  
+}

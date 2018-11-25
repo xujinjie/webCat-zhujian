@@ -1,0 +1,294 @@
+<view class='content'>
+  <view class='store-intro'>
+    <view class='store-cover'>
+      <image src='{{shopMsg.cover}}' mode='aspectFill' class='store-cover-image' lazy-load></image>
+    </view>
+    <view class='store-detail'>
+      <view class='store-avatar'>
+        <image src='{{shopMsg.avatar}}' mode='aspectFill' class='store-avatar-image'></image>
+      </view>
+      <view class='store-collection'>
+        <my-icon type='shoucang' size='40s' color='#ff7700' />
+      </view>
+      <view class='store-name' catchtap='showDetailmModal'>
+        <my-icon type='wodefankui' size='42' style='margin-right: 5px;' wx:if="{{0}}" />
+        <text style='margin-right: 5px;'>{{shopMsg.name}}</text>
+      </view>
+      <view class='store-score' catchtap='showDetailmModal'>
+        <text space='1'>评价 5.0</text>
+        <text>月销40份</text>
+        <text>商家配送约50分钟</text>
+      </view>
+      <view class='stroe-desc shenlue' catchtap='showDetailmModal'>
+        <text>{{shopMsg.post}}</text>
+      </view>
+
+    </view>
+    <view class='stroe-activity' catchtap='showActivity'>
+      <swiper class='stroe-swiper' vertical="{{storeAtivitySwiper.vertical}}" autoplay="{{storeAtivitySwiper.autoplay}}" interval='{{storeAtivitySwiper.interval}}' circular="{{storeAtivitySwiper.circular}}">
+        <block wx:for="{{shopMsg.activity}}" wx:key="{{index}}">
+          <swiper-item class="stroe-swiper-item">
+            <text class='activity-type'>{{item.flag}}</text>
+            <text class='activity-about'>{{item.text}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <view class='sanjiao'></view>
+    </view>
+  </view>
+  <!--点餐，评价，商家 tab 吸顶-->
+  <view class='shop-tab'>
+    <block wx:for="{{tabArr}}" wx:key="{{index}}">
+      <view class='shop-tab-item' data-index='{{index}}' bindtap='tabTap'>
+        <text class='tab-text {{index==tabIndex?"shop-tab-active":""}}' data-index='{{index}}'>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <!--点餐，评价，商家 tab 吸顶-->
+
+  <swiper class="the-swiper" current='{{tabIndex}}'>
+    <swiper-item class="swiper-item-goods">
+      <scroll-view scroll-y="1" class='good-classify'>
+        <block wx:for="{{showCategoryList}}" wx:key="{{index}}">
+
+          <badge value="{{item.dotCount}}" style="width: 100%" self-style="top: 0px;right: 0px;height: 35rpx;width: 35rpx;border-radius: 50%;line-height: 35rpx;font-size: 20rpx;text-align: center; background-color: #f56c6c;color: #fff;">
+            <view class='good-classify-item {{leftIndex==index?"classify-item-active":""}}' data-index='{{index}}' catchtap='changeClassify' style='width: 150rpx'>
+              <my-icon type='{{item.icon.type}}' size='{{item.icon.size}}' style='padding-right: 5px' wx:if="{{item.icon.type}}" />
+              <text>{{item.categoryName}}</text>
+
+            </view>
+          </badge>
+
+        </block>
+      </scroll-view>
+
+      <scroll-view scroll-y="1" class='good-content' scroll-into-view="{{scrollIntoView}}" scroll-with-animation="{{true}}" bindscroll="listScroll">
+        <block wx:for="{{showCategoryList}}" wx:key="{{index}}">
+          <view class='left-view'>
+            <view class='classify' id='{{item.label}}'>
+              <text>{{item.categoryName}}</text>
+            </view>
+            <block wx:for="{{item.goodsList}}" wx:for-item="good" wx:for-index="inx" wx:key="{{inx}}">
+              <view class='cart-list'>
+
+                <view class='good-pic'>
+                  <image src='{{good.src}}' class='good-image'></image>
+                </view>
+
+                <view class='good-intro'>
+                  <view class='title'>
+                    <text>{{good.title}}</text>
+                  </view>
+                  <view class='good-desc' style='min-height: 10px'>
+                    <text>{{good.introduction}}</text>
+                  </view>
+                  <view class='sale-situation'>
+                    <text>月销{{good.situation.count}}份</text>
+                    <text>好评率{{good.situation.rate}}%</text>
+                  </view>
+                  <view class='good-activity' wx:if="{{good.activity.discount}}">
+                    <text>{{good.activity.discount}}折</text>
+                    <text>{{good.activity.desc}}</text>
+                  </view>
+
+                  <view class='list-bottom'>
+                    <view class='price'>
+                      <text class='after-price' wx:if="{{good.price.afterPrice}}">{{good.price.afterPrice}}</text>
+                      <text class='before-price' wx:if="{{good.price.beforePrice}}">{{good.price.beforePrice}}</text>
+                    </view>
+                    <view class='add-count'>
+                      <counter bindadd="addTap" data-index="{{good.index}}" data-inx='{{good.inx}}' bindsub="subTap" data-whichcounter="counter-{{good.index}}-{{good.inx}}" class="counter-{{good.index}}-{{good.inx}}" count="{{categoryList[good.index].goodsList[good.inx].selectCount}}"
+                        data-disabled="{{good.sort?'true':'false'}}" left-disabled="{{good.sort?true:false}}" />
+                    </view>
+                  </view>
+                </view>
+
+              </view>
+            </block>
+          </view>
+        </block>
+      </scroll-view>
+
+    </swiper-item>
+  </swiper>
+
+  <!--底部购物车视图-->
+  <view class='cart-nav' wx:if="{{tabIndex==0}}">
+    <view class='cart-icon' bindtap='showSelectGood'>
+      <view class='cart-icon-left'>
+        <badge value="{{totalCount}}" self-style="top: -5px;right: -5px;height: 40rpx;width: 40rpx;border-radius: 50%;line-height: 40rpx;font-size: 24rpx;text-align: center; background-color: #f56c6c;color: #fff;">
+          <view class='my-icon {{selectGoodList.length?"icon-active":""}}'>
+            <my-icon type='gouwuche' size='55' color='{{selectGoodList.length?"#333":""}}' />
+            <!--有商品时color: #333-->
+          </view>
+        </badge>
+      </view>
+
+      <view class='cart-content'>
+        <view class='no-good' wx:if="{{!selectGoodList.length}}">
+          <text>购物车是空的哦^_^</text>
+        </view>
+
+        <view class='good-price' wx:if="{{selectGoodList.length}}">
+          <text>￥{{totalPrice}}</text>
+        </view>
+
+        <view class='good-tips' wx:if="{{selectGoodList.length}}">
+          <text>这里是提示</text>
+        </view>
+      </view>
+    </view>
+    <view class='cart-account {{accountable?"cart-ative":""}}' catchtap='goAccount'>
+      <text>去结算</text>
+    </view>
+  </view>
+  <!--底部购物车视图-->
+
+
+  <!--展示选购商品开始-->
+  <popup direction="bottom" class="show-goods" self-fixed="{{selfFixed}}" z-index="9998">
+    <view class='cart-about'>
+      <view class='cart-about-top'>
+        <view class='about-top-left'>
+          <text>{{cartSelectText}}</text>
+        </view>
+        <view class='about-top-right'>
+          <text class='clear-cart' catchtap='clearCart'>{{clearCartText}}</text>
+          <my-icon type='close' color='#666' size='30' class='clear-icon' wx:if="{{false}}" />
+        </view>
+      </view>
+
+      <scroll-view class='cart-about-list' scroll-y>
+        <block wx:for="{{selectGoodList}}" wx:key="{{index}}">
+          <view class='about-list-item'>
+
+            <view class='about-item-name'>
+              <view class='about-item-title'>
+                <text>{{item.title}}</text>
+              </view>
+              <view class='about-item-sort' wx:if="{{item.sort}}">
+                <block wx:for="{{item.sort}}" wx:key="{{index}}" wx:for-item="text">
+                  <text>{{text.value }} {{index == item.sort.length-1?"":" / "}}</text>
+                </block>
+              </view>
+            </view>
+
+            <view class='about-item-price'>
+              <text class='about-after-price' wx:if="{{item.price.afterPrice}}">{{item.count*item.price.afterPrice}}</text>
+              <text class='about-before-price' wx:if="{{item.price.beforePrice}}">{{item.count*item.price.beforePrice}}</text>
+
+            </view>
+            <view class='about-item-count'>
+              <counter bindadd="aboutAdd" data-index="{{item.index}}" data-inx='{{item.inx}}' bindsub="aboutSub" data-whichcounter="about-{{item.index}}-{{item.inx}}" class="about-{{item.index}}-{{item.inx}}" count="{{item.count}}" data-selectIndex="{{index}}" />
+            </view>
+
+          </view>
+        </block>
+
+      </scroll-view>
+
+    </view>
+  </popup>
+  <!--展示选购商品结束-->
+
+
+  <desc-modal class="desc-modal">
+    <view class='desc-modal-content'>
+      <view class='store-name-modal'>
+        <my-icon type='wodefankui' size='42' style='margin-right: 5px;' wx:if="{{0}}" />
+        <text style='margin-right: 5px;'>{{shopMsg.name}}</text>
+      </view>
+      <view class='desc-modal-detail'>
+        <view class='desc-item'>
+          <text>4.5</text>
+          <text>评分</text>
+        </view>
+        <view class='desc-item'>
+          <text>400</text>
+          <text>月销</text>
+        </view>
+        <view class='desc-item'>
+          <text>商家配送</text>
+          <text>约29分钟</text>
+        </view>
+        <view class='desc-item'>
+          <text>4元</text>
+          <text>配送费</text>
+        </view>
+      </view>
+
+      <view class='desc-gonggao-content'>
+        <view class='desc-gonggao'>
+          <text>公告</text>
+        </view>
+      </view>
+
+      <view class='stroe-desc'>
+        <text>{{shopMsg.post}}</text>
+      </view>
+    </view>
+    <view class='hide-modal'>
+      <view class='desc-delete-icon' catchtap='showDetailmModal'>
+        <my-icon type='close' size='40' color='#fff' />
+      </view>
+    </view>
+  </desc-modal>
+
+  <popup direction="bottom" class="show-activity" z-index="{{10000}}">
+    <view class='popup-activity'>
+      <view class='popup-activity-tite'>
+        <text>优惠活动</text>
+      </view>
+      <scroll-view scroll-y="1" class='popup-activity-scroll'>
+        <block wx:for="{{shopMsg.activity}}" wx:key="{{index}}">
+          <view class="pupup-activity-item">
+            <text class='activity-type'>{{item.flag}}</text>
+            <text class='activity-about'>{{item.text}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </popup>
+
+  <popup direction="bottom" class="show-sort" z-index="{{10000}}">
+    <view class='sort-popup'>
+      <view class='sort-popup-top'>
+        <view class='good-pic'>
+          <image src='{{goodMsg.src}}' class='good-image'></image>
+        </view>
+
+        <view class='good-intro' style='padding: 0 10px'>
+          <view class='sort-title'>
+            <text>{{goodMsg.title}}</text>
+          </view>
+
+          <view class='popup-has-select'>
+
+            <text space='1' wx:if="{{selectText}}">已选择：{{selectText}}</text>
+
+          </view>
+          <view class='popup-kongbai'></view>
+          <view class='sort-popup-price'>
+            <text>{{sortSelectList[0].price?sortSelectList[0].price:goodMsg.price.afterPrice}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='sort-select-list'>
+        <block wx:for="{{goodMsg.sort}}" wx:key="{{index}}">
+          <view class='select-title'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='sort-select-item'>
+            <select simple span="{{4}}" options="{{item.kind}}" list-height="60" select-type="radio" bindchange="selectChange" data-index="{{index}}" class="select" />
+          </view>
+        </block>
+      </view>
+
+      <button class='sort-botton' disabled='{{selectDisabled}}' bindtap='selectFinish'>选好了</button>
+    </view>
+  </popup>
+
+</view>
+

@@ -1,0 +1,63 @@
+/* plugin/components/my-button/my-button.wxss */
+
+.btn{
+  width: 100%;
+  height: 100%;
+  line-height: 78rpx
+}
+
+.my-button-normal{
+  display: inline-block;
+  width: 160rpx;
+  height: 80rpx
+}
+
+.my-button-normal>button{
+  font-size: 30rpx
+}
+
+.my-button-large{
+  display: inline-block;
+  width: 100%;
+  height: 80rpx
+}
+
+.my-button-large>button{
+  font-size: 35rpx
+}
+
+.my-button-large-padding{
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10rpx 20rpx;
+  height: 100rpx
+}
+
+.my-button-large-padding>button{
+  font-size: 35rpx
+}
+
+.my-button-round{
+  border-radius: 80rpx
+}
+
+.my-button-default{
+  color: #000;
+  background-color: #FF7700
+}
+
+.my-button-success{
+  color: #fff;
+  background-color: #67C23A
+}
+.my-button-warning{
+  color: #fff;
+  background-color: #E6A23C
+}
+
+.my-button-info{
+  color: #fff;
+  background-color: #909399
+}

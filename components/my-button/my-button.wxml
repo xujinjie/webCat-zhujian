@@ -1,0 +1,5 @@
+<form class='{{size=="large"?padding?"my-button-"+size+"-"+"padding":"my-button-"+size:"my-button-"+size}}'>
+  <button class='btn {{round?"my-button-round":""}} {{"my-button-"+type}}' disabled='{{disabled}}' formType='submit' plain="{{plain}}" loading='{{loading}}' open-type="{{openType}}" app-parameter="{{appParameter}}" hover-stop-propagation="{{hoverStopPropagation}}"
+    hover-start-time="{{hoverStartTime}}" hover-stay-time="{{hoverStayTime}}" lang="{{lang}}" session-from="{{sessionFrom}}" send-message-title="{{sendMessageTitle}}" send-message-path="{{sendMessagePath}}" send-message-img="{{sendMessageImg}}" show-message-card="{{showMessageCard}}"
+    bindtap="btnClick" bindgetuserinfo="getUserInfo" bindcontact="onContact" bindgetphonenumber="getPhoneNumber" binderrror="onError" style='background-color: {{color?color:""}};border:{{border}}'>{{value}}</button>
+</form>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "badge",
+  "component": true,
+  "usingComponents": {
+    "my-badge": "../../components/my-badge/my-badge",
+    "table": "../../components/table/table"
+  }
+}

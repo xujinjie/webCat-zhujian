@@ -1,0 +1,30 @@
+@import "../assets/calender.wxss";
+
+.calender-days{
+  border-bottom: 1rpx solid #f0f0f0
+}
+
+.is-radio-rctive .is-radio-both-active{
+  color: #fff;
+  background-color: #e64340;
+  border-radius: 10rpx;  
+}
+
+.is-checkbox-active .is-checkbox-first-active{
+  color: #fff;
+  background-color: #e64340;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;   
+}
+
+.is-checkbox-active .is-checkbox-last-active{
+  color: #fff;
+  background-color: #e64340;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;   
+}
+
+.checkbox-disabled{
+  color: rgba(0, 0, 0, 0.3)!important;
+   background-color:rgba(230,67,64,.3)!important;
+}

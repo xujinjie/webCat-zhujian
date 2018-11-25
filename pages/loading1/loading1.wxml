@@ -1,0 +1,22 @@
+<view style='margin-top: 30rpx'>
+        <jj-loading id='my-loading' />
+        <button bindtap='showMyLoading'>显示icon为close loading</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <button bindtap='showMyLoading1'>显示icon为complete loading</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+        <button bindtap='showMyLoading2'>显示icon为loading loading</button>
+</view>
+
+
+
+<view style='margin-top: 30rpx'>
+        <table data="{{loading1APIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{loading1APIData.method}}" title="方法" />
+</view>

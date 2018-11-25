@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-list": "../../components/my-list/my-list",
+    "popup": "../../components/popup/popup"
+  }
+}

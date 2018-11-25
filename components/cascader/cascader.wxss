@@ -1,0 +1,96 @@
+.select-container {
+  width: 550rpx;
+  height: 100%;
+}
+
+.select-title {
+  display: flex;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cascader-list {
+  min-width: 120rpx;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.isAtive {
+  color: blue;
+}
+
+.cascader-options {
+  width: 150%;
+  display: inline-block;
+  height: calc( 100% - 80rpx );
+  overflow: hidden;
+}
+
+.swiper-item{
+  transition: all .5s;
+  width: 33.333%!important;
+  float: left;
+  height: 100%;
+}
+.the-scroll{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.cascader-options-label{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx
+}
+
+.cascader-options-label>text{
+  display: inline-block;
+  height: 100%;
+}
+.cascader-options-label>text:first-child{
+  width: 90%;
+  overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.cascader-options-label>text:last-child{
+  width: 10%;
+  overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+  font-size: 32rpx
+}
+
+.is-tap {
+  background-color: #dedede;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+.cascader-list>text{
+  display: inline-block;
+  height: 100%;
+}
+.cascader-list>text:first-child{
+  width: 85%;
+  overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.cascader-list>text:last-child{
+  width: 15%;
+  overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+  font-size: 32rpx
+}

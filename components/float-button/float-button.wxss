@@ -1,0 +1,148 @@
+@import "../assets/animatied.wxss";
+
+.float-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999
+}
+
+.show-button {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.7s;
+}
+
+.some-icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(255, 255, 255, 9);
+}
+
+.icon-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.icon-close {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-close-icon {
+  transition: all 1s;
+  width: 100rpx;
+  height: 100%;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.icon-list {
+  width: 100%;
+  min-height: 400rpx;
+  display: flex;
+  margin-bottom: 100rpx;
+  flex-wrap: wrap;
+}
+
+.icon-list-item {
+  width: 25%;
+  height: 180rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.list-item-container {
+  width: 100%;
+  height: 100%;
+}
+
+.list-item-icon{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130rpx;
+  text-align: center;
+}
+
+.item-my-icon{
+  display: block;
+  width: 90%;
+  height: 100%;
+}
+.list-item-text{
+  width: 100%;
+  height: 50rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  text-align: center;
+}
+
+@-webkit-keyframes animatedRotate {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(45deg);
+  }
+}
+
+@keyframes animatedRotate {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(45deg);
+  }
+}
+
+.animatedRotate {
+  -webkit-animation-name: animatedRotate;
+  animation-name: animatedRotate;
+}
+
+@-webkit-keyframes animatedRotate2 {
+  from {
+    transform: rotateZ(45deg);
+  }
+
+  to {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes animatedRotate2 {
+  from {
+    transform: rotateZ(45deg);
+  }
+
+  to {
+    transform: rotateZ(0);
+  }
+}
+
+.animatedRotate2 {
+  -webkit-animation-name: animatedRotate2;
+  animation-name: animatedRotate2;
+}

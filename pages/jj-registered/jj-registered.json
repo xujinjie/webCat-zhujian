@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "注册页",    
+  "component": true,
+  "usingComponents": {
+    "jj-registered": "../../components/jj-registered/jj-registered",
+    "table": "../../components/table/table"
+  }
+}

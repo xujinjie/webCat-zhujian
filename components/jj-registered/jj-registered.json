@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-icon": "../my-icon/my-icon",
+    "my-input": "../my-input/my-input",
+    "my-button": "../my-button/my-button",
+    "my-alert": "../my-alert/my-alert",
+    "top-tips": "../topTips/topTips"
+  }
+}

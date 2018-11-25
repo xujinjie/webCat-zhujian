@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "浮动按钮",
+    
+  "component": true,
+  "usingComponents": {
+    "float-button": "../../components/float-button/float-button",
+    "table": "../../components/table/table"
+  }
+}

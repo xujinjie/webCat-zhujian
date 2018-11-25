@@ -1,0 +1,12 @@
+<!--plugin/components/my-counter/my-counter.wxml-->
+<view class="counter">
+        <view class="counter__number">
+                <view class="counter__modify counter__opt{{number <= min || disabled ? ' counter__no' : ''}}" bindtap="minusHandler">
+                        <my-icon type="jian" color="{{number <= min || disabled ? '#d2d2d2' : color}}"></my-icon>
+                </view>
+                <text class="counter__modify counter__text{{disabled ? ' counter__no' : ''}}">{{number}}</text>
+                <view class="counter__modify counter__opt{{number >= max || disabled ? ' counter__no' : ''}}" bindtap="addHandler">
+                        <my-icon type="add" color="{{number >= max || disabled ? '#d2d2d2' : color}}"></my-icon>
+                </view>
+        </view>
+</view>

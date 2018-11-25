@@ -1,0 +1,8 @@
+{
+      "navigationBarTitleText": "标签",
+  "component": true,
+  "usingComponents": {
+    "tag": "../../components/my-tag/my-tag",
+    "table": "../../components/table/table"
+  }
+}

@@ -1,0 +1,8 @@
+{
+      "navigationBarTitleText": "登录页",
+  "component": true,
+  "usingComponents": {
+    "jj-login-ui": "../../components/jj-login-ui/jj-login-ui",
+    "table": "../../components/table/table"
+  }
+}

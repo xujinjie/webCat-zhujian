@@ -1,0 +1,35 @@
+<view class="float-button">
+  <view class='show-button animated-slow {{mainButtonAnimated}}' style='{{selfStyle}};bottom:{{bottom}}px;right:{{right}}px;background-color: {{buttonColor}};width: {{buttonSize}}px;height: {{buttonSize}}px' catchtouchmove='buttonTapMove' catchtap='toggleMainButton'>
+    <view class='my-icon'>
+      <my-icon type="add-o" size='{{buttonIconSize}}' color='{{buttonIconColor}}' />
+    </view>
+  </view>
+
+  <view class='some-icon' wx:if="{{showIcon}}" style="width: {{windowWidth}}px;height: {{windowHeight}}px">
+    <view class='icon-container'>
+
+      <view class='icon-list'>
+          <block wx:for="{{innerOptions}}" wx:key="{{index}}" >
+            <view class='icon-list-item animated {{itemAnimated}}' style='animation-delay: {{item.delay}}s' data-index='{{index}}' catchtap='iconItemTap'>
+              <view class='list-item-container'>
+                <view class='list-item-icon'>
+                  <view class='item-my-icon'>
+                    <my-icon type='{{item.iconType}}' size='120'/>
+                  </view>
+                </view>
+                <view class='list-item-text'>
+                  <text>{{item.text}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+      </view>
+
+      <view class='icon-close animated {{mainButtonAnimated}}'>
+        <view class='my-close-icon'>
+          <my-icon type="add-o" size='50' color='#000' catchtap='closeIcon'/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

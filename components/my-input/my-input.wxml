@@ -1,0 +1,21 @@
+<!--plugin/components/my-input/my-input.wxml-->
+
+<view class="input-content input_mode_{{mode}}" style='{{"border-color:"+borderColor }}'>
+        
+        <my-icon class='input-icon' wx:if="{{!src && icon.type}}" type="{{icon.type}}" color="{{icon.color}}" size="{{icon.size}}" />
+        
+        <view class="input-left" wx:if="{{title}}">{{title}}</view>
+
+        <view class='input-image' wx:if="{{!title && src}}">
+                <image mode="aspectFit" src="{{src}}"></image>
+        </view>
+
+        <input class='input-center {{right?"input_right":""}}' style='{{isShowDelete?"":"padding-right: 20rpx"}}' value='{{value}}' focus='{{focus}}' type="{{type}}" password="{{password}}" placeholder="{{placeholder}}" placeholder-style="{{placeholderStyle}}"
+                placeholder-class="input__placeholder" disabled="{{disabled}}" maxlength="{{maxlength}}" cursor-spacing="{{cursorSpacing}}" confirm-type="{{confirmType}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" selection-start="{{selectionStart}}"
+                selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" bindinput='onInput' bindfocus='onFocus' bindblur='onBlur' bindconfirm='onConfirm'></input>
+        
+        <view class='input-right' catchtap='clearInput'>
+                <my-icon type='close3' size='35' class='input-right' wx:if="{{isShowDelete&&deleteIcon}}" color='#999'/>
+        </view>
+
+</view>

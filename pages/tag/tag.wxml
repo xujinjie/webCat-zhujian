@@ -1,0 +1,35 @@
+
+<view style='margin-top: 30rpx'>
+    <view class='title'>不设置span 可关闭 type=normal</view>
+    <tag title="{{item}}" type="normal" round round-size="10" hit wx:for="{{tag}}" wx:key="{{index}}" bindselect="tagSelect" bindclose="tagClose" closable/>
+</view>
+
+<view style='margin-top: 30rpx'>
+    <view class='title'>不设置span 可关闭 type=normal</view>
+    <tag title="{{item}}" type="normal" round round-size="10" hit wx:for="{{tag}}" wx:key="{{index}}" bindselect="tagSelect" bindclose="tagClose" closable/>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+    <view class='title'>span=4 可关闭 type=info</view>
+    <tag title="{{item}}" type="info" round round-size="10" hit wx:for="{{tag}}" wx:key="{{index}}" bindselect="tagSelect" span="4" bindclose="tagClose" closable/>
+</view>
+<view style='margin-top: 30rpx'>
+    <view class='title'>span=5 可关闭 type=info</view>
+    <tag title="{{item}}" type="info" round round-size="10" hit wx:for="{{tag}}" wx:key="{{index}}" bindselect="tagSelect" span="5" bindclose="tagClose" closable/>
+</view>
+
+<view style='margin-top: 30rpx'>
+    <view class='title'>span： 4 可选择的tag type=success</view>
+    <tag title="{{item}}" type="info" round round-size="10" hit wx:for="{{tag}}" wx:key="{{index}}" bindselect="tagSelect" span="4" bindclose="tagClose" selectable/>
+</view>
+
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{tagAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{tagAPIData.method}}" title="方法"/>
+</view>

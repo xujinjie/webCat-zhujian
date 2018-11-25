@@ -1,0 +1,118 @@
+@import "../assets/animatied.wxss";
+
+.dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 9999;
+}
+
+.diaog-container {
+        width: 80%;
+        height: auto;
+        border-radius: 10rpx;
+        background-color: #fff;
+        font-size: 16px;
+        color: #333;
+}
+
+.dialog-header {
+        padding: 30rpx 0;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+}
+
+.dialog-content {
+        position: relative;
+        padding: 30rpx 40rpx 0;
+        margin-bottom: 40rpx;
+        line-height: 1.5;
+        min-height: 40rpx;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+}
+
+.dialog-content-title {
+        color: #999;
+        font-size: 28rpx;
+}
+
+.dialog-footer {
+        overflow: hidden;
+}
+
+.dialog-button {
+        line-height:90rpx;
+        height: 90rpx;
+        padding: 0 10rpx;
+        border-radius: 0;
+        margin-bottom: 0;
+}
+
+.dialog-button::after {
+        border-width: 0;
+        border-radius: 0;
+}
+
+.dialog-footer-horizontal {
+        display: flex;
+        border-top: 1rpx solid #E5E5E6;
+}
+
+.dialog-footer-horizontal .dialog-button {
+        flex: 1;
+        border-right: 1rpx solid #E5E5E6;
+}
+
+.dialog-footer-horizontal .dialog-button::after {
+        border-right-width: 1rpx;
+        border-right-color: #E5E5E6;
+}
+
+.dialog-footer-horizontal .dialog-button:last-child::after {
+        border-right-width: 0;
+}
+
+.dialog-footer-horizontal .dialog-button{
+        border-radius: 10rpx
+}
+
+.dialog-footer-vertical .dialog-button {
+        flex: 1;
+}
+
+.dialog-footer-vertical .dialog-button::after {
+        border-bottom-width: 1px;
+}
+
+.dialog-footer-vertical .dialog-button:last-child::after {
+        border-bottom-width: 0;
+}
+
+.dialog-footer-vertical .dialog-button:first-child{
+        border-top: 1rpx solid #E5E5E6
+}
+
+.dialog-footer-vertical .dialog-button{
+        border-bottom-left-radius: 10rpx;
+        border-bottom-right-radius: 10rpx;
+}
+
+.is-tap {
+        background-color: #dedede;
+        color: rgba(0, 0, 0, 0.6);
+}
+
+button{
+        background-color: #fff!important;
+}

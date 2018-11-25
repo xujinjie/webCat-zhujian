@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "文本断句",    
+  "component": true,
+  "usingComponents": {
+    "elip": "../../components/my-elip/my-elip",
+    "table": "../../components/table/table"
+  }
+}

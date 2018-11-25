@@ -1,0 +1,43 @@
+view{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+}
+.is_display{
+        display: flex;
+        display: -webkit-flex;
+}
+.select_con{
+        padding: 20rpx;
+}
+
+.simple{
+        width: 100%;
+        display: 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg_red_normal{
+        background-color: #6e4340;
+}
+
+.bg_red_press{
+        background-color: #6e4340;
+        opacity: .2;
+}
+
+.bg_red_disbled{
+        background-color: #6e4340;
+        opacity: .1
+}

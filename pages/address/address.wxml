@@ -1,0 +1,13 @@
+
+<address address="{{address}}" catchdelete='handleTap' catchadd="handleTap" catchsetDefault="handleTap" catchedit='handleTap'/>
+
+<!--
+<view style='margin-top: 30rpx'>
+  <table data="{{addressAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{addressAPIData.method}}" title="方法"/>
+</view>
+
+-->

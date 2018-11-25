@@ -1,0 +1,38 @@
+.my-badge {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.the-bage {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 3000;
+}
+
+.the-badge-inner {
+  color: #fff;
+  height: 40rpx;
+  border-radius: 40rpx;
+  background-color: #f56c6c;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-align: center;
+  top: -25rpx;
+  right: 0;
+  transform: translateX(calc(100% - 20rpx));
+  min-width: 40rpx;
+  padding: 0 15rpx;
+}
+
+.dot {
+  box-sizing: border-box;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  background-color: #f56c6c;
+  position: absolute;
+  top: -5rpx;
+  right: -5rpx;
+  z-index: 3000;
+}

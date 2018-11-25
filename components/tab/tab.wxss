@@ -1,0 +1,31 @@
+.tab{
+  position: relative
+}
+
+.tab-item {
+  box-sizing: border-box;
+  margin: 0 20rpx;
+  display: inline-block;
+  height: 80rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+}
+
+
+.item-content{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.my-icon,.img{
+  width: 40rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+.is-active {
+  color: #409eff;
+  border-bottom: 1px solid #409eff;
+}
+

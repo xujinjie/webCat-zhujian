@@ -1,0 +1,15 @@
+@import "../assets/animatied";
+
+.top-tips {
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}

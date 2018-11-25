@@ -1,0 +1,69 @@
+.my-warn {
+        width: 100%;
+        height: 70rpx;
+        box-sizing: border-box;
+        padding: 0 20rpx;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.type_success {
+        background-color: #f0f9eb;
+        color: #b5cc3a;
+}
+
+.type_info {
+        background-color: #f4f4f5;
+        color: #aa9399;
+}
+
+.type_warning {
+        background-color: #fdf6ec;
+        color: #ecaa8b;
+}
+
+.type_error {
+        background-color: #fef0f0;
+        color: #f56c6c;
+}
+
+.warn-text {
+        flex: 1;
+        height: 100%;
+        font-size: 28rpx;
+        line-height: 70rpx;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+}
+
+@-webkit-keyframes fadeInRight {
+        from {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+        }
+
+        to {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+        }
+}
+
+@keyframes fadeInRight {
+        from {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+        }
+
+        to {
+                -webkit-transform: translate3d(-100% 0, 0);
+                transform: translate3d(-100%, 0, 0);
+        }
+}
+
+.fadeInRight {
+        -webkit-animation: fadeInRight 4s linear infinite;
+        animation: fadeInRight 4s linear infinite;
+}

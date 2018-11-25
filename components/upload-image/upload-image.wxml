@@ -1,0 +1,32 @@
+<view class="upload-image">
+        
+        <!--选择图片后显示的view-->
+        <block wx:for="{{imageArr}}" wx:key="{{index}}" wx:if="{{imageArr.length}}">
+                <view class='image-item' catchtap='iamgeTap' data-index='{{index}}' style="height: {{itemHeight}}px">
+                        <image class='the-image' src='{{item}}' mode="{{imageMode}}" data-index="{{index}}" catchtap='_previewImage'></image>
+                        
+                        <my-icon type='close2' size='30' color='#000' data-index='{{index}}' catchtap='deleteImage' class='image-item-delete'/>
+                        
+                </view>
+        </block>
+        <!--选择图片-->
+        <view class='image-item' catchtap='selectImage' wx:if="{{imageArr.length<maxLength}}" style="height: {{itemHeight}}px">
+                <view class='select-image'>
+                        <my-icon type='add' size='50' color='#c0ccda' />
+                </view>
+        </view>
+
+        <!-- <view class='show-image' wx:if="{{showImage}}" style='height: {{windowHeight}}px;width: {{windowWidth}}px;'>
+                <view class='dot dot-direction-{{direction}}'>
+                        <text space='true'>{{iamgeIndex+1 + " / " + imageArr.length}}</text>
+                </view>
+                <view class='direction-control direction-control-{{direction}}' catchtap='directionControl'>{{directionControlText}}</view>
+                <view style='height: {{windowHeight}}px;width: {{windowWidth}}px;' class='show-image-container'>
+                        <view class="image-direction-{{direction}}" style='height: {{direction=="horizontal"?windowHeight:windowWidth}}px;width: {{direction=="horizontal"?windowWidth:windowHeight}}px;'>
+
+                                <image mode='aspectFit' src='{{imageArr[iamgeIndex]}}' style='width: 100%;height:100%' catchtouchstart='showImageTapStart' catchtouchend='showImageEnd' catchtouchmove='showImageMove' />
+
+                        </view>
+                </view>
+        </view> -->
+</view>

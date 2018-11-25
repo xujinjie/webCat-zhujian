@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "详细展示",
+  "component": true,
+  "usingComponents": {
+    "desc-modal": "../../components/desc-modal/desc-modal",
+    "table": "../../components/table/table",
+    "my-icon": "../../components/my-icon/my-icon"
+
+  }
+}

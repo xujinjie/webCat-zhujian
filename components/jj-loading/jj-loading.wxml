@@ -1,0 +1,12 @@
+<!--components/my-loading2/my-loading2.wxml-->
+<view class='my-loading2' style='width: {{width}}px;height: {{height}}px' wx:if="{{isShow}}">
+        <view class='mark_con' style='width: {{width}}px;height: {{height}}px'></view>
+        <view class='content'>
+                <view class='icon_box'  wx:if="{{icon}}" >
+                        <my-icon type='{{icon}}' size='{{100}}' color="#fff"/>
+                </view> 
+                <view class='text_box' wx:if="{{title}}">
+                        <text>{{title}}</text>                        
+                </view>
+        </view>
+</view>

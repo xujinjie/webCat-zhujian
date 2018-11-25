@@ -1,0 +1,4 @@
+<view class="my-badge">
+  <view class='the-bage {{isDot?"dot":""}} {{selfStyle?"":"the-badge-inner"}}' style='{{selfStyle?selfStyle:""}}' wx:if="{{value}}">{{isDot?"":value}}</view>
+  <slot></slot>
+</view>

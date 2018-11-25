@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "数字键盘",    
+  "component": true,
+  "usingComponents": {
+    "keyboard": "../../components/keyboard/keyboard",
+    "table": "../../components/table/table"
+  }
+}

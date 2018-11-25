@@ -1,0 +1,10 @@
+<view class="select_con">
+        <view class="{{container}}">
+                <view class='item_con'>
+                        <view class='select_item'>
+                                <my-icon type='' size='' color=''/>
+                                <text>{{}}</text>
+                        </view>
+                </view>
+        </view>
+</view>

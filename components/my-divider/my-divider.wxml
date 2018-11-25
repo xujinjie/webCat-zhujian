@@ -1,0 +1,11 @@
+<view class="my-divider">
+        <view class="line-box">
+                <view class="line" style="background: {{lineColor}};"></view>
+        </view>
+        <view class="my-divider-content" style="color: {{textColor}};padding: 0 {{padding}}rpx;font-size: {{size}}rpx">
+                <my-icon type='{{icon}}' size='{{size}}' color="{{textColor}}" class='test'/> {{title}}
+        </view>
+        <view class="line-box">
+                <view class="line" style="background: {{lineColor}}"></view>
+        </view>
+</view>

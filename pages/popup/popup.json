@@ -1,0 +1,8 @@
+{
+      "navigationBarTitleText": "弹出层",
+  "component": true,
+  "usingComponents": {
+    "popup": "../../components/popup/popup",
+    "table": "../../components/table/table"
+  }
+}

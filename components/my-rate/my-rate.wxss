@@ -1,0 +1,29 @@
+.my-rate {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-top: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.content {
+  width: 100%;
+  box-sizing: border-box
+}
+
+.rate-icon{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.rate-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center
+}
+my-icon{
+  text-align: center
+}

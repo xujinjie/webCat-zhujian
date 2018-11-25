@@ -1,0 +1,9 @@
+{
+        "navigationBarTitleText": "列表",
+        "component": true,
+        "usingComponents": {
+                "my-row": "../../components/my-row/my-row",
+                "my-col": "../../components/my-col/my-col",
+                "table": "../../components/table/table"
+        }
+}

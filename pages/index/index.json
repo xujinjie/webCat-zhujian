@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-list": "../../components/my-list/my-list",
+    "my-collapse": "../../components/my-collapse/my-collapse",
+    "my-collapse-item": "../../components/my-collapse-item/my-collapse-item"
+  }
+}

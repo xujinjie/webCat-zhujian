@@ -1,0 +1,26 @@
+.my-divider {
+        display: table;
+        white-space: nowrap;
+        height: auto;
+        overflow: hidden;
+        line-height: 1;
+        text-align: center;
+}
+
+.my-divider .line-box {
+        content: "";
+        display: table-cell;
+        position: relative;
+        transform: translateY(50%);
+        width: 50%;
+}
+
+.my-divider .line-box .line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        transform: scaleY(0.33);
+        transform-origin: 0 0;
+}

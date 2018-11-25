@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-icon": "../../components/my-icon/my-icon",
+    "counter": "../../components/counter2/counter2",
+    "badge": "../../components/my-badge/my-badge",
+    "sticky": "../../components/my-sticky/my-sticky",
+    "popup": "../../components/popup/popup",
+    "desc-modal": "../../components/desc-modal/desc-modal",
+    "select": "../../components/my-select/my-select"
+  }
+}

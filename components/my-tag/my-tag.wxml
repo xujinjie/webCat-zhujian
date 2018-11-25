@@ -1,0 +1,7 @@
+<!--plugin/components/my-tag/my-tag.wxml-->
+<view class='my-tag {{animate?"animated fadeOut":""}}' bindtap='hideTag' wx:if="{{!isHide}}" style='width: {{span?percent:""}}'>
+  <view class='tag-content type_{{type?type:"normal"}} {{span?"isSpanText":""}}' style='height: {{size}}rpx;font-size: {{size/(bili+0.5)}}rpx;line-height: {{size-5}}rpx;background-color: {{color?color:""}};padding: {{closable? "0 10rpx 0 20rpx": "0 20rpx"}};border-radius: {{round?roundSize?roundSize:size:""}}rpx;border: {{hit?"1rpx solid " + iconColor:""}};'>
+    <text class='tag-text'>{{title}}</text>
+    <my-icon size='{{size/(bili+0.5)}}' type="close" color="{{iconColor}}" class='tag-icon {{span?"isSpanText":""}}' wx:if="{{closable}}"/>
+  </view>
+</view>

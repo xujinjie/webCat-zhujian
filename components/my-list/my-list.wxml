@@ -1,0 +1,26 @@
+
+<view class="list-content list_mode_{{mode}}" bindtap="onClick" style='background-color:{{backgroundColor}};{{detail?"":"height:"+height+"rpx"}}'>
+        <view class='icon_box'>
+                <my-icon wx:if="{{icon&&!img}}" type="{{iconData.type}}" size='{{iconData.size}}' color='{{iconData.color}}' />
+        </view>
+
+        <view class='list-image' wx:if="{{img&&imgData.src}}">
+                <image src="{{imgData.src}}" mode="aspectFill" style='width: {{imgData.width}}rpx;height: {{imgData.height}}rpx'/>
+        </view>
+
+        <view class='{{detail?"list-detail":"list-title"}}' style='padding-left: 0'>
+                <view class='{{detail?"list-title-detail":"list-title"}}' style='{{detail?"line-height: 70rpx":""}}'>{{title}}</view>
+                <view class='list-title-detail' wx:if="{{detail}}" style='line-height: 50rpx;'>{{detail}}</view>
+        </view>
+
+        <view class='list-desc' wx:if="{{!detail&&desc}}">{{desc}}</view>
+
+         <view class='dot_con' wx:if="{{!detail&&!desc&&dot&&dot.text}}">
+                <text style='background-color: {{dot.backgroundColor}};color: {{dot.color}}' class='dot_con_text'>{{dot.text}}</text>
+         </view>
+
+       <view class='icon_box'>
+                <my-icon type="{{arrowData.type}}" size='{{arrowData.size}}' wx:if="{{arrow}}" color='{{arrowData.color}}' />
+       </view>
+        
+</view>

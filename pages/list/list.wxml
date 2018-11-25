@@ -1,0 +1,13 @@
+<block wx:for="{{listData}}" wx:key="{{index}}">
+        <view class='list'>
+                <my-list title="{{item.title}}" background-color="{{item.backgroundColor}}" height="{{item.height}}" desc="{{item.desc}}" detail="{{item.detail}}" arrow="{{item.arrow}}" arrow-data="{{item.arrowData}}" icon="{{item.icon}}" icon-data="{{item.iconData}}" img="{{item.img}}" img-data="{{item.imgData}}" dot="{{item.dot}}"/>
+        </view>
+</block>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{listAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{listAPIData.method}}" title="方法" />
+</view>

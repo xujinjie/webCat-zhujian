@@ -1,0 +1,2 @@
+<!--pages/fixed-nav/fixed-nav.wxml-->
+<fixed-nav binditemTap="navItemTap" nav-item="{{navItem}}" />

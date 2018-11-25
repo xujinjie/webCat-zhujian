@@ -1,0 +1,50 @@
+<view class="cascader">
+  <popup right class="popup">
+    <view class='select-container'>
+      <view class='select-title'>
+        <view wx:if="{{!selectOptions.length}}" class='cascader-list'>请选择</view>
+        <block wx:for="{{selectOptions}}" wx:key="{{index}}">
+          <view class='cascader-list'>
+            <text data-index='{{index}}' bindtap='topNavTap'>{{item}}</text>
+            <text>></text>
+          </view>
+        </block>
+      </view>
+      <view class='cascader-options'>
+
+        <view class='swiper-item' style='{{current?"transform: translateX(-100%)":"transform: translateX(0)"}}'>
+          <scroll-view class='the-scroll' scroll-y>
+            <block wx:for="{{options}}" wx:key="{{index}}" >
+              <view class='cascader-options-label {{index == firstIndex?"is-tap":""}}' data-value='{{item.value}}' catchtap='firstTap' data-index='{{index}}'>
+                <text>{{item.label}}</text>
+                <text>></text>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+        <view class='swiper-item' wx:if="{{secondOptions}}" style='{{current?" transform: translateX(-100%)":"transform: translateX(0)"}}'>
+          <scroll-view class='the-scroll' scroll-y>
+            <block wx:for="{{secondOptions}}" wx:key="{{index}}">
+              <view class='cascader-options-label {{index == secondIndex?"is-tap":""}}' data-value='{{item.value}}' data-index='{{index}}' catchtap='secondTap'>
+                <text style='width: {{!item.children?"100%":""}};font-size: 28rpx'>{{item.label}}</text>
+                <text wx:if="{{item.children}}">></text>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+
+        <view class='swiper-item' wx:if="{{thirdOptions}}" style='{{current?"transform: translateX(-100%)":"transform: translateX(0)"}}'>
+          <scroll-view class='the-scroll' scroll-y>
+            <block wx:for="{{thirdOptions}}" wx:key="{{index}}">
+              <view class='cascader-options-label {{index == thirdIndex?"is-tap":""}}' data-value='{{item.value}}' data-index='{{index}}' catchtap='thirdTap'>
+                <text style='width: {{!item.children?"100%":""}};font-size: 28rpx'>{{item.label}}</text>
+                <text wx:if="{{item.children}}">></text>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+
+      </view>
+    </view>
+  </popup>
+</view>

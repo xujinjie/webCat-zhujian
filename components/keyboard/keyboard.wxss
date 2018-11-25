@@ -1,0 +1,198 @@
+
+@import "../assets/animatied";
+.keyboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.keyboard__content {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+  z-index: 1000;
+}
+
+.keyboard__hd {
+  position: relative;
+  height: 80rpx;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 15px;
+}
+
+.keyboard__hd::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.keyboard__bd {
+  margin: 15px 40px;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: #fff;
+}
+
+.keyboard__label {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-flex: 1;
+  flex: 1;
+  height: 50px;
+}
+
+.keyboard__label:not(:last-child):after {
+  content: "";
+  width: 1px;
+  height: 50%;
+  position: absolute;
+  right: 0;
+  top: 25%;
+  background-color: #d9d9d9;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+/*密码输入后的小黑点*/
+
+.keyboard__password {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+  display: none;
+}
+
+.keyboard__password--active {
+  display: block;
+}
+
+.keyboard__ft {
+  background-color: #fff;
+  position: relative;
+}
+
+.keyboard__ft:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.keyboard__title {
+  overflow: hidden;
+  padding: 10px 0 6px;
+  color: #222;
+  margin-bottom: 1px;
+  font-size: 12px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.keyboard__title::before {
+  font-size: 13px;
+  color: #ff2424;
+  line-height: 1;
+  margin-right: 3px;
+}
+
+.keyboard__numbers, .clear-all {
+  font-size: 24px;
+  background-color: #fff;
+}
+
+.keyboard__number, .clear-all {
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.is-cancel, .is-delete, .is-clear {
+  background-color: #f7f7f7;
+  font-size: 15px;
+  color: #686868;
+}
+
+.keyboard__text {
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1%;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #222;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.keyboard__text:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.keyboard__text:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.is-tap {
+  background-color: #dedede;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+

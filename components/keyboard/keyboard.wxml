@@ -1,0 +1,36 @@
+<!--components/keyboard/keyboard.wxml-->
+<view class='keyboard' style='width: {{width}}px;height: {{height}}px' wx:if="{{isShow}}">
+  <view class='keyboard__content animated {{animated}}'>
+    <view class="keyboard__hd">{{inputText}}</view>
+    <view class="keyboard__bd">
+      <block wx:for="{{keys}}" wx:key="">
+        <view class="keyboard__label">
+          <view class="keyboard__password {{ value.length >= (index + 1) ? 'keyboard__password--active' : '' }}"></view>
+        </view>
+      </block>
+    </view>
+    <view class="keyboard__ft">
+      <view class="keyboard__title">{{titleText}}</view>
+      <view class="keyboard__numbers">
+        <block wx:for="{{numsData.topNums}}" wx:key="{{index}}" wx:for-item="n">
+          <view class='keyboard__number'>
+            <block wx:for="{{n}}" wx:key="{{item}}" wx:for-item="m">
+              <view class='keyboard__text {{tapValue == m ?"is-tap":""}}' data-value='{{m}}' catchtap='addPassword'>{{m}}</view>
+            </block>
+          </view>
+        </block>
+        <view class='keyboard__number'>
+          <view class='keyboard__text is-cancel' catchtap='isCancel'>{{cancelText}}</view>
+          <view class='keyboard__text {{tapValue == numsData.bottomNum?"is-tap":""}}' bindtap='addPassword' data-value='{{numsData.bottomNum}}' catchtap='addPassword'>{{numsData.bottomNum}}</view>
+          <view class='keyboard__text is-delete' catchtap='isDelete'>
+            <text>{{deleteText}}</text>
+          </view>
+        </view>
+        <view class='clear-all'>
+          <view class='keyboard__text is-clear' wx:if="{{ablenull}}" catchtap='ablenull'>提交</view>
+          <view class='keyboard__text is-clear' catchtap='clearAll'>清空</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

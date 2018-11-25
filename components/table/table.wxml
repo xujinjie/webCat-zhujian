@@ -1,0 +1,25 @@
+<!--components/table/table.wxml-->
+<view class='table'>
+  <view class='table-head'>
+    <text class='table-head-item head-name'>{{title}}</text>
+    <text class='table-head-item head-desc'>描述</text>
+  </view>
+  <block wx:for="{{data}}" wx:key="{{index}}">
+    <view class='table-body' wx:if="{{data}}">
+      <view class='table-body-name'>
+        <text>{{item.title}}</text>
+      </view>
+      <view class='table-body-content'>
+        <view class='tbody-content-item'>
+          <text>[说明]:{{item.desc}}</text>
+        </view>
+        <view class='tbody-content-item'>
+          <text>[类型]:{{item.type}}</text>
+        </view>
+        <view class='tbody-content-item' wx:if="{{item.value}}">
+          <text>[默认值]:{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

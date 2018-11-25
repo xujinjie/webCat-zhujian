@@ -1,0 +1,8 @@
+{
+      "navigationBarTitleText": "输入框",
+  "component": true,
+  "usingComponents": {
+    "my-input": "../../components/my-input/my-input",
+    "table": "../../components/table/table"
+  }
+}

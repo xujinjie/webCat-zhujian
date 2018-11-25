@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "固定导航栏",
+  "component": true,
+  "usingComponents": {
+    "fixed-nav": "../../components/fixed-nav/fixed-nav",
+    "table": "../../components/table/table"
+  }
+}

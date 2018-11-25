@@ -1,0 +1,35 @@
+<view>
+  <my-sticky scroll-top="{{scrollTop}}" zindex="{{100}}" class="sticky">
+    <my-list title="测试一" arrow/>
+    <my-list title="测试一" arrow slot="sticky" />
+  </my-sticky>
+
+  <block wx:for="{{list1}}" wx:key="{{index}}">
+    <my-list title="{{item}}" />
+  </block>
+
+  <my-sticky scroll-top="{{scrollTop}}" zindex="{{100}}" class="sticky">
+    <my-list title="测试二" arrow/>
+    <my-list title="测试二" arrow slot="sticky" />
+  </my-sticky>
+
+  <block wx:for="{{list1}}" wx:key="{{index}}">
+    <my-list title="{{item}}" />
+  </block>
+
+</view>
+
+
+
+
+
+
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{stickyAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{stickyAPIData.method}}" title="方法" />
+</view>

@@ -1,0 +1,51 @@
+.collapse-item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.collapse-item-top {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.collapse-title {
+  flex: 1;
+}
+
+.icon-arrow {
+  line-height: 100rpx;
+}
+
+.collapse-item-content {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+
+.border_all{
+  border: 1rpx solid #e5e5e5
+}
+.border_top{
+  border-top: 1rpx solid #e5e5e5
+}
+
+.border_right{
+  border-right: 1rpx solid #e5e5e5
+}
+
+.border_left{
+  border-left: 1rpx solid #e5e5e5
+}
+.border_bottom{
+   border-bottom: 1rpx solid #e5e5e5
+}
+
+.border_both{
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5
+}

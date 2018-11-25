@@ -1,0 +1,9 @@
+view{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+}
+.is_display{
+        display: flex;
+        display: -webkit-flex;
+}
+

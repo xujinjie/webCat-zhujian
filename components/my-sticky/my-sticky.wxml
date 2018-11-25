@@ -1,0 +1,6 @@
+<view class='my-sticky'>
+  <slot></slot>
+  <view hidden="{{ !isFixed }}" class="sticky-fixed" style='width: 100%' bindtap='handleTap'>
+    <slot name="sticky"></slot>
+  </view>
+</view>

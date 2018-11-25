@@ -1,0 +1,92 @@
+.my-tag{
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.tag-content{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  width: auto;
+  box-sizing: border-box;
+  justify-content: space-around;
+  overflow: hidden;
+  -webkit-box-sizing: border-box
+}
+.tag-text{
+  display: block;
+  height: 100%;
+  text-align: center;
+}
+.tag-icon{
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  text-align: right
+}
+
+.isSpanText{
+  flex: 11
+}
+isSpanIcon{
+  flex: 1
+}
+.type_normal{
+  color: #889EFF;
+  background-color: #ECF5FF
+}
+.type_success{
+  color: #67C23A;
+  background-color: #F0F9EB
+  
+}
+
+.type_info{
+  color: #909399;
+  background-color: #F4F4F4
+}
+
+.type_warning{
+  color: #E6A23C;
+  background-color: #FCF6EB    
+}
+.type_danger{
+  color: #F56C6C;
+  background-color: #FEF0F0      
+}
+
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.animated {
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

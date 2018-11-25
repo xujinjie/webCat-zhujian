@@ -1,0 +1,9 @@
+
+<upload-image bindchange="uploadPicture"/>
+<view style='margin-top: 30rpx'>
+  <table data="{{uploadImageData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{uploadImageData.method}}" title="方法"/>
+</view>

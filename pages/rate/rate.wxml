@@ -1,0 +1,54 @@
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>默认</view>
+  <my-rate />
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>type设置为star</view>
+  <my-rate type="star"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>设置max为10 mark为默认</view>
+  <my-rate max="{{10}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>设置max为10 mark为6 则高评分是7</view>
+  <my-rate max="{{10}}" mark="{{6}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>设置disable为true，需要设置rateValue</view>
+  <my-rate max="{{10}}" mark="{{6}}" disable="{{true}}" rate-value="{{4}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>显示文字评价</view>
+  <my-rate showText/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>显示文字评价</view>
+  <my-rate showScore/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>设置大小</view>
+  <my-rate showScore size="{{100}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>change事件</view>
+  <my-rate bindchange="rateChange"/>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{rateAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{rateAPIData.method}}" title="方法"/>
+</view>

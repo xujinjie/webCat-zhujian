@@ -1,0 +1,12 @@
+<view style='margin-top: 30rpx'>
+  <tab data="{{tabNavData}}" bindchange="selectChange"/>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{tabAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{tabAPIData.method}}" title="方法"/>
+</view>

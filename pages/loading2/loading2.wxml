@@ -1,0 +1,13 @@
+<my-loading class="my-loading" />
+
+<view style='margin-top: 30rpx'>
+  <button bindtap="showLoading">显示</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{loading2APIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{loading2APIData.method}}" title="方法" />
+</view>

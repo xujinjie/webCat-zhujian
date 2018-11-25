@@ -1,0 +1,22 @@
+<view class="steps steps--{{direction}}">
+
+<block wx:for="{{steps}}" wx:key="{{index}}">
+  <view class='step is-{{direction}} {{center?"is-center":""}}' style='{{center?stepStyle:index==steps.length-1?"flex-basis: auto":"flex-basis: 50%"}}'>
+    <view class='step__head'>
+      <view class='step__line {{steps[index+1].done?"is-normal-finish":"is-normal-frist"}} {{steps[index+1].current?"is-normal-wait":""}}' style="{{index==steps.length-1?'display: none':''}}"></view>
+      <view class='step__{{type}} {{type=="normal"?steps[index].done?"is-normal-finish":"is-normal-frist":""}} {{type=="normal"?steps[index].current?"is-normal-wait":"":""}}'>
+        <view class='step__icon-inner {{steps[index].done?"is-icon-finish":"is-icon-frist"}}' wx:if="{{type=='icon'}}">
+          <text wx:if="{{!steps[index].done}}">{{index+1}}</text>
+          <my-icon type="selected" size='45' wx:if="{{steps[index].done}}" color='{{steps[index].done?"red":"#409eff"}}'/>
+        </view>
+      </view>
+    </view>
+    <view class='step__main step-main-{{direction}}' style='{{type=="normal"?"":"padding-top: 13rpx"}};color: {{steps[index].done?"#67C23A":"#409eff"}}'>
+      <view class='step__title {{textType}}'>{{item.text}}</view>
+      <view class='step__description {{textType}}'>{{item.desc}}</view>
+    </view>
+  </view>
+</block>
+
+  
+</view>

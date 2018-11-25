@@ -1,0 +1,32 @@
+<!--
+<view class='card {{cardFlipped}}' >
+  <view class='face front'>
+    <image src='./img/pukebeimian.png'></image>
+  </view>
+
+  <view class='face back '>
+    <image src='./img/heitaoyi.png'></image>
+  </view>
+</view>
+
+-->
+
+
+<view class='container'>
+  <my-row bottom="{{5}}" gutter="{{5}}">
+    <block wx:for="{{listArr}}" wx:key="{{index}}">
+      <my-col span="{{6}}">
+        <view class='content {{item.success?"hidePuke":""}}'>
+          <view class='card {{index==firstIndex || index==lastIndex?"card-flipped":""}}'>
+            <view class='face front' catchtap='pukeTap' data-index='{{index}}'>
+              <image src='./img/pukebeimian.png' style='width: 175rpx;height: 250rpx'></image>
+            </view>
+            <view class='face back'>
+              <image src='{{item.src}}' style='width: 175rpx;height: 250rpx'></image>
+            </view>
+          </view>
+        </view>
+      </my-col>
+    </block>
+  </my-row>
+</view>

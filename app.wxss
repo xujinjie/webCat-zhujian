@@ -1,0 +1,78 @@
+@import "./public/css/icon.wxss";
+@import "./public/css/animated.wxss";
+@import "./public/css/common.wxss";
+
+
+.disabled{
+        color: #888;
+        background-color: #888;
+        opacity: .1
+}
+
+.disabled_1{
+
+}
+/* 主内容 Black 黑色，次要内容 Grey 灰色；时间戳与表单缺省值 Light 灰色；大段的说明内容而且属于主要内容用 Semi 黑。 */
+.first_color{
+        color: #333;
+}
+
+.sen_color{
+        color: #353535
+}
+
+.grey{
+        color: #888
+}
+
+.light{
+        color: #b2b2b2;
+}
+
+/* 蓝色为链接用色，绿色为完成字样色，红色为出错用色 Press 与 Disable 状态分别降低透明度为20%与10%。 */
+
+
+
+
+.bg_blue_normal{
+        background-color: #576b95;
+}
+
+.bg_blue_press{
+        background-color: #576b95;
+        opacity: .2;
+}
+
+.bg_blue_disbled{
+        background-color: #576b95;
+        opacity: .1
+}
+
+.bg_green_normal{
+        background-color: #09bb07;
+}
+
+.bg_green_press{
+        background-color: #09bb07;
+        opacity: .2;
+}
+
+.bg_green_disbled{
+        background-color: #09bb07;
+        opacity: .1
+}
+
+
+.bg_red_normal{
+        background-color: #6e4340;
+}
+
+.bg_red_press{
+        background-color: #6e4340;
+        opacity: .2;
+}
+
+.bg_red_disbled{
+        background-color: #6e4340;
+        opacity: .1
+}

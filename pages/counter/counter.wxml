@@ -1,0 +1,24 @@
+<view class='title'>不显示icon</view>
+
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>默认</view>
+  <my-counter />
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>间隔为2</view>
+  <my-counter step="{{2}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <view class='title'>触发change事件： {{currentCount}}</view>
+  <my-counter bindchange="counterChange"/>
+</view>
+<view style='margin-top: 30rpx'>
+  <table data="{{counterAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{counterAPIData.method}}" title="方法"/>
+</view>

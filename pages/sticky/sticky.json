@@ -1,0 +1,9 @@
+{
+      "navigationBarTitleText": "吸顶器",
+  "component": true,
+  "usingComponents": {
+    "my-sticky": "../../components/my-sticky/my-sticky",
+    "table": "../../components/table/table",
+    "my-list": "../../components/my-list/my-list"
+  }
+}

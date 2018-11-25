@@ -1,0 +1,5 @@
+<view class='my-col my-col-{{span}}' style='padding-left: {{offset?offset+"%":gutter}};padding-right: {{gutter}};margin-bottom: {{bottom}}rpx'>
+  <slot></slot>
+</view>
+
+

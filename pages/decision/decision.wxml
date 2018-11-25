@@ -1,0 +1,20 @@
+
+<decision class="decision" buttons="{{buttons}}" type='button'/>
+
+<decision class="decision" class="moren"/>
+<view style='margin-top: 30rpx'>
+  <button bindtap='moren'>默认</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='showDeCision'>show decision</button>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{decisionAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{decisionAPIData.method}}" title="方法"/>
+</view>

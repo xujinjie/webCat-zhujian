@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "级联选择器",    
+  "component": true,
+  "usingComponents": {
+    "cascader": "../../components/cascader/cascader",
+    "table": "../../components/table/table"
+  }
+}

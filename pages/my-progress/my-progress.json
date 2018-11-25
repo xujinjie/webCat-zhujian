@@ -1,0 +1,8 @@
+{
+      "navigationBarTitleText": "进度条",
+  "component": true,
+  "usingComponents": {
+    "my-progress": "../../components/my-progress/my-progress",
+    "table": "../../components/table/table"
+  }
+}

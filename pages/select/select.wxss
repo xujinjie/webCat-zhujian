@@ -1,0 +1,16 @@
+page {
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0;
+}
+
+.select_con{
+        padding: 0 20rpx;
+        background-color: #fff;
+}
+
+.title{
+        height: 100rpx;
+        line-height: 100rpx;
+        font-size: 32rpx;
+}

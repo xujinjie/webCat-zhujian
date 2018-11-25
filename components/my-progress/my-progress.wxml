@@ -1,0 +1,14 @@
+
+<view class='my-progress' style='padding-left: {{paddingLeft}}rpx;padding-right: {{paddingRight}}rpx'>
+  <view class='type-line' wx:if="{{type=='line'}}">
+    <view class='line' style='height: {{strokeWidth}}rpx;'>
+      <view class='background' style='border-radius: {{strokeWidth}}rpx;'></view>
+      <view class='progress' style='background-color: {{color}};width: {{percentage}}%;border-radius: {{strokeWidth}}rpx;font-size: {{strokeWidth}}rpx;line-height: {{strokeWidth}}rpx;  text-align: right'>{{textInside&&showText?percentage+"%":""}}</view>
+    </view>
+    <view class='percentage-text' style='font-size: {{strokeWidth*1.5}}rpx;line-height: {{strokeWidth*1.5}}rpx' wx:if="{{!textInside&&showText}}">{{percentage}}%</view>
+  </view>
+
+  <view class='type-circle' wx:if="{{type=='circle'}}">
+    <canvas canvas-id="myCanvas" style="width: {{width}}rpx;height: {{width}}rpx;"/>
+  </view>
+</view>

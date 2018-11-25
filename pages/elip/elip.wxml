@@ -1,0 +1,38 @@
+
+<view style='width: 100%; box-sizing: border-box;padding: 20rpx;  background-color: #fff;margin-top:30rpx'>
+  <view class='title'>不显示icon</view>
+  <elip  openable="{{1}}" show-icon="{{false}}" text="根据京东提供的数据显示，从2018年6月1日0点到6月18日24点，累计下单金额达1592亿元，其中出库订单金额同比增长超过37%；而根据口碑的线下商户数据，天猫618首日，就带动商场消费金额同比大增109%，交易笔数同比大幅增长73%" line="{{1}}">
+  </elip>
+</view>
+
+
+<view style='width: 100%; box-sizing: border-box;padding: 20rpx;  background-color: #fff;margin-top:30rpx'>
+<view class='title'>显示icon</view>
+  <elip is-slot openable="{{1}}">
+      <text>根据京东提供的数据显示，从2018年6月1日0点到6月18日24点，累计下单金额达1592亿元，其中出库订单金额同比增长超过37%；而根据口碑的线下商户数据，天猫618首日，就带动商场消费金额同比大增109%，交易笔数同比大幅增长73%。</text>
+  </elip>
+</view>
+
+
+<view style='width: 100%; box-sizing: border-box;padding: 20rpx;  background-color: #fff;margin-top:30rpx'>
+<view class='title'>显示icon icon在右边</view>
+  <elip is-slot openable="{{1}}" iconDirection="right">
+          <text>根据京东提供的数据显示，从2018年6月1日0点到6月18日24点，累计下单金额达1592亿元，其中出库订单金额同比增长超过37%；而根据口碑的线下商户数据，天猫618首日，就带动商场消费金额同比大增109%，交易笔数同比大幅增长73%。</text>
+  </elip>
+</view>
+
+<view style='width: 100%; box-sizing: border-box;padding: 20rpx;  background-color: #fff;margin-top:30rpx'>
+<view class='title'>显示icon 不能打开</view>
+  <elip is-slot openable="{{false}}">
+
+      <text>根据京东提供的数据显示，从2018年6月1日0点到6月18日24点，累计下单金额达1592亿元，其中出库订单金额同比增长超过37%；而根据口碑的线下商户数据，天猫618首日，就带动商场消费金额同比大增109%，交易笔数同比大幅增长73%。</text>
+  </elip>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{elipAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{elipAPIData.method}}" title="方法"/>
+</view>

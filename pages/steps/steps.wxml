@@ -1,0 +1,40 @@
+
+<view style='width: 100%;height: 500rpx'>
+  <steps  steps="{{steps}}" type="{{type}}" direction="{{direction}}" text-type="{{textType}}" space="{{space}}" center="{{center}}"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='setdirection'>设置direction</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='settype'>设置type</button>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='settextType'>设置textType</button>
+</view>
+
+
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='setspace'>设置space</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='setcenter'>设置center</button>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <button bindtap='setDone'>next</button>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{stepsAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{stepsAPIData.method}}" title="方法"/>
+</view>

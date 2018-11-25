@@ -1,0 +1,12 @@
+
+<button bindtap='cascaderTap'>{{cascader}}</button>
+<cascader options="{{cascaderOptions}}" class="cascader"/>
+
+
+<view style='margin-top: 30rpx'>
+  <table data="{{cascaderAPIData.attributes}}" title="属性"/>
+</view>
+
+<view style='margin-top: 30rpx'>
+  <table data="{{cascaderAPIData.method}}" title="方法"/>
+</view>

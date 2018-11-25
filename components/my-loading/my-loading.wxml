@@ -1,0 +1,11 @@
+<view class="loading_con" style="width: {{width}}px;height: {{height}}px" wx:if="{{isShow}}">
+        <view class='mark_box' style="width: {{width}}px;height: {{height}}px"></view>
+
+        <view class='loading_box'>
+                <view class='top_img'>
+                        <image src='{{image?image:"../../public/imgs/loading- image.png"}}' mode='scaleToFill' class='img_bgc'/>
+                        <image src='{{image?image:"../../public/imgs/loading- slip.png"}}' mode='scaleToFill' class='slip'/>
+                        <text class='loading_text' wx:if="{{text}}">loading</text>
+                </view>
+        </view>
+</view>

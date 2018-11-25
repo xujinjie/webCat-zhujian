@@ -1,0 +1,13 @@
+<view class='my-rate'>
+  <view class='content'>
+    <view class='rate-icon' style='justify-content: {{justifyContent}}'>
+      <block wx:for="{{max}}" wx:key="{{index}}">
+        <my-icon type="{{iconData[index].iconType}}" size='{{size}}' style='height: {{size*1.5}}rpx;line-height: {{size*1.5}}rpx;width: {{size*1.5}}rpx;' data-index='{{index}}' catchtap='iconTap' color='{{iconData[index].color}}' />
+      </block>
+    </view>
+    <view style='height: {{size}}rpx;line-height: {{size/1.6}}rpx;width: 100%;font-size: {{size/2}}rpx;width: 100%;color:#909399' wx:if="{{showText || showScore}}">
+      <text wx:if="{{showText&&!showScore}}" class='rate-text' space='{{false}}'>{{text}}</text>
+      <text wx:if="{{showScore&&!showText}}" class='rate-text' space='{{false}}'>{{score}}{{score?"分":""}}</text>
+    </view>
+  </view>
+</view>

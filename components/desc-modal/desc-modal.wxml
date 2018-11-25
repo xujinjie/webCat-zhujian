@@ -1,0 +1,6 @@
+<view class="desc-modal" wx:if="{{showModal}}">
+<view class='desc-modal-zhezhao' catchtap='hide'></view>
+ <view class='desc-modal-content'>
+   <slot></slot>
+ </view>
+</view>

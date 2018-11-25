@@ -1,0 +1,61 @@
+
+@import "../assets/animatied";
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: opacity .7s;
+  opacity: 0;
+  z-index: 9997
+}
+
+.popup .popup_mark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1008;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup_container {
+  position: fixed;
+  z-index: 1009;
+  background-color: #fff;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: transform 0.7s;
+  transition: transform 0.7s;
+}
+
+.popup_container-top {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.popup_container-left {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.popup_container-right {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.popup_container-bottom{
+    -webkit-transform: translate3d(0%, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
