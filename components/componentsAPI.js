@@ -974,72 +974,28 @@ module.exports = {
 
         //首要目标
         select: {
-                "attributes": [{
-                                title: "options",
-                                desc: "选项的数据，[{value: ''}]，value是显示在选项里的",
-                                type: "Array",
-                                value: ""
-                        },
-                        {
-                                title: "direction",
-                                desc: "选项的排列顺序，有 horizontal,vertical",
-                                type: "String",
-                                value: "vertical"
-                        },
-                        {
-                                title: "listHeight",
-                                desc: "选项的高度,单位是rpx",
-                                type: "Number",
-                                value: "80"
-                        },
-                        {
-                                title: "cbgc",
-                                desc: "背景颜色",
-                                type: "String",
-                                value: "#fff"
-                        },
-                        {
-                                title: "selectType",
-                                desc: "选择的类型，radio是单选,checkbox是多选",
-                                type: "String",
-                                value: "radio"
-                        },
-                        {
-                                title: "selectColor",
-                                desc: "被选中的颜色",
-                                type: "String",
-                                value: "red"
-                        },
-                        {
-                                title: "right",
-                                desc: "选项框是否在右边",
-                                type: "Boolean",
-                                value: "false"
-                        },
-                        {
-                                title: "radioType",
-                                desc: "选项框的类型，square方形,selected √ ,circle 圆形",
-                                type: "String",
-                                value: "circle"
-                        },
-                        {
-                                title: "simple",
-                                desc: "简朴模式",
-                                type: "Boolean",
-                                value: "false"
-                        },
-                        {
-                                title: "span",
-                                desc: "一行排列几个选项,当设置direction=='horizontal'时起效",
-                                type: "Number",
-                                value: 4
-                        },
-                ],
+                "attributes": [{}],
                 "method": [{
                         title: "change",
                         desc: "选择改变时触发",
                         type: "triggerEvent",
-                }]
+                },{
+                        title: "create",
+                        desc: `创建选择的组件
+                                参数有： 
+                                {
+                                        simple: Boolean, （默认fasle等级最高,true时direction，span，icon，right，失效。）
+                                        direction: String, (默认col col,row),
+                                        listHeight: Number,(选项的高度 默认80 单位rpx)
+                                        type: String, (radio 单选，checkboxd 多选)
+                                        right: Boolean,
+                                        span: Number, 一行几个
+                                        options: array 选项
+                                        key: 选项展示的文本的key
+                                        icon: 图标 {normal,active,size}
+                                }`,
+                        type: "innerEvent",
+                 }]
         },
 
          //有空再改

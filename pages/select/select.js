@@ -23,22 +23,26 @@ Page({
                 ],
                 title: "默认",
                 options: {
-                        simple: true,
+                        // simple: true,
                         direction: "col",
                         listHeight: 80,
-                        type : "radio",
-                        color: "#333",
-                        activeColor: "#fff",
-                        backgroundColor: "#fff",
-                        activeBackgroundColor: "#f70",
-                        iconType: "wancheng",
+                        type: "checkbox", //checkbox,radio
+                        // color: "#333",
+                        // activeColor: "#fff",
+                        // iconType: "wancheng",
+                        icon: {
+                                normal: "none",
+                                active: "wancheng",
+                                size: "40"
+                        },
                         right: true,
                         span: 4,
                         options: [{
-                                value: "广州",
+                                value: "广州广州广州广州",
                                 id: 0,
                                 isSelect: false,
-                                disabled: false
+                                disabled: false,
+                                desc: "描述"
                         },
                         {
                                 value: "深圳",
@@ -51,19 +55,35 @@ Page({
                                 value: "北京",
                                 id: 2,
                                 isSelect: false,
-                                disabled: false
+                                disabled: true
                         },
                         {
                                 value: "珠海",
                                 id: 3,
                                 isSelect: false,
-                                disabled: false
-                        }
+                                disabled: false,
+                                desc: "描述"
+                        },
+                                {
+                                        value: "珠海",
+                                        id: 3,
+                                        isSelect: false,
+                                        disabled: false
+                                },
+                                {
+                                        value: "珠海",
+                                        id: 3,
+                                        isSelect: false,
+                                        disabled: false
+                                }
                         ]
                 }
         },
         onLoad(){
                 this.$select = this.selectComponent(".select")
                 this.$select.create(this.data.options)
+        },
+        selectChange(e){
+                console.log(e)
         }
 })

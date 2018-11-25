@@ -6,7 +6,7 @@
         </view>
 
         <view class='select_box'>
-                <my-select class="select" />
+                <my-select class="select" bindchange="selectChange"/>
         </view>
 
         <view class='button_item'>

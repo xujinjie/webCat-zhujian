@@ -1,10 +1,21 @@
-<view class="select_con">
-        <view class="{{container}}">
-                <view class='item_con'>
-                        <view class='select_item'>
-                                <my-icon type='' size='' color=''/>
-                                <text>{{}}</text>
+<view class="select_con {{container}}">
+        <view class='item_con'>
+                <block  wx:for="{{options}}" wx:key="{{index}}">
+                        <view class='select_item is_display' style='height: {{simple?listHeight+"rpx":"auto"}};{{!simple?direction=="row"?"width: "+100/span+"%":"":""}}' data-index='{{index}}' catchtap='selectHandle' data-disabled='{{item.disabled}}'>
+                                <view class='select_inner {{simple?item.isSelect?"select_active":"select_normal":item.isSelect?"col_active":"col_normal"}} {{simple?item.disabled?"select_disabled":"":item.disabled?"col_disabled":""}} {{!simple?right?"right":"":""}}' >
+                                        <view class='icon_con' wx:if="{{!simple}}" style='height: {{listHeight}}rpx'>
+                                                <my-icon type='{{item.isSelect?icon.active:icon.normal}}' size='{{icon.size}}' color='{{item.isSelect?"#ff7f18":"#495060"}}'/>
+                                        </view>
+                                        <view class='text_con' style='padding: {{!simple?right?"0 10rpx 0 0":"0 0 0 10rpx":""}}'>
+                                                <view class='text_value'  style='{{!simple?"height:"+listHeight +"rpx":""}}'>
+                                                        <text>{{item.showValue}}</text>
+                                                </view>
+                                                <view class='text_desc' wx:if="{{!simple && item.desc && direction=='col'}}" >
+                                                        <text>{{item.desc}}</text>
+                                                </view>
+                                        </view>
+                                </view>
                         </view>
-                </view>
+                </block>
         </view>
 </view>
