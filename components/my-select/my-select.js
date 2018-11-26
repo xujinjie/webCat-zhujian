@@ -62,8 +62,22 @@ Component({
 
                                         }
 
+                                        else{
+                                                if(el.isSelect){
+                                                        this.selectData[index] = el
+                                                }
+                                        }
                                         
                                 }
+                                else{
+                                        let temp = {}
+                                        temp.showValue = el
+                                        temp.isSelect = false
+                                        temp.disabled = false
+                                        options[index] = temp
+                                }
+
+
                         })
 
                         let container = direction
@@ -139,6 +153,7 @@ Component({
                                 // console.log(this.selectData)
                                 let data = []
                                for(let key in this.selectData){
+                                       this.selectData[key].index = Number(key)
                                        data.push(this.selectData[key])
                                }
                                 this.triggerEvent("change", data)    

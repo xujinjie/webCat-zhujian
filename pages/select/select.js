@@ -37,24 +37,25 @@ Page({
                         },
                         right: true,
                         span: 4,
+                        // options: [1,2,3,45,6,7,8]
                         options: [{
                                 value: "广州广州广州广州",
                                 id: 0,
-                                isSelect: false,
+                                isSelect: true,
                                 disabled: false,
                                 desc: "描述"
                         },
                         {
                                 value: "深圳",
                                 id: 1,
-                                isSelect: false,
+                                isSelect: true,
                                 disabled: false
                                 
                         },
                         {
                                 value: "北京",
                                 id: 2,
-                                isSelect: false,
+                                isSelect: true,
                                 disabled: true
                         },
                         {
