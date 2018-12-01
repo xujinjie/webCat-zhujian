@@ -1,50 +1,41 @@
 <view class="cascader">
-  <popup right class="popup">
-    <view class='select-container'>
-      <view class='select-title'>
-        <view wx:if="{{!selectOptions.length}}" class='cascader-list'>请选择</view>
-        <block wx:for="{{selectOptions}}" wx:key="{{index}}">
-          <view class='cascader-list'>
-            <text data-index='{{index}}' bindtap='topNavTap'>{{item}}</text>
-            <text>></text>
-          </view>
-        </block>
-      </view>
-      <view class='cascader-options'>
+        <popup direction="bottom" class="popup">
+                <view class='cascader_con'>
+                        <view class='cascader_top_nav'>
+                                <text class='cascader_cancel' catchtap='cancel'>取消</text>
+                                <text class='cascader_title' wx:if="{{title}}">{{title}}</text>
+                                <text class='cascader_sure' catchtap='confirm'>确定</text>
+                        </view>     
 
-        <view class='swiper-item' style='{{current?"transform: translateX(-100%)":"transform: translateX(0)"}}'>
-          <scroll-view class='the-scroll' scroll-y>
-            <block wx:for="{{options}}" wx:key="{{index}}" >
-              <view class='cascader-options-label {{index == firstIndex?"is-tap":""}}' data-value='{{item.value}}' catchtap='firstTap' data-index='{{index}}'>
-                <text>{{item.label}}</text>
-                <text>></text>
-              </view>
-            </block>
-          </scroll-view>
-        </view>
-        <view class='swiper-item' wx:if="{{secondOptions}}" style='{{current?" transform: translateX(-100%)":"transform: translateX(0)"}}'>
-          <scroll-view class='the-scroll' scroll-y>
-            <block wx:for="{{secondOptions}}" wx:key="{{index}}">
-              <view class='cascader-options-label {{index == secondIndex?"is-tap":""}}' data-value='{{item.value}}' data-index='{{index}}' catchtap='secondTap'>
-                <text style='width: {{!item.children?"100%":""}};font-size: 28rpx'>{{item.label}}</text>
-                <text wx:if="{{item.children}}">></text>
-              </view>
-            </block>
-          </scroll-view>
-        </view>
+                        <view class='cascader_tabs'>
+                               <block wx:for="{{selectData}}" wx:key="{{key}}">
+                                        <view class='cascader_tabs_item {{isComplete && index==current?"tab_active":""}}' data-index="{{index}}" catchtap='tabsItemTap'>
+                                                <text>{{item.label}}</text>
+                                        </view>
+                               </block>
+                                <view class='cascader_tabs_item tab_active' wx:if="{{!isComplete}}">
+                                        <text>请选择</text>
+                                </view>
+                        </view>
 
-        <view class='swiper-item' wx:if="{{thirdOptions}}" style='{{current?"transform: translateX(-100%)":"transform: translateX(0)"}}'>
-          <scroll-view class='the-scroll' scroll-y>
-            <block wx:for="{{thirdOptions}}" wx:key="{{index}}">
-              <view class='cascader-options-label {{index == thirdIndex?"is-tap":""}}' data-value='{{item.value}}' data-index='{{index}}' catchtap='thirdTap'>
-                <text style='width: {{!item.children?"100%":""}};font-size: 28rpx'>{{item.label}}</text>
-                <text wx:if="{{item.children}}">></text>
-              </view>
-            </block>
-          </scroll-view>
-        </view>
-
-      </view>
-    </view>
-  </popup>
+                        <view class='select_item_con'>
+                                <swiper current='{{current}}' >
+                                        <block wx:for="{{selectOptions}}" wx:key="{{index}}">
+                                                <!-- catchtouchmove='catchTouchMove' -->
+                                                <swiper-item catchtouchmove='catchTouchMove'>
+                                                                <scroll-view scroll-y>
+                                                                        <block wx:for="{{item}}" wx:for-item="listItem" wx:for-index="idx" wx:key="{{idx}}" >
+                                                                                <view class='select_item' style='{{listItem.isSelect?"color: #ff7f18":""}}' data-p="{{index}}" data-c="{{idx}}" catchtap='selectItemTap'> 
+                                                                                        <text>{{listItem.label}}</text>
+                                                                                        <my-icon type='wancheng' size='40' color='ff7f18' wx:if="{{listItem.isSelect}}"/>
+                                                                                </view>
+                                                                        </block>
+                                                                </scroll-view>
+                                                        
+                                                </swiper-item>
+                                        </block>
+                                </swiper>
+                        </view>
+                </view>
+        </popup>
 </view>

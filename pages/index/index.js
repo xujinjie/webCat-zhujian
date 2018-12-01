@@ -221,7 +221,7 @@ Page({
                 })
                 */
                 wx.navigateTo({
-                        url: '../select/select',
+                        url: '../cascader/cascader',
                 })
                 
         },

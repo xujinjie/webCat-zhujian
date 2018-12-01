@@ -1,7 +1,9 @@
 {
-  "component": true,
-  "usingComponents": {
-    "my-list": "../../components/my-list/my-list",
-    "popup": "../../components/popup/popup"
-  }
+        "component": true,
+        "usingComponents": {
+                "my-list": "../../components/my-list/my-list",
+                "my-select": "../../components/my-select/my-select",
+                "my-icon": "../my-icon/my-icon",
+                "popup": "../../components/popup/popup"
+        }
 }

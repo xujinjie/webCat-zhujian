@@ -1,96 +1,96 @@
-.select-container {
-  width: 550rpx;
-  height: 100%;
+.cascader_con{
+        width: 100%;
+        padding: 0 20rpx;
 }
 
-.select-title {
-  display: flex;
-  padding-left: 10rpx;
-  box-sizing: border-box;
-  height: 80rpx;
-  line-height: 80rpx;
-  font-size: 28rpx;
-  border-bottom: 1px solid #f0f0f0;
+.cascader_top_nav{
+        display: flex;
+        display: -webkit-flex;
+        border-bottom: 1rpx solid #e5e5e5
 }
 
-.cascader-list {
-  min-width: 120rpx;
-  text-align: center;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
+.cascader_top_nav>text{
+        flex: 1;
+        height: 80rpx;
+        line-height: 80rpx;
+        font-size: 28rpx
 }
 
-.isAtive {
-  color: blue;
+.cascader_cancel{
+       color: #999;
+        padding-left: 10rpx;
+       
 }
 
-.cascader-options {
-  width: 150%;
-  display: inline-block;
-  height: calc( 100% - 80rpx );
-  overflow: hidden;
-}
-
-.swiper-item{
-  transition: all .5s;
-  width: 33.333%!important;
-  float: left;
-  height: 100%;
-}
-.the-scroll{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.cascader-options-label{
-  height: 80rpx;
-  line-height: 80rpx;
-  padding: 0 20rpx;
-  font-size: 28rpx
-}
-
-.cascader-options-label>text{
-  display: inline-block;
-  height: 100%;
-}
-.cascader-options-label>text:first-child{
-  width: 90%;
-  overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-
-.cascader-options-label>text:last-child{
-  width: 10%;
-  overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-  font-size: 32rpx
-}
-
-.is-tap {
-  background-color: #dedede;
-  color: rgba(0, 0, 0, 0.6);
+.cascader_title{
+       color: #1c2438;
+       text-align: center;
 }
 
 
-.cascader-list>text{
-  display: inline-block;
-  height: 100%;
-}
-.cascader-list>text:first-child{
-  width: 85%;
-  overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+.cascader_sure{
+        color: #ff7f18;
+        text-align: right;
+        padding-right: 10rpx
 }
 
-.cascader-list>text:last-child{
-  width: 15%;
-  overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-  font-size: 32rpx
+.cascader_tabs{
+        height: 70rpx;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
 }
+
+.cascader_tabs_item{
+        font-size: 24rpx;
+        height: 100%;
+        line-height: 70rpx;
+        max-width: 142rpx;
+        box-sizing: border-box;
+        padding: 0 10rpx;
+        display: -webkit-box;
+  	-webkit-box-orient: vertical;
+  	-webkit-line-clamp:1;
+  	overflow: hidden;
+          text-align: center;
+}
+
+.select_item_con{
+        height: 500rpx
+}
+
+
+.select_item_con>swiper{
+        width: 100%;
+        height: 100%;
+}
+
+.select_item_con swiper-item{
+        width: 100%;
+        height: 100%;
+}
+
+.select_item_con scroll-view{
+        width: 100%;
+        height: 100%
+}
+
+.select_item{
+        height: 80rpx;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        font-size: 28rpx;
+}
+
+.select_item>text{
+        flex: 1
+}
+
+
+.tab_active{
+        border-bottom: 1px solid #ff7f18;
+        color: #ff7f18
+}
+
+

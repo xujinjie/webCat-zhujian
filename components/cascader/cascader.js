@@ -1,97 +1,157 @@
-
 Component({
-  properties: {
-    options: {
-      type: Array
-    }
-  },
-  data: {
-    selectOptions: [],
-    current: 0
-  },
-  ready(){
-    this._init()
-  },
-  methods: {
-    _init(){
-      //console.log(this.data.options)
-    },
-    showCascader(){
-      let $popup = this.selectComponent('.popup')
-      $popup.showPopup()
-      return new Promise((resolve,reject)=>{
-        this.setData({
-          resolve,
-          reject
-        })
-      })
-    },
+        properties: {
+                options: {
+                        type: Array
+                },
+                key: {
+                        type: String
+                },
+                title: {
+                        type: String,
+                        value: "标题"
+                }
+        },
+        data: {
+                selectOptions: [],
+                current: 0,
+                selectData: [],
+                isComplete: false
+        },
+        ready() {
+                this.$popup = this.selectComponent('.popup')
+                this._init()
+        },
+        methods: {
+                show() { 
+                        this.$popup.showPopup() 
+                },
+                hide(){
+                        this.$popup.hidePopup()                         
+                },
 
-    firstTap(e){
-      let value = e.currentTarget.dataset.value
-      let index = e.currentTarget.dataset.index
-      let arr = []
-      arr.push(this.data.options[index].label)
-      this.setData({
-        secondOptions: this.data.options[index].children,
-        selectOptions: arr,
-        firstIndex: index,
-        thirdOptions: null
-      })
-    },
-    secondTap(e){
-      let firstIndex = this.data.firstIndex
-      let value = e.currentTarget.dataset.value
-      let index = e.currentTarget.dataset.index
-      let selectOptions = this.data.selectOptions
-      selectOptions[1] = this.data.secondOptions[index].label
-      selectOptions = selectOptions.slice(0,2)
-      if (!this.data.secondOptions[index].children) {
+                _init(){
+                        let { options, selectOptions,key} = this.data
+                        // console.log(options)
+                        if(key){
+                                options.forEach((el,index)=>{
+                                        options[index]["label"] = options[index][key]
+                                })
+                        }
 
-        let $popup = this.selectComponent('.popup')
-        $popup.hidePopup()
-        this.data.resolve({ value: selectOptions})
-        return
-      }
+                        selectOptions.push(options)
+                        this.setData({
+                                selectOptions
+                        })
+                },
 
-      this.setData({
-        thirdOptions: this.data.secondOptions[index].children,
-        selectOptions,
-        current: 1,
-        secondIndex: index,
-        thirdIndex: null,
-      })
-    },
-    thirdTap(e){
-      let thirdOptions = this.data.thirdOptions
-      let value = e.currentTarget.dataset.value
-      let index = e.currentTarget.dataset.index
-      let selectOptions = this.data.selectOptions
-      selectOptions[2] = thirdOptions[index].label
-      this.setData({
-        thirdIndex: index
-      })
-      if (!this.data.thirdOptions[index].children) {
-        let $popup = this.selectComponent('.popup')
-        $popup.hidePopup()
-        this.data.resolve({ value: selectOptions })
-        return
-      }
+                selectItemTap(e){
+                        let { p, c } = e.currentTarget.dataset
+                        let { selectOptions, current, selectData, options, isComplete } = this.data
+                        let tempObj = {}
+                        for (let key in selectOptions[current][c]){
+                                if(key != "list" && key!="isSelect"){
+                                        tempObj[key] = selectOptions[current][c][key]
+                                }
+                        }
+                        tempObj["index"] = c
 
-      this.setData({
-        fourOptions: thirdOptions[index].children,
-        selectOptions,
-        current: 1,
-      })
-    },
-    topNavTap(e){
-      if(e.target.dataset.index==0){
-        this.setData({
-          current: 0,
-          thirdIndex: null,
-          secondIndex: null
-        })
-      }
-    }
-  }
+                        if (selectOptions[current][c]["list"]){
+                                // console.log(1)
+                                if(isComplete){
+                                        // console.log(2)
+                                        isComplete = false
+                                        selectOptions[current][selectData[current]["index"]]["isSelect"] = false
+                                        selectOptions[current][c]["isSelect"] = true
+                                        selectOptions.push(selectOptions[current][c]["list"])
+                                        current += 1
+                                }
+                                else{
+                                        // console.log(3) 
+                                        isComplete = false                                        
+                                        selectOptions[current][c]["isSelect"] = true
+                                        selectOptions.push(selectOptions[current][c]["list"])
+                                        current += 1       
+                                        selectData.push(tempObj)                                           
+                                }
+                               
+                        }
+                        else{
+                               
+                               if(!isComplete){
+                                //        console.log(5)
+                                       isComplete = true
+                                       selectOptions[current][c]["isSelect"] = true
+                                       selectData.push(tempObj)
+                               }
+                               else{
+                                //        console.log(6)
+                                       selectOptions[current][selectData[current]["index"]]["isSelect"] = false
+                                       selectOptions[current][c]["isSelect"] = true
+                                       selectData[current] = tempObj
+                               }
+
+                                isComplete = true
+                        }
+                        
+                        this.setData({
+                                selectData,
+                                current,
+                                isComplete,
+                                selectOptions
+                        },()=>{
+                                // console.log(this.data.selectData)
+                                // console.log(this.data.selectOptions)
+                                // console.log(this.data.isComplete)
+                                // console.log(this.data.current)
+                                this.triggerEvent("change", this.data.selectData)
+                                if(isComplete){
+                                        this.triggerEvent("complete",this.data.selectData)
+                                }
+                        })
+                },
+
+                tabsItemTap(e){
+                        
+                        let index = e.currentTarget.dataset.index
+                        let { selectData, selectOptions, current} = this.data
+                        let tempArr = []
+                        let tempArr2 = []
+                        selectOptions.forEach((el,inx)=>{
+                                if(inx>=index){
+                                        
+                                        if (selectData[inx]){
+                                                selectOptions[inx][selectData[inx]["index"]]["isSelect"] = false
+                                        }
+                                      
+                                       
+                                }
+                                else{
+                                        tempArr.push(selectOptions[inx])
+                                        tempArr2.push(selectData[inx])
+                                }
+                        })
+
+                        tempArr.push(selectOptions[index])
+                        this.setData({
+                                selectOptions: tempArr,
+                                selectData: tempArr2,
+                                current: index,
+                                isComplete: false
+                        },()=>{
+                                this.triggerEvent("change", this.data.selectData)                                
+                        })
+                },
+                cancel(){
+                        this.hide()
+                        this.triggerEvent("cancel",this.data.selectData)
+                },
+
+                confirm(){
+                        this.hide()         
+                        this.triggerEvent("confirm", this.data.selectData)
+                },
+                catchTouchMove (res) {
+                        return false
+                }
+        }
 })

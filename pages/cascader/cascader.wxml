@@ -1,6 +1,6 @@
 
 <button bindtap='cascaderTap'>{{cascader}}</button>
-<cascader options="{{cascaderOptions}}" class="cascader"/>
+<cascader  class="cascader" options="{{cascaderOptions}}" bindchange="selectChange" bindcomplete="selectComplete" bindcancel="cancel" bindconfirm="confirm"/>
 
 
 <view style='margin-top: 30rpx'>
