@@ -220,9 +220,9 @@ Page({
                   showCancel: false
                 })
                 */
-                wx.navigateTo({
-                        url: '../cascader/cascader',
-                })
+                // wx.navigateTo({
+                //         url: '../cascader/cascader',
+                // })
                 
         },
         onReady() {
