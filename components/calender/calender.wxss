@@ -1,62 +1,98 @@
 .calender {
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #fff;
-  margin-top: 100rpx;
-  font-size: 28rpx;
-  padding-bottom: 10rpx;
-  text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #fff;
+        margin-top: 100rpx;
+        font-size: 28rpx;
+        padding-bottom: 10rpx;
+        text-align: center;
 }
 
 .calender-nav, .calender-week {
-  width: 100%;
-  height: 80rpx;
-  line-height: 80rpx;
-  display: flex;
+        width: 100%;
+        height: 80rpx;
+        line-height: 80rpx;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
 }
 
 .calender-nav-text {
-  flex: 1;
+        flex: 1;
 }
 
-.nav-button {
-  width: 60rpx;
-  box-sizing: border-box;
-  padding: 0 20rpx;
-  height: 100%;
-  font-size: 32rpx;
+.nav-button_left {
+        box-sizing: border-box;
+        padding-left: 20rpx;
+        height: 100%;
+        display: flex;
+        align-items: center;
+}
+
+.nav-button_right {
+        box-sizing: border-box;
+        padding-right: 20rpx;
+        height: 100%;
+        display: flex;
+        align-items: center;
 }
 
 .week-item {
-  flex: 1;
+        flex: 1;
 }
 
 .week-item:last-child, .week-item:first-child {
-  color: red;
+        color: red;
 }
 
 .calender-days {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
 }
 
 .days-item {
-  width: 14.2857%;
-  height: 60rpx;
-  line-height: 60rpx;
+        width: 14.2857%;
+        height: 60rpx;
+        line-height: 60rpx;
 }
 
 .days-item:nth-child(7n), .days-item:nth-child(7n+1) {
-  color: red;
+        color: red;
 }
 
 .disabled {
-  color: rgba(0, 0, 0, 0.3)!important;
-  background-color: #f7f7f7!important;
+        color: rgba(0, 0, 0, 0.3) !important;
+        background-color: #f7f7f7 !important;
 }
-.active{
-  color: #fff;
-  background-color: #e64340;
-  border-radius: 10rpx;  
+
+.active {
+        color: #fff !important;
+        background-color: #e64340 !important;
+        border-radius: 10rpx;
+}
+
+.is-radio-both-active {
+        color: #fff!important;
+        background-color: #e64340;
+        border-radius: 10rpx;
+}
+
+.is-checkbox-first-active {
+        color: #fff!important;
+        background-color: #e64340;
+        border-top-left-radius: 10rpx;
+        border-bottom-left-radius: 10rpx;
+}
+
+.is-checkbox-last-active {
+        color: #fff!important;
+        background-color: #e64340;
+        border-top-right-radius: 10rpx;
+        border-bottom-right-radius: 10rpx;
+}
+
+.checkbox-disabled {
+        color: rgba(0, 0, 0, 0.3) !important;
+        background-color: rgba(230, 67, 64, 0.3) !important;
 }

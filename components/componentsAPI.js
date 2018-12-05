@@ -1630,44 +1630,62 @@ module.exports = {
 
                         selectCalender: {
                                 "attributes": [{
-                                                title: "monthCount",
-                                                desc: "月份的数量",
+                                        title: "afterCount",
+                                                desc: "当前月份的后面的月份数量",
                                                 type: "Number",
                                                 value: 6
                                         },
                                         {
-                                                title: "selectType",
+                                                title: "beforeCount",
+                                                desc: "当前月份的前面的月份数量",
+                                                type: "Number",
+                                                value: 2
+                                        },
+                                        {
+                                                title: "type",
                                                 desc: "选择的类型radio,checkbox",
                                                 type: "String",
-                                                value: "checkbox"
+                                                value: "radio"
                                         },
                                         {
                                                 title: "max",
-                                                desc: "双选是选择的最大天数",
+                                                desc: "双选时选择的最大天数",
                                                 type: "Number",
                                                 value: 15
                                         }
                                 ],
                                 "method": [{
-                                        title: "select",
+                                        title: "complete",
                                         desc: `选择完成后返回的数据，可以从e.detail中获得
-        单选返回的数据形式：
-            {
-              year: "选择的年份", 
-              month: "选择的月份",
-              day: "选择的日期"
-            }
-        多选返回的数据形式： 
-            {
-              beginYear: "开始的年份",
-              beginMonth: "开始的月份",
-              beginDay:"开始的日期",
-              endYear: "结束的年份",
-              endMonth: "结束的月份",
-              endDay: "结束的日期",
-              dayCount: "选择的总天数"
-            }`,
+                                                        单选返回的数据形式：
+                                                        {
+                                                        from: {
+                                                        year: "选择的年份", 
+                                                        month: "选择的月份",
+                                                        day: "选择的日期"
+                                                        },
+                                                        type: "radio"
+                                                        }   
+                                                        多选返回的数据形式： 
+                                                        {
+                                                                from: {
+                                                                        year: "选择的年份", 
+                                                                        month: "选择的月份",
+                                                                        day: "选择的日期"
+                                                                },
+                                                                to: {
+                                                                        year: "选择的年份", 
+                                                                        month: "选择的月份",
+                                                                        day: "选择的日期"
+                                                                },
+                                                                count: "选择的天数",
+                                                                type: "checkbox"
+                                                        }`,
                                         type: "triggerEvent",
+                                },{
+                                                title: "max",
+                                                desc: "多选超出max值触发",
+                                                type: "triggerEvent"
                                 }]
                         },
 

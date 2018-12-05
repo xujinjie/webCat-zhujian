@@ -1,24 +1,36 @@
 <view class="calender">
-  <view class='calender-nav'>
-    <view class='nav-button' catchtap='previousMonth'>
-      <text decode='1'>&lt;</text>
-    </view>
+        <view class='calender-nav'>
+                <view class='.nav-button_left' catchtap='previousMonth'>
+                        <!-- <text decode='1'>&lt;</text> -->
+                        <my-icon type="left" size='35' color='#333' />
+                </view>
 
-    <view class='calender-nav-text'>{{currentYear}}年{{currentMonth}}月</view>
+                <view class='.nav-button_left' catchtap='previousYear'>
+                        <!-- <text decode='1'>&lt;</text> -->
+                        <my-icon type="doubleleft" size='35' color='#333' />
+                </view>
+                
+                <view class='calender-nav-text'>{{current.currentYear}}年{{current.currentMonth}}月</view>
+               
+                <view class='nav-button_right' catchtap='nextYear'>
+                        <!-- <text decode='1'>&lt;</text> -->
+                        <my-icon type="doubleright" size='35' color='#333' />
+                </view>
+               
+                <view class='nav-button_right' catchtap='nextMonth'>
+                        <!-- <text decode='1'>&gt;</text> -->
+                        <my-icon type="right" size='35' color='#333' />
+                </view>
+        </view>
+        <view class='calender-week'>
+                <block wx:for="{{cWeekText}}" wx:key="{{index}}">
+                        <view class='week-item'>{{item}}</view>
+                </block>
+        </view>
 
-    <view class='nav-button' catchtap='nextMonth'>
-      <text decode='1'>&gt;</text>
-    </view>
-  </view>
-  <view class='calender-week'>
-    <block wx:for="{{cWeekText}}" wx:key="{{index}}">
-      <view class='week-item'>{{item}}</view>
-    </block>
-  </view>
-
-  <view class='calender-days'>
-    <block wx:for="{{currentMonthData}}" wx:key="{{index}}">
-      <view class='days-item {{index<dayOneIndex || index>=dayOneIndex+currentDays?"disabled":""}} {{index == activeIndex&&currentMonth==activeMonth&&currentYear==activeYear?"active":""}}' data-index='{{index}}' data-month='{{currentMonth}}' data-year='{{currentYear}}' catchtap='{{index<dayOneIndex || index>=dayOneIndex+currentDays?"":"daysTap"}}'>{{item}}</view>
-    </block>
-  </view>
+        <view class='calender-days'>
+                <block wx:for="{{current.currentMonthData}}" wx:key="{{index}}">
+                        <view class='days-item {{item.isSelect?item.class?item.class:"is-radio-both-active":""}} {{item.disabled?item.value?"disabled":"":""}}' data-index='{{index}}' data-disabled="{{item.disabled}}" data-day="{{item.value}}" data-month='{{item.month}}' data-year="{{item.year}}" catchtap='dayItemTap'>{{item.value || " "}}</view>
+                </block>
+        </view>
 </view>

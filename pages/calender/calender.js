@@ -2,44 +2,87 @@
 Page({
 
 
-  data: {
-  
-  },
+        data: {
+                max: 15,
+                type: "radio"
+        },
 
-  onLoad: function (options) {
-    //console.log("onload")
-  },
+        onLoad(options) {
+                //console.log("onload")
+        },
 
-  onReady: function () {
-    //console.log("onReady")  
-  },
+        onReady() {
+                //console.log("onReady")  
+        },
 
-  onShow: function () {
-    //console.log("onShow")  
-  },
-
-
-  onHide: function () {
-    //console.log("onHide")  
-  },
-
-  onUnload: function () {
-    //console.log("onUnload")  
-  },
+        onShow() {
+                //console.log("onShow")  
+        },
 
 
-  onPullDownRefresh: function () {
-  
-  },
+        onHide() {
+                //console.log("onHide")  
+        },
 
- 
-  onReachBottom: function () {
-  
-  },
+        onUnload() {
+                //console.log("onUnload")  
+        },
 
-  
-  onShareAppMessage: function () {
-  
-  }
+
+        onPullDownRefresh() {
+
+        },
+
+
+        onReachBottom() {
+
+        },
+
+
+        onShareAppMessage() {
+
+        },
+
+        complete(e){
+                
+                if (e.detail.type == "radio") {
+                        wx.showToast({
+                                title: `${e.detail.year}-${e.detail.month}-${e.detail.day}`,
+                                icon: "none"
+                        })
+                }
+                else {
+                        wx.showToast({
+                                title: `选择了${e.detail.count}天`,
+                                icon: "none"
+                        })
+                }
+        },
+
+        max(e){
+                wx.showToast({
+                        title: '超出范围',
+                        icon: "none"
+                })
+        },
+
+        changeMax(){
+                let max = 15
+                if (this.data.max == 15) {
+                        max = 200
+                }
+                this.setData({
+                        max
+                })
+        },
+
+        changeType() {
+                let type = "radio"
+                if (this.data.type == type) {
+                        type = "checkbox"
+                }
+                this.setData({
+                        type
+                })
+        }
 })
-

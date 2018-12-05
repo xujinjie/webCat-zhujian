@@ -1,2 +1,11 @@
 <!--pages/calender/calender.wxml-->
-<calender/>
+<calender bindcomplete="complete" bindmax="max" max="{{max}}" type="{{type}}"/>
+
+
+<view style='margin: 20rpx 40rpx'>
+        <button bindtap='changeMax'>切换max: {{max}}</button>
+</view>
+
+<view style='margin: 20rpx 40rpx'>
+        <button bindtap='changeType'>切换max: {{type}}</button>
+</view>

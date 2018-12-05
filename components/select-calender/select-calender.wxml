@@ -1,28 +1,17 @@
 <view class="calender">
-  <view class='calender-week'>
-    <block wx:for="{{cWeekText}}" wx:key="{{index}}">
-      <view class='week-item'>{{item}}</view>
-    </block>
-  </view>
-  <block wx:for="{{monthData}}" wx:key="{{index}}" wx:for-item="monthItem" wx:for-index="monthDataIndex">
-    <view class='calender-nav'>
-      <view class='calender-nav-text'>{{monthItem.currentYear}}年{{monthItem.currentMonth}}月</view>
-    </view>
-    <view class='calender-days {{selectType == "checkbox"?monthDataIndex==firstTap.monthIndex||monthDataIndex==lastTap.monthIndex?"is-checkbox-active":"":""}} {{selectType == "radio"?monthDataIndex==firstTap.monthIndex?"is-radio-rctive":"":""}}'>
-      <block wx:for="{{monthItem.currentMonthData}}" wx:key="{{index}}">
-        <view class='days-item {{selectType == "checkbox"?monthDataIndex==firstTap.monthIndex?index==firstTap.dayIndex?"is-checkbox-first-active":"":"":""}} {{selectType == "checkbox"?monthDataIndex==lastTap.monthIndex?index==lastTap.dayIndex?"is-checkbox-last-active":"":"":""}} {{selectType == "radio"?index==firstTap.dayIndex?"is-radio-both-active":"":""}} {{monthDataIndex==0?index<monthData[0].activeIndex?"disabled":"":""}} {{selectType == "checkbox"?firstTap.monthIndex==lastTap.monthIndex?monthDataIndex==firstTap.monthIndex?index>firstTap.dayIndex&&index<lastTap.dayIndex?"checkbox-disabled":"":"":firstTap.monthIndex<lastTap.monthIndex?monthDataIndex==firstTap.monthIndex?index>firstTap.dayIndex?"checkbox-disabled":"":monthDataIndex==lastTap.monthIndex?index<lastTap.dayIndex&&index>=monthItem.dayOneIndex?"checkbox-disabled":"":"":"":""}}' data-dayindex='{{index}}' data-year='{{monthItem.currentYear}}' data-month='{{monthItem.currentMonth}}' data-monthindex='{{monthDataIndex}}' catchtap='{{monthDataIndex==0?index<monthData[0].activeIndex?"":"daysItemTap":"daysItemTap"}}'>{{item}}</view>
-      </block>
-    </view>
-  </block>
+        <view class='calender-week'>
+                <block wx:for="{{cWeekText}}" wx:key="{{index}}">
+                        <view class='week-item'>{{item}}</view>
+                </block>
+        </view>
+        <block wx:for="{{monthData}}" wx:key="{{index}}" wx:for-item="monthItem" wx:for-index="monthDataIndex">
+                <view class='calender-nav'>
+                        <view class='calender-nav-text'>{{monthItem.currentYear}}年{{monthItem.currentMonth}}月</view>
+                </view>
+                <view class='calender-days {{type=="radio"?"is-radio-rctive":"is-checkbox-active"}}'>
+                        <block wx:for="{{monthItem.currentMonthData}}" wx:key="{{index}}">
+                                <view class='days-item {{type=="checkbox"?item.times?item.times == beginSelect.times?"is-checkbox-first-active":item.times==endSelect.times?"is-checkbox-last-active":item.times>beginSelect.times&&item.times<endSelect.times?"checkbox-disabled":"":"":""}} {{type=="radio"?item.times==beginSelect.times?"is-radio-both-active":"":""}}' catchtap='dayItemTap' data-year="{{monthItem.currentYear}}" data-month="{{monthItem.currentMonth}}" data-day="{{item.value}}" data-disabled="{{item == ' '?true:false}}" data-times="{{item.times}}">{{item.value}}</view>
+                        </block>
+                </view>
+        </block>
 </view>
-
-
-
-<!--
-  calender-days的view里的cclass解析：
-  1.{{selectType == "checkbox"?monthDataIndex==firstTap.monthIndex||monthDataIndex==lastTap.monthIndex?"is-checkbox-active":"":""}}
-  判断是否是checkbox类型，是的话就继续判断，不是的话就不做操作。如果是则继续判断哪个月份，然后给点击的月份添加is-checkbox-active类
-
-  2.{{selectType == "radio"?monthDataIndex==firstTap.monthIndex?"is-radio-rctive":"":""}}
-  判断是否是radio类型，是的话就继续判断，不是的话就不做操作。如果是则继续判断哪个月份，然后给点击的月份添加is-radio-rctive类
--->
