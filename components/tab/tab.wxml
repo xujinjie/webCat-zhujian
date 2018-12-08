@@ -1,15 +1,16 @@
-<view class="tab" style='width: 100%;'>
-  <view style='width: 100%;height: 80rpx;background-color: #fff;'>
-    <scroll-view style='width: 100%;height: 80rpx;white-space: nowrap' scroll-x="true" scroll-with-animation="true" scroll-left="{{scrollLeft}}" >
-      <block wx:for="{{data}}" wx:key="{{index}}">
-        <view class='tab-item {{index==active?"is-active":""}}' catchtap='tabItemTap' data-index='{{index}}'>
-          <view class='item-content'>
-            <image src='{{item.src}}' wx:if="{{item.src}}" class='img'></image>
-            <my-icon type='{{item.icon}}' size='30' color="{{index==active?'#409eff':''}}" class='my-icon' wx:if="{{!item.src&&item.icon}}"/>
-            <text>{{item.label}}</text>
-          </view>
-        </view>
-      </block>
-    </scroll-view>
-  </view>
+<view class="tab_con">
+        <scroll-view scroll-x style='height: {{height?height:90}}rpx' class='scroll_con' scroll-left="{{scrollLeft}}" scroll-with-animation>
+                <block wx:for="{{options}}" wx:key="{{index}}">
+                        <view class='tab_item {{full?"is_full":"no_full"}}' style='{{ full?"width: "+100/options.length + "%": "" }}'>
+                                <view class='tab_inner'>
+                                       <view class='tab_item_box {{"tab_box"+index}}' data-index='{{index}}' catchtap='tabItemTap' style='color: {{current==index?activeColor: ""}}'>
+                                                <my-icon type="{{item.icon.type}}"  size='{{item.icon.size || 35}}' color='{{current==index?activeColor:item.icon.color}}' wx:if="{{item.icon}}"/>
+                                                <text>{{item.label}}</text>
+                                       </view> 
+                                </view>
+                        </view>
+                </block>
+
+                <view class='line' style="width: {{lineWidth}}px; transform: translate3d({{lineLeft}}px,0,0);background-color: {{lineColor}}"></view>
+        </scroll-view>
 </view>

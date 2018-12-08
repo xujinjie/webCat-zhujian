@@ -313,20 +313,54 @@ module.exports = {
                         ]
                 },
 
-                //还没改
+              
                 tab: {
                         "attributes": [{
                                         title: "data",
                                         desc: "tab的数据",
                                         type: "Array",
-                                        value: 0
+                                        value: `数据格式：
+                                                {
+                                                        label: "标签一",
+                                                        value: 0,
+                                                        icon: {
+                                                                type: "wodefankui",
+                                                                 color: "blue"
+                                                        }
+                                                },`
                                 },
                                 {
-                                        title: "active",
+                                        title: "current",
                                         desc: "当前激活的下标",
                                         type: "Number",
                                         value: 0
+                                },
+                                {
+                                        title: "activeColor",
+                                        desc: "当前激活的下标的颜色",
+                                        type: "String",
+                                        value: "#09bb07"
+                                },
+                                {
+                                        title: "height",
+                                        desc: "高度，单位rpx",
+                                        type: "Number",
+                                        value: 90
+                                },
+                                {
+                                        title: "full",
+                                        desc: "是否平方容器的宽度",
+                                        type: "Boolean",
+                                        value: false
+                                },
+
+                                 {
+                                        title: "lineColor",
+                                         desc: "下滑线的颜色",                                        
+                                        type: "String",                                        
+                                        value: "#09bb07"
                                 }
+                                
                         ],
                         "method": [{
                                 title: "change",
