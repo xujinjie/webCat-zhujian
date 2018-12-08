@@ -208,7 +208,7 @@ Page({
                                 title: "固定导航栏",
                                 arrow: true,
                                 value: "fixed-nav"
-                        },
+                        }
                 ]
         },
         onLoad(options) {

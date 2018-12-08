@@ -40,7 +40,6 @@
                 "pages/account/account",
                 "pages/goods/goods",
                 "pages/fixed-nav/fixed-nav",
-                "pages/waterfall/waterfall",
                 "pages/icon/icon"
         ],
         "window": {
