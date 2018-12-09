@@ -208,6 +208,11 @@ Page({
                                 title: "固定导航栏",
                                 arrow: true,
                                 value: "fixed-nav"
+                        },
+                        {
+                                title: " fullloading",
+                                arrow: true,
+                                value: "fullloading" 
                         }
                 ]
         },

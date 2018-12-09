@@ -40,7 +40,8 @@
                 "pages/account/account",
                 "pages/goods/goods",
                 "pages/fixed-nav/fixed-nav",
-                "pages/icon/icon"
+                "pages/icon/icon",
+                "pages/fullloading/fullloading"
         ],
         "window": {
                 "backgroundTextStyle": "light",
