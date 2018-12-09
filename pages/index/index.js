@@ -87,6 +87,11 @@ Page({
                                 value: "loading2"
                         },
                         {
+                                title: " fullloading",
+                                arrow: true,
+                                value: "fullloading"
+                        },
+                        {
                                 title: "dialog  模态窗",
                                 arrow: true,
                                 value: "dialog"
@@ -208,11 +213,6 @@ Page({
                                 title: "固定导航栏",
                                 arrow: true,
                                 value: "fixed-nav"
-                        },
-                        {
-                                title: " fullloading",
-                                arrow: true,
-                                value: "fullloading" 
                         }
                 ]
         },
