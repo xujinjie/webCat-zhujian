@@ -1,0 +1,7 @@
+<view class="full_loading_con" style='width: {{ww}}px;height: {{wh}}px'>
+        <view>
+                <!-- <view class='dot-pulse'></view> -->
+                <!-- <view class='dot-flashing'></view> -->
+                <view class='dot-spin '></view>
+        </view>
+</view>

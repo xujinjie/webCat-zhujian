@@ -1,0 +1,8 @@
+{
+        "navigationBarTitleText": "loading",
+        "component": true,
+        "usingComponents": {
+                "full-loading": "../../components/full-loading/full-loading",
+                "table": "../../components/table/table"
+        }
+}
