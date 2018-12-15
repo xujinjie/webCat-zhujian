@@ -1,0 +1,14 @@
+<!--pages/swpier-out/swpier-out.wxml-->
+<swiper-out-group>
+        <block wx:for="{{swiperItem}}" wx:key="{{index}}">
+                <swiper-out open="{{item.open}}" disabled="{{item.disabled}}" self-dot="{{item.selfDot}}" dots="{{item.dots}}" data-index="{{index}}" binddottap="dottap" bindchange="swiperChange" bindclick="itemClick" name="{{index}}">
+                        <view style='font-size: 28rpx;padding-left: 20rpx;border-bottom: 1px solid #333' slot="content">
+                                <block wx:for="{{item.test}}" wx:for-item="itm">
+                                        <view style='height: 20px;line-height: 20px'>
+                                                 <text>{{itm}}</text>
+                                        </view>
+                                </block>
+                        </view>
+                </swiper-out>
+        </block>
+</swiper-out-group>

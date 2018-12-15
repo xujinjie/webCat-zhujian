@@ -41,7 +41,8 @@
                 "pages/goods/goods",
                 "pages/fixed-nav/fixed-nav",
                 "pages/icon/icon",
-                "pages/fullloading/fullloading"
+                "pages/fullloading/fullloading",
+                "pages/swpier-out/swpier-out"
         ],
         "window": {
                 "backgroundTextStyle": "light",
