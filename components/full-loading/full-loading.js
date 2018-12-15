@@ -4,7 +4,14 @@ Component({
          * 组件的属性列表
          */
         properties: {
-
+                backgroundColor: {
+                        type: String,
+                        value: "#fff"   //67cf22
+                },
+                type: {
+                        type: Number,
+                        value: 5
+                }
         },
 
         /**

@@ -1,7 +1,49 @@
 <view class="full_loading_con" style='width: {{ww}}px;height: {{wh}}px'>
-        <view>
-                <!-- <view class='dot-pulse'></view> -->
-                <!-- <view class='dot-flashing'></view> -->
-                <view class='dot-spin '></view>
+        <view class="spinner" wx:if="{{type==2}}">
+                <view class="rect1" style='background-color: {{backgroundColor}}'></view>
+                <view class="rect2" style='background-color: {{backgroundColor}}'></view>
+                <view class="rect3" style='background-color: {{backgroundColor}}'></view>
+                <view class="rect4" style='background-color: {{backgroundColor}}'></view>
+                <view class="rect5" style='background-color: {{backgroundColor}}'></view>
         </view>
+
+        <view class="spinner1" wx:if="{{type==3}}">
+                <view class="double-bounce1" style='background-color: {{backgroundColor}}'></view>
+                <view class="double-bounce2" style='background-color: {{backgroundColor}}'></view>
+        </view>
+
+        <view class="spinner2" wx:if="{{type==4}}">
+                <view class="dot1" style='background-color: {{backgroundColor}}'></view>
+                <view class="dot2" style='background-color: {{backgroundColor}}'></view>
+        </view>
+
+
+        <view class="spinner3" wx:if="{{type==1}}">
+                <view class="bounce1" style='background-color: {{backgroundColor}}'></view>
+                <view class="bounce2" style='background-color: {{backgroundColor}}'></view>
+                <view class="bounce3" style='background-color: {{backgroundColor}}'></view>
+        </view>
+
+
+        <view class="spinner5"  wx:if="{{type==5}}">
+                <view class="spinner-container container1">
+                        <view class="circle1" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle2" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle3" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle4" style='background-color: {{backgroundColor}}'></view>
+                </view>
+                <view class="spinner-container container2">
+                        <view class="circle1" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle2" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle3" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle4" style='background-color: {{backgroundColor}}'></view>
+                </view>
+                <view class="spinner-container container3">
+                        <view class="circle1" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle2" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle3" style='background-color: {{backgroundColor}}'></view>
+                        <view class="circle4" style='background-color: {{backgroundColor}}'></view>
+                </view>
+        </view>
+
 </view>

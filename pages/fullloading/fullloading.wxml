@@ -1,1 +1,5 @@
-<full-loading />
+<full-loading type="{{type}}" />
+
+<view class='btn_con'>
+        <button bindtap='changeType'>切换 type: {{type}}</button>
+</view>
