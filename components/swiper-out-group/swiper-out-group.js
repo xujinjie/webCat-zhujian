@@ -7,7 +7,7 @@ Component({
                 '../swiper-out/swiper-out': {
                         type: 'child',
                         linked(target) {
-                               this.data.children = this. _getChildren()
+                        //      target._init()
                         },
                         unlinked(target) {
                                 this.data.children = this._getChildren()

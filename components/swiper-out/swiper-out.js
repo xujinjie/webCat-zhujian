@@ -121,13 +121,13 @@ Component({
                         let that = this
                         const query = wx.createSelectorQuery().in(this)
                         query.select(`.content`).boundingClientRect(function(res) {
+                                console.log(res.height)
                                 that.setData({
                                         _height: res.height
                                 })
                         }).exec()
 
-                        query.select(`.dots`).boundingClientRect(function(res2) {
-                                console.log(res2)
+                        query.select(`.dots`).boundingClientRect(function (res2) {
                                 let _translate = 0
                                 let active = false
                                 if (that.data.open) {
