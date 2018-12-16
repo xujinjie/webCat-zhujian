@@ -19,9 +19,9 @@
 
 
         <view class="spinner3" wx:if="{{type==1}}">
-                <view class="bounce1" style='background-color: {{backgroundColor}}'></view>
-                <view class="bounce2" style='background-color: {{backgroundColor}}'></view>
-                <view class="bounce3" style='background-color: {{backgroundColor}}'></view>
+                <view class="bounce1" style='background-color: {{backgroundColor}};-webkit-animation-delay: -0.32s!important;animation-delay: -0.32s!important'></view>
+                <view class="bounce2" style='background-color: {{backgroundColor}};-webkit-animation-delay: -0.16s!important;animation-delay: -0.16s!important'></view>
+                <view class="bounce3" style='background-color: {{backgroundColor}};-webkit-animation-delay: 0!important;animation-delay: -0s!important'></view>
         </view>
 
 
