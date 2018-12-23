@@ -1,0 +1,16 @@
+<view class="swipe-out">
+
+        <view class="content" style="transform: translate3d({{_translate}}px, 0px, 0px);{{_ts}}" 
+        bindtouchstart="touchStartHandler" 
+        bindtouchmove="touchMoveHandler" 
+        bindtouchend="touchEndHandler">
+                <slot name="content"></slot>
+        </view>
+
+        <view class="dots_con">
+                 <view class='dots'>
+                        <slot name="dots"></slot>  
+                </view>
+        </view>
+        
+</view>

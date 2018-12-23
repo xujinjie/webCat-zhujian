@@ -1,0 +1,13 @@
+/* pages/swpier-out/swpier-out.wxss */
+page{
+        background-color: #f0f0f0;
+}
+
+.title{
+        height: 120rpx;
+        line-height: 120rpx;
+        padding-left: 20rpx;
+        font-size: 32rpx;
+        font-weight: 600;
+        color: #333;
+}

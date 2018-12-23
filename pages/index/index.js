@@ -213,6 +213,11 @@ Page({
                                 title: "固定导航栏",
                                 arrow: true,
                                 value: "fixed-nav"
+                        },
+                        {
+                                title: "侧滑",
+                                arrow: true,
+                                value: "swpier-out"
                         }
                 ]
         },
