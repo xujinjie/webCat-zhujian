@@ -1,38 +1,44 @@
 .swipe-out {
-        position: relative;
         width: 100%;
+        position: relative;
+        height: auto;
+        z-index: 1-1
 }
 
 .swipe-out .content {
-        position: absolute;
-        background: white;
         width: 100%;
+        background-color: #fff;
+        position: relative;
+        left: 0;
+        top: 0;
         z-index: 2;
+        box-sizing: border-box;
 }
 
 .dots_con {
         position: absolute;
-        right: 0;
         height: 100%;
-        width: 100%;
+        top: 0px;
+        right: 0px !important;
+        z-index: 1;
         display: flex;
+        display: -webkit-flex;
         align-items: center;
         justify-content: flex-end;
 }
 
-
-.dots{
+.dots {
         height: 100%;
         display: flex;
         display: -webkit-flex;
         align-items: center;
 }
 
-.dots_item{
+/* .dots_item {
         height: 100%;
         display: flex;
         display: -webkit-flex;
         align-items: center;
         justify-content: center;
-        font-size: 28rpx
-}
+        font-size: 28rpx;
+} */

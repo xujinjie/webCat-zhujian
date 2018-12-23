@@ -12,7 +12,7 @@
 .disabled_1{
 
 }
-/* 主内容 Black 黑色，次要内容 Grey 灰色；时间戳与表单缺省值 Light 灰色；大段的说明内容而且属于主要内容用 Semi 黑。 */
+
 .first_color{
         color: #333;
 }
@@ -28,9 +28,6 @@
 .light{
         color: #b2b2b2;
 }
-
-/* 蓝色为链接用色，绿色为完成字样色，红色为出错用色 Press 与 Disable 状态分别降低透明度为20%与10%。 */
-
 
 
 

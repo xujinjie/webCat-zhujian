@@ -1,75 +1,198 @@
 // pages/swpier-out/swpier-out.js
+let swiperOutAPIData = require("../../components/componentsAPI.js").swiperOut
+
 Page({
 
         /**
          * 页面的初始数据
          */
         data: {
+                el: "undefined",
                 swiperItem: [{
                         disabled: false,
-                        open: false,
-                        selfDot: false,
-                        text: "默认的右边",
-                        test: [1,2,3,4,5,6,7]
+                        value: "off",
+                        height: 90,
+                        width: 120
                 }, {
                         disabled: false,
-                        open: false,
-                        selfDot: false,
-                        text: "自定义的1",
-                                test: [1, 2, 3, 4],
-                        dots: [{
-                                text: "删除",
-                                type: "del",
-                                color: "#fff",
-                                backgroundColor: "blue",
-                                width: 60,
-                                icon: {}
-                        }]
+                        value: "off",
+                        height: 80,
+                        width: 60
                 }, {
                         disabled: false,
-                        open: false,
-                        selfDot: false,
-                                test: [1, 2, 3, 4, 5],
-                        text: "自定义的2",
-                        dots: [{
-                                text: "确定",
-                                type: "sure",
-                                color: "#fff",
-                                backgroundColor: "yellow",
-                                width: 60,
-                                icon: {}
-                        }]
+                        value: "off",
+                        height: 70,
+                        width: 60,
                 }],
-        },
 
-        dottap(e) {
-                let {index} = e.currentTarget.dataset
-                let data = e.detail.data
-                let swiperItem = this.data.swiperItem
-                if (data.type == "del"){
-                        swiperItem.splice(index,1)
-                       this.data.activeIndex  = "undefined"
-                       console.log(swiperItem)
+                swiperItem2: [{
+                        disabled: false,
+                        value: "off",
+                        height: 90,
+                        width: 120
+                }, {
+                        disabled: false,
+                        value: "off",
+                        height: 80,
+                        width: 60
+                }, {
+                        disabled: false,
+                        value: "off",
+                        height: 70,
+                        width: 60,
+                }],
+                el2: "undefined",
+
+                swiperItem3: [{
+                        disabled: false,
+                        value: "off",
+                        height: 90,
+                        width: 120
+                }, {
+                        disabled: false,
+                        value: "off",
+                        height: 80,
+                        width: 60
+                }, {
+                        disabled: false,
+                        value: "off",
+                        height: 70,
+                        width: 60,
+                }],
+                el3: "undefined",
+
+        },
+        onLoad(){
+                this.setData({
+                        swiperOutAPIData
+                })
+        },
+        /*
+        swiperChange(e) {
+                var index = e.currentTarget.dataset.index;
+                let {swiperItem,el} = this.data
+                if (el == "undefined"){
+                        swiperItem[index].value = e.detail.value
+                        el = index
                         this.setData({
-                                swiperItem
+                                swiperItem,
+                                el
                         })
                 }
                 else{
-                   wx.showToast({
-                           title: `${data.text}`,
-                           icon: "none"
-                   })
+                        if(el != index){
+                                swiperItem[el].value = "off"
+                                swiperItem[index].value = e.detail.value
+                                el = index
+                        }
+                        else{
+                                swiperItem[index].value = e.detail.value
+                        }
+
+                        this.setData({
+                                swiperItem,
+                                el
+                        })
                 }
         },
+        */
 
-        swiperChange(e) {
-                     
+        swiperChange(e){
+                var index = e.currentTarget.dataset.index;
+                let { swiperItem, el } = this.data
+                swiperItem[index].value = e.detail.value
+                this.setData({
+                        swiperItem
+                })
         },
+
 
         itemClick(e) {
                 wx.showToast({
                         title: `click: ${e.currentTarget.dataset.index}`,
                         icon: "none"
                 })
+        },
+
+        deleteItem(e) {
+                var index = e.currentTarget.dataset.index;
+                this.data.swiperItem.splice(index, 1);
+                this.setData({
+                        swiperItem: this.data.swiperItem
+                });
+        },
+
+
+
+        swiperChange2(e) {
+                var index = e.currentTarget.dataset.index;
+                let {swiperItem2,el2} = this.data
+                if (el2 == "undefined"){
+                        swiperItem2[index].value = e.detail.value
+                        el2 = index
+                        this.setData({
+                                swiperItem2,
+                                el2
+                        })
+                }
+                else{
+                        if(el2 != index){
+                                swiperItem2[el2].value = "off"
+                                swiperItem2[index].value = e.detail.value
+                                el2 = index
+                        }
+                        else{
+                                swiperItem2[index].value = e.detail.value
+                        }
+
+                        this.setData({
+                                swiperItem2,
+                                el2
+                        })
+                }
+        },
+
+        deleteItem2(e) {
+                var index = e.currentTarget.dataset.index;
+                this.data.swiperItem2.splice(index, 1);
+                this.setData({
+                        swiperItem2: this.data.swiperItem2
+                });
+        },
+
+        swiperChange3(e) {
+                var index = e.currentTarget.dataset.index;
+                let { swiperItem3, el3 } = this.data
+                if (el3 == "undefined") {
+                        swiperItem3[index].value = e.detail.value
+                        el3 = index
+                        this.setData({
+                                swiperItem3,
+                                el3
+                        })
+                }
+                else {
+                        if (el3 != index) {
+                                swiperItem3[el3].value = "off"
+                                swiperItem3[index].value = e.detail.value
+                                el3 = index
+                        }
+                        else {
+                                swiperItem3[index].value = e.detail.value
+                        }
+
+                        this.setData({
+                                swiperItem3,
+                                el3
+                        })
+                }
+        },
+
+        deleteItem3(e) {
+                var index = e.currentTarget.dataset.index;
+                this.data.swiperItem3.splice(index, 1);
+                this.setData({
+                        swiperItem3: this.data.swiperItem3
+                });
         },
 })

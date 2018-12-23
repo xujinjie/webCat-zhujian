@@ -7,12 +7,11 @@ Component({
                 '../swiper-out/swiper-out': {
                         type: 'child',
                         linked(target) {
-                        //      target._init()
+                                
                         },
                         unlinked(target) {
-                                this.data.children = this._getChildren()
-                                this.data.children.forEach((el,index)=>{
-                                        el._init()
+                                this._getChildren().forEach((el)=>{
+                                        console.log(el.data)
                                 })
                         }
                 },
@@ -24,12 +23,8 @@ Component({
                         value: true
                 }
         },
-
-        /**
-         * 组件的初始数据
-         */
         data: {
-
+                beforeActive: null
         },
 
         ready(){
@@ -38,6 +33,25 @@ Component({
         methods: {
                 _getChildren() {
                         return this.getRelationNodes('../swiper-out/swiper-out')
+                },
+
+                childrenChange(index){
+                       if(this.data.accordion){
+                               let { beforeActive } = this.data
+                               if (!index && index != 0) {
+                                       beforeActive = null
+                               }
+                               else {
+                                       this._getChildren()[index].setData({
+                                               active: false,
+                                               _translate: 0
+                                       })
+                                       beforeActive = index
+                               }
+                               this.setData({
+                                       beforeActive
+                               })
+                       }
                 }
         }
 })

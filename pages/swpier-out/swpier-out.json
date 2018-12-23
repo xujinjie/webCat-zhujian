@@ -4,6 +4,7 @@
         "usingComponents": {
                 "swiper-out": "../../components/swiper-out/swiper-out",
                 "swiper-out-group": "../../components/swiper-out-group/swiper-out-group",
-                "table": "../../components/table/table"
+                "table": "../../components/table/table",
+                "my-icon": "../../components/my-icon/my-icon"
         }
 }

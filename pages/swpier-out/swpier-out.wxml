@@ -1,14 +1,75 @@
 <!--pages/swpier-out/swpier-out.wxml-->
-<swiper-out-group>
+
+<view style='width: 100%'>
+        <view class='title'>
+                <text>非手风琴</text>
+        </view>
         <block wx:for="{{swiperItem}}" wx:key="{{index}}">
-                <swiper-out open="{{item.open}}" disabled="{{item.disabled}}" self-dot="{{item.selfDot}}" dots="{{item.dots}}" data-index="{{index}}" binddottap="dottap" bindchange="swiperChange" bindclick="itemClick" name="{{index}}">
-                        <view style='font-size: 28rpx;padding-left: 20rpx;border-bottom: 1px solid #333' slot="content">
-                                <block wx:for="{{item.test}}" wx:for-item="itm">
-                                        <view style='height: 20px;line-height: 20px'>
-                                                 <text>{{itm}}</text>
-                                        </view>
-                                </block>
+
+                <swiper-out disabled="{{item.disabled}}" data-index="{{index}}" bindchange="swiperChange" bindclick="itemClick" width="{{item.width}}" value="{{item.value}}">
+                        <view style='font-size: 28rpx;padding: 20rpx;height: {{item.height}}rpx;border-bottom: 1rpx solid #f0f0f0' slot="content">
+                                <view style='height: 100%;display: flex;align-items: center;'>
+                                        <text>{{index}}</text>
+                                </view>
+                        </view>
+
+                        <view style='height: 100%;display: flex;display: -webkit-flex;align-items: center;justify-content: center;font-size: 28rpx;color: #fff;background: #f70;width: {{item.width}}px' slot="dots" bindtap='deleteItem' data-index='{{index}}'>
+                                <text>删除</text>
                         </view>
                 </swiper-out>
+
         </block>
-</swiper-out-group>
+</view>
+
+
+<view style='margin-top: 20rpx;width: 100%'>
+        <view class='title'>
+                <text>手风琴</text>
+        </view>
+        <block wx:for="{{swiperItem2}}" wx:key="{{index}}">
+
+                <swiper-out disabled="{{item.disabled}}" data-index="{{index}}" bindchange="swiperChange2" bindclick="itemClick" width="{{item.width}}" value="{{item.value}}">
+                        <view style='font-size: 28rpx;padding: 20rpx;height: {{item.height}}rpx;border-bottom: 1rpx solid #f0f0f0' slot="content">
+                                <view style='height: 100%;display: flex;align-items: center;'>
+                                        <text>{{index}}</text>
+                                </view>
+                        </view>
+
+                        <view style='height: 100%;display: flex;display: -webkit-flex;align-items: center;justify-content: center;font-size: 28rpx;color: #fff;background: #f70;width: {{item.width}}px' slot="dots" bindtap='deleteItem2' data-index='{{index}}'>
+                                <text>删除</text>
+                        </view>
+                </swiper-out>
+
+        </block>
+</view>
+
+
+<view style='margin-top: 20rpx;width: 100%'>
+        <view class='title'>
+                <text>icon 手风琴</text>
+        </view>
+        <block wx:for="{{swiperItem3}}" wx:key="{{index}}">
+
+                <swiper-out disabled="{{item.disabled}}" data-index="{{index}}" bindchange="swiperChange3" bindclick="itemClick" width="{{item.width}}" value="{{item.value}}">
+                        <view style='font-size: 28rpx;padding: 20rpx;height: {{item.height}}rpx;border-bottom: 1rpx solid #f0f0f0' slot="content">
+                                <view style='height: 100%;display: flex;align-items: center;'>
+                                        <text>{{index}}</text>
+                                </view>
+                        </view>
+
+                        <view style='height: 100%;display: flex;display: -webkit-flex;align-items: center;justify-content: center;font-size: 28rpx;color: #fff;background: #f70;width: {{item.width}}px' slot="dots" bindtap='deleteItem3' data-index='{{index}}'>
+                                <my-icon type='delete' color='#fff' size='40' />
+                        </view>
+                </swiper-out>
+
+        </block>
+</view>
+
+
+<view style='margin-top: 30rpx'>
+        <table data="{{swiperOutAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+        <table data="{{swiperOutAPIData.method}}" title="方法" />
+</view>
