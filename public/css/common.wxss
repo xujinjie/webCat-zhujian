@@ -1,16 +1,85 @@
-view{
+/* 颜色 */
+@import "./color.wxss";
+/* 字体 */
+@import "./other.wxss";
+
+view {
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
+        font-size: 28rpx;
 }
-.is_display{
+
+page {
+        background: #f0f0f0;
+}
+
+.is_display {
         display: flex;
         display: -webkit-flex;
 }
 
-.is_both_center{
-         display: flex;
+.is_both_center {
+        display: flex;
         display: -webkit-flex;
         align-items: center;
         justify-content: center;
 }
+
+.is_row_center {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+}
+
+.is_col_center {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+}
+
+.is_border_box{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+}
+
+.is_content_box{
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+}
+
+/* 字体 */
+        .h0 {
+                font-size: 40rpx;
+        }
+
+        .h1 {
+                font-size: 36rpx;
+        }
+
+        .h2 {
+                font-size: 32rpx;
+        }
+
+        .h3 {
+                font-size: 28rpx;
+        }
+
+        .h4 {
+                font-size: 24rpx;
+        }
+
+        .h5 {
+                font-size: 20rpx;
+        }
+
+        .font_content {
+                font-size: 28rpx;
+                color: #495060;
+        }
+
+        .font_title {
+                font-size: 32rpx;
+                color: #1c2438;
+        }
+
 
