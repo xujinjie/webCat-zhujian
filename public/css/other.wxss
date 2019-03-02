@@ -1,86 +1,70 @@
 /* 线性渐变 */
 
 .test {
-        background: linear-gradient(-18deg, #ffaf25, #ffc259);
+    background: linear-gradient(-18deg, #ffaf25, #ffc259);
 }
 
 /* 实现四周阴影 将颜色提到前面，且将h-shadow,v-shadow设为0px,*/
 
 .around_box_sho {
-        box-shadow: black 0px 0px 10px;
+    box-shadow: black 0px 0px 10px;
 }
 
 /* 向上三角形 */
 
 .triangle_up {
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 100px solid red;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
 }
 
 .triangle_down {
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-top: 100px solid red;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
 }
 
 .triangle-left {
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;
-        border-right: 100px solid red;
-        border-bottom: 50px solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid red;
+    border-bottom: 50px solid transparent;
 }
 
 #triangle-right {
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;
-        border-left: 100px solid red;
-        border-bottom: 50px solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid red;
+    border-bottom: 50px solid transparent;
 }
 
 #triangle-topleft {
-        width: 0;
-        height: 0;
-        border-top: 100px solid red;
-        border-right: 100px solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
 }
 
 #triangle-topright {
-        width: 0;
-        height: 0;
-        border-top: 100px solid red;
-        border-left: 100px solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
 }
 
 #triangle-bottomleft {
-        width: 0;
-        height: 0;
-        border-bottom: 100px solid red;
-        border-right: 100px solid transparent;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid red;
+    border-right: 100px solid transparent;
 }
 
 /* background: linear-gradient(45deg,transparent 0% , transparent 30%,  rgba(22,78,137,1) 30%,  rgba(22,78,137,1) 100%) */
-        
-/* filter:  */
-
-
-/* 列表前置短竖线 */
-/* .title{
-	font-size: 2rem; line-height: 5rem; color: white
-}
-
-
-.title::before{
-	content: '';
-	display: inline-block;
-	width: .2em; background: yellow; 
-	height: .8em; margin-right: .5em;
-} */
 
 

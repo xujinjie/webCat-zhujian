@@ -1,0 +1,167 @@
+.cart_con {
+      width: 100%;
+}
+
+.goods_con {
+      padding: 20rpx 20rpx 100rpx;
+}
+
+.cart_item {
+      width: 100%;
+      background: #fff;
+      border-radius: 10rpx;
+}
+
+.good_item_left {
+      height: 100%;
+      padding: 0 20rpx;
+}
+
+.good_item_right {
+      flex: 1;
+      padding: 20rpx 0;
+}
+
+.good_img_con {
+      width: 180rpx;
+      min-height: 180rpx;
+}
+
+.good_img_con>image {
+      width: 180rpx;
+      height: 180rpx;
+      border-radius: 10rpx;
+}
+
+.good_detail_con {
+      flex: 1;
+      padding: 0 20rpx;
+      flex-direction: column;
+      flex-wrap: wrap;
+}
+
+.good_intro {
+      width: 100%;
+      font-size: 30rpx;
+}
+
+.good_bottom {
+      width: 100%;
+}
+
+.good_price {
+      flex: 1;
+      color: #dc4225;
+}
+
+.good_count image {
+      width: 100%;
+      height: 100%;
+}
+
+.sub_con, .add_con {
+      width: 35rpx;
+      height: 35rpx;
+      box-sizing: content-box;
+      padding: 1rpx;
+}
+
+.good_count>text {
+      padding: 0 15rpx;
+      text-align: center;
+}
+
+/* 删除的样式 */
+
+.delete_con {
+      height: 100%;
+      font-size: 26rpx;
+      color: #fff;
+      border-top-right-radius: 10rpx;
+      border-bottom-right-radius: 10rpx;
+}
+
+.is_default_con {
+      background: #5887f4;
+      height: 100%;
+      width: 80px;
+}
+
+.is_delete {
+      width: 60px;
+      background: #dc4225;
+      height: 100%;
+      color: #fff;
+      border-top-right-radius: 15rpx;
+      border-bottom-right-radius: 15rpx;
+}
+
+/* 删除的样式 */
+
+/*底部*/
+
+.bottom_nav {
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100rpx;
+      background-color: #fff;
+      border-bottom: 1rpx solid rgb(240, 240, 240);
+}
+
+.select_img_con {
+      height: 100%;
+      padding: 0 20rpx;
+}
+
+.bottom_nav_left {
+      flex: 1;
+      height: 100%;
+}
+
+.select_img_con {
+      height: 100%;
+      padding: 0 20rpx;
+}
+
+.select_img_box {
+      padding-right: 10rpx;
+}
+
+.select_img {
+      width: 35rpx;
+      height: 35rpx;
+}
+
+.select_all_text {
+      font-size: 24rpx;
+      color: #333;
+}
+
+.total_message {
+      flex: 1;
+      height: 100%;
+      padding-right: 20rpx;
+}
+
+.total_price_item {
+      font-size: 28rpx;
+      color: #333;
+}
+
+.total_price_text {
+      font-weight: 600;
+      font-size: 28rpx;
+}
+
+.bottom_nav_right {
+      width: 30%;
+      line-height: 100rpx;
+      color: #fff;
+      text-align: center;
+      background: #dc4225;
+}
+
+/*底部*/

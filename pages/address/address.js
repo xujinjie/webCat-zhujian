@@ -1,139 +1,163 @@
-let addressAPIData = require("../../components/componentsAPI.js").address
+const app = getApp();
 Page({
+    data: {
+        isDelete: false,
 
+        // address里的键的key
+        phoneKey: null,
+        nameKey: null,
+        provinceKey: null,
+        cityKey: null,
+        districtKey: null,
+        detailKey: null,
 
-  data: {
-    addressAPIData,
-    address: [
-      {
-        name: "1",
-        phone: 18218523021,
-        address: {
-          city: "清远市",
-          district: "清新区",
-          nation: "中国",
-          province: "广东省",
-          street: "府前路",
-          street_number: "府前路42号",
-          detail: ""
-        },
-        isDefault: true
-      },
-      {
-        name: "2",
-        phone: 18218523022,
-        address: {
-          city: "清远市",
-          district: "清新区",
-          nation: "中国",
-          province: "广东省",
-          street: "府前路",
-          street_number: "府前路42号",
-          detail: ""
-        },
-        isDefault: false
-      },
-      {
-        name: "3",
-        phone: 18218523023,
-        address: {
-          city: "清远市",
-          district: "清新区",
-          nation: "中国",
-          province: "广东省",
-          street: "府前路",
-          street_number: "府前路42号",
-          detail: ""
-        },
-        isDefault: false
-      },
-      {
-        name: "4",
-        phone: 18218523023,
-        address: {
-          city: "清远市",
-          district: "清新区",
-          nation: "中国",
-          province: "广东省",
-          street: "府前路",
-          street_number: "府前路42号",
-          detail: ""
-        },
-        isDefault: false
-      },
-      {
-        name: "5",
-        phone: 18218523023,
-        address: {
-          city: "清远市",
-          district: "清新区",
-          nation: "中国",
-          province: "广东省",
-          street: "府前路",
-          street_number: "府前路42号",
-          detail: ""
-        },
-        isDefault: false
-      }
-    ]
-  },
+        // address里的键的key
 
-  handleTap(e) {
-    wx.showToast({
-      title: e.detail.type,
-      icon: "none"
-    })
-  },
-  onLoad: function (options) {
-  
-  },
+        //当前激活的index值
+        activeIndex: null,
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    },
+    onLoad(options){
+        
+    },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+    onShow(){
+        let {address} = app.globalData;
+        address.forEach((el, index) => {
+            if (!el['value']) {
+                address[index]['value'] = "off";
+            }
+        });
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+        this.setData({
+            address
+        })
+    },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+    onHide(){
+        let { address } = this.data;
+        let { activeIndex } = this.data;
+        if (activeIndex || activeIndex == 0) {
+            address[activeIndex].value = "off";
+        }
+        this.setData({
+            address
+        })
+        app.globalData.address = address;
+    },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
+    
+    onUnload() {
+       
+        let {address} = this.data;
+        let {activeIndex} = this.data;
+        
+        if(activeIndex || activeIndex == 0){
+            address[activeIndex].value = "off";
+        }
+        app.globalData.address = address;
+        app.setItemSync("address",address);
+    },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
+    onReady(){
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    },
+
+    // 滑动的状态的改变触发
+    swiperChange(e) {
+        let {
+            index
+        } = e.currentTarget.dataset;
+        let {
+            address
+        } = this.data;
+        let {
+            value
+        } = e.detail;
+        if (value == "on") {
+            if (this.data.activeIndex || this.data.activeIndex == 0) {
+                address[this.data.activeIndex]["value"] = 'off';
+            }
+            address[index]["value"] = "on";
+            this.data.activeIndex = index;
+        } else {
+            address[index]["value"] = "off";
+            this.data.activeIndex = null;
+        }
+
+        this.setData({
+            address
+        })
+    },
+
+    contentItemTap(e) {
+        let {value,index} = e.currentTarget.dataset;
+        if(value != "on"){
+            app.showToast({ title: "点击事件" });
+        }
+     
+        
+      
+    },
+
+    doSomething(e) {
+        // console.log(e);
+        let {
+            address
+        } = this.data;
+
+        let {
+            index,
+            type
+        } = e.currentTarget.dataset;
+        
+        if (type =="delete"){
+            this.data.activeIndex = null;
+            address.splice(index, 1);
+            this.setData({
+                isDelete: true,
+                address
+            },()=>{
+                this.setData({
+                    isDelete: false
+                })
+            })
+        }
+
+        if(type == "set"){
+            app.showToast({ title: "设置默认" });
+
+            address[index].value = "off";
+            
+            address[0].isDefault = false;
+            
+            let setAddress = address.splice(index,1);
+
+            setAddress[0].isDefault = true;
+
+            setAddress[0].value = "off";
+
+            
+
+            address.unshift(setAddress[0]);
+
+            this.setData({
+                address
+            })
+        }
+
+        if (type == "edit") {
+            app.showToast({ title: "编辑" });
+            wx.navigateTo({
+                url: `../addAddress/addAddress?type=edit&index=${index}`,
+            })
+
+        }
+    },
+
+    addAddress(){
+        wx.navigateTo({
+            url: `../addAddress/addAddress?type=add`,
+        })
+    },
 })

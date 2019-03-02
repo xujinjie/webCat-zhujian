@@ -1,13 +1,54 @@
+<view class="address_con" wx:if="{{address.length}}">
+    <block wx:for="{{address}}" wx:key="{{index}}">
+        <swiper-out width="{{item.isDefault?60:140}}" is-delete="{{isDelete}}" bindchange="swiperChange" data-index="{{index}}" value="{{item.value}}" >
+            <view slot="content" class='address_content' data-index='{{index}}' catchtap='contentItemTap' data-value="{{item.value}}">
+                <view class='address_item_top is_row_center'>
+                    <view class='user_name'>
+                        <text>{{nameKey?item[nameKey]:item["name"]}}</text>
+                    </view>
+                    <view class='user_phone'>
+                        <text>{{phoneKey?item[phoneKey]:item["phone"]}}</text>
+                    </view>
 
-<address address="{{address}}" catchdelete='handleTap' catchadd="handleTap" catchsetDefault="handleTap" catchedit='handleTap'/>
+                    <view class='label_con' >
+                        <my-label value="默认" wx:if="{{item.isDefault}}" color="#fff" background="#DC4225" />
+                        <my-label value="{{item.label}}" color="#fff" background="#5887F4" wx:if="{{item.label}}"/>
+                    </view>
+                </view>
 
-<!--
-<view style='margin-top: 30rpx'>
-  <table data="{{addressAPIData.attributes}}" title="属性"/>
+                <view class='address_item_bottom is_row_center'>
+                    <view class='address_detail'>
+                        <text>{{provinceKey?item[provinceKey]:item["province"]}}</text>
+                        <text>{{cityKey?item[cityKey]:item["city"]}}</text>
+                        <text>{{districtKey?item[districtKey]:item["district"]}}</text>
+                        <text>{{detailKey?item[detailKey]:item["detail"]}}</text>
+                    </view>
+                    <view class='eidt_con' catchtap='doSomething' data-type='edit' data-index='{{index}}'>
+                        <my-icon color='#b2b2b2' size='35' type='editor' style='font-weight: 600' />
+                    </view>
+                </view>
+            </view>
+
+            <view class='delete_con is_both_center' slot="dots">
+                <view class='is_default_con is_both_center' wx:if="{{!item.isDefault}}" catchtap='doSomething' data-index='{{index}}' data-type='set'>
+                    <text>设为默认</text>
+                </view>
+                <view class='is_delete is_both_center' catchtap='doSomething' data-index='{{index}}' data-type='delete'>
+                    <text>删除</text>
+                </view>
+            </view>
+        </swiper-out>
+    </block>
 </view>
 
-<view style='margin-top: 30rpx'>
-  <table data="{{addressAPIData.method}}" title="方法"/>
-</view>
+<!-- <import src="../../template/isnull.wxml"/> -->
+<!-- <template is="isnull" data="{{url: '/public/imgs/null.png',text: '暂无数据'}}" wx:if="{{!address.length}}"/> -->
 
--->
+<null url="/public/imgs/null.png" text="暂无数据" selfStyle="padding-bottom: 160rpx" wx:if="{{!address.length}}"></null>
+
+<view class='add_address_con'>
+    <view class='add_address_box is_both_center' catchtap='addAddress'>
+        <my-icon type='jiahao1' size='30' color='#fff' style="margin-right: 10rpx"/>
+        <text>添加地址</text>
+    </view>
+</view>

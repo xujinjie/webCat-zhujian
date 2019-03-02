@@ -1,0 +1,6 @@
+.my_label{
+        display: inline-block;
+        text-align: center;
+        /* box-sizing: border-box; */
+        padding: 0 18rpx;
+}

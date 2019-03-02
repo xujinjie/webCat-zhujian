@@ -1,0 +1,39 @@
+<view class="login">
+    <view class="top_avatar is_both_center">
+        <image src="{{logo}}" mode="widthFix" />
+    </view>
+
+    <form class="from_con">
+        <view class='form_item_con'>
+            <view class="from_item">
+                <input type='number' confirm-type="next" class='from_item_input' name="phone" bindinput='phoneInput' placeholder='手机号' focus='{{phoneFocus}}' value="{{phone}}" />
+                <my-icon type='close' size='28' color='#999' class='from_item_text' wx:if="{{phone}}" catchtap='deletePhone' />
+            </view>
+
+
+            <view class="from_item" wx:if="{{loginType == 0}}">
+                <input type='text' bindinput='passwordInput' password='{{isPassword}}' class='from_item_input' name="password" placeholder='请输入密码' />
+                <my-icon type='{{isPasswordIcon}}' size='28' color='#999' class='from_item_text' bindtap='changeIsPassword'/>
+                <view class='right_line'></view>
+                <text class='form_item_right' catchtap='toUrl' data-url='{{forgetPassword}}' data-options='{{ {type: 1} }}' data-type='n'>忘记密码</text>
+            </view>
+
+            <view class="from_item" wx:if="{{loginType == 1}}">
+                <input type='number' bindinput='codeInput' class='from_item_input' name="code" placeholder='请输入验证码' maxlength='6'/>
+                <view class='right_line'></view>
+                <text class='form_item_right is_send_code' catchtap='changeCodeText'>{{codeText}}</text>
+            </view>
+
+            <view class='submit_btn'>
+                <button bindtap='fromSubmit'>登 录</button>
+            </view>
+
+            <view class='forget-p-w is_row_center'>
+                <text bindtap='changeLoginType' wx:if="{{loginType == 0}}">短信快捷登录</text>
+                <text bindtap='changeLoginType' wx:if="{{loginType == 1}}">密码登录</text>
+                <text catchtap='toUrl' data-url='{{registered}}' data-options='' data-type='n'>快速注册</text>
+            </view>
+
+        </view>
+    </form>
+</view>

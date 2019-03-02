@@ -1,1 +1,0 @@
-<jj-login-ui  bindforgetPassWord="forgetPassWord" binddoRegistered="doRegistered" bindsubmit="handleSubmit"/>

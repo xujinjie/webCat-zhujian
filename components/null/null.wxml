@@ -1,0 +1,10 @@
+<view class="is_both_center null_con" style="{{selfStyle}}">
+    <view style='width: 100%'>
+        <view class='is_both_center'>
+            <image src='{{url}}' mode='widthFix' style='width: 40%;'></image>
+        </view>
+        <view class='is_both_center' style='color: #999'>
+            <text>{{text}}</text>
+        </view>
+    </view>
+</view>

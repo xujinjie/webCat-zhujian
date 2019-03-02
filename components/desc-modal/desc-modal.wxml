@@ -1,6 +1,9 @@
 <view class="desc-modal" wx:if="{{showModal}}">
-<view class='desc-modal-zhezhao' catchtap='hide'></view>
- <view class='desc-modal-content'>
-   <slot></slot>
- </view>
+    <view class='desc-modal-zhezhao {{_showModal?"fadeIn":"fadeOut"}}' catchtap='markTap' wx:if="{{mark}}"></view>
+    <view class='desc-modal-content animated {{_showModal?"zoomIn":"zoomOut"}}'>
+        <slot></slot>
+        <view class='desc-delete-icon'>
+            <my-icon type='guanbi2' size='50' color='#fff' catchtap='hide' />
+        </view>
+    </view>
 </view>

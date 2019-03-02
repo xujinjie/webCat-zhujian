@@ -1,0 +1,11 @@
+.null_con{
+    width: 100%;
+    height: 100%;
+}
+
+.is_both_center {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,4 @@
+<!--components/my-label/my-label.wxml-->
+<view class='my_label' style='{{myStyle}}'>
+        <text>{{value}}</text>
+</view>

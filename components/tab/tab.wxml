@@ -1,16 +1,16 @@
 <view class="tab_con">
-        <scroll-view scroll-x style='height: {{height?height:90}}rpx' class='scroll_con' scroll-left="{{scrollLeft}}" scroll-with-animation>
-                <block wx:for="{{options}}" wx:key="{{index}}">
-                        <view class='tab_item {{full?"is_full":"no_full"}}' style='{{ full?"width: "+100/options.length + "%": "" }}'>
-                                <view class='tab_inner'>
-                                       <view class='tab_item_box {{"tab_box"+index}}' data-index='{{index}}' catchtap='tabItemTap' style='color: {{current==index?activeColor: ""}}'>
-                                                <my-icon type="{{item.icon.type}}"  size='{{item.icon.size || 35}}' color='{{current==index?activeColor:item.icon.color}}' wx:if="{{item.icon}}"/>
-                                                <text>{{item.label}}</text>
-                                       </view> 
-                                </view>
-                        </view>
-                </block>
+    <scroll-view scroll-x style='height: {{height?height:90}}rpx' class='scroll_con' scroll-left="{{scrollLeft}}" scroll-with-animation>
+        <block wx:for="{{options}}" wx:key="{{index}}">
+            <view class='tab_item {{full?"is_full":"no_full"}}' style='{{ full?"width: "+100/options.length + "%": "" }}'>
+                <view class='tab_inner'>
+                    <view class='tab_item_box {{"tab_box"+index}}' data-index='{{index}}' catchtap='tabItemTap' style='color: {{current==index?activeColor: ""}}'>
+                        <my-icon type="{{item.icon.type}}" size='{{item.icon.size || 35}}' color='{{current==index?activeColor:item.icon.color}}' wx:if="{{item.icon}}" />
+                        <text>{{item.label}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
 
-                <view class='line' style="width: {{lineWidth}}px; transform: translate3d({{lineLeft}}px,0,0);background-color: {{lineColor}}"></view>
-        </scroll-view>
+        <view class='line' style="width: {{lineWidth}}px; transform: translate3d({{lineLeft}}px,0,0);background-color: {{lineColor}}"></view>
+    </scroll-view>
 </view>

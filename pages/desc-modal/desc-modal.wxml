@@ -1,53 +1,48 @@
 <button bindtap='buttonTap'>显示</button>
 
-<desc-modal class="desc-modal">
+<desc-modal class="desc-modal" bindmark="markTap">
 
-  <view class='desc-modal-content'>
-    <view class='store-name-modal'>
-      <my-icon type='wodefankui' size='42' style='margin-right: 5px;' wx:if="{{0}}" />
-      <text style='margin-right: 5px;'>name</text>
-    </view>
-    <view class='desc-modal-detail'>
-      <view class='desc-item'>
-        <text>4.5</text>
-        <text>评分</text>
-      </view>
-      <view class='desc-item'>
-        <text>400</text>
-        <text>月销</text>
-      </view>
-      <view class='desc-item'>
-        <text>商家配送</text>
-        <text>约29分钟</text>
-      </view>
-      <view class='desc-item'>
-        <text>4元</text>
-        <text>配送费</text>
-      </view>
-    </view>
+    <view class='desc-modal-content'>
+        <view class='store-name-modal'>
+            <my-icon type='wodefankui' size='42' style='margin-right: 5px;' wx:if="{{0}}" />
+            <text style='margin-right: 5px;'>name</text>
+        </view>
+        <view class='desc-modal-detail'>
+            <view class='desc-item'>
+                <text>4.5</text>
+                <text>评分</text>
+            </view>
+            <view class='desc-item'>
+                <text>400</text>
+                <text>月销</text>
+            </view>
+            <view class='desc-item'>
+                <text>商家配送</text>
+                <text>约29分钟</text>
+            </view>
+            <view class='desc-item'>
+                <text>4元</text>
+                <text>配送费</text>
+            </view>
+        </view>
 
-    <view class='desc-gonggao-content'>
-      <view class='desc-gonggao'>
-        <text>公告</text>
-      </view>
-    </view>
+        <view class='desc-gonggao-content'>
+            <view class='desc-gonggao'>
+                <text>公告</text>
+            </view>
+        </view>
 
-    <view class='stroe-desc'>
-      <text>公告介绍</text>
+        <view class='stroe-desc'>
+            <text>公告介绍</text>
+        </view>
     </view>
-  </view>
-  <view class='hide-modal'>
-    <view class='desc-delete-icon' catchtap='showDetailmModal'>
-      <my-icon type='close' size='40' color='#fff' />
-    </view>
-  </view>
 </desc-modal>
 
 
 <view style='margin-top: 30rpx'>
-  <table data="{{descModal.attributes}}" title="属性" />
+    <table data="{{descModal.attributes}}" title="属性" />
 </view>
 
 <view style='margin-top: 30rpx'>
-  <table data="{{descModal.method}}" title="方法" />
+    <table data="{{descModal.method}}" title="方法" />
 </view>

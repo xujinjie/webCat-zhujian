@@ -1,29 +1,28 @@
-
 <view style='margin-top: 30rpx'>
-        <button style='padding: 0 20rpx' bindtap='showDialog'>显示</button>
+    <button style='padding: 0 20rpx' bindtap='showDialog'>显示</button>
 </view>
 
 <view style='margin-top: 30rpx'>
-        <button style='padding: 0 20rpx' bindtap='showDialog1'>不显示cancel </button>
+    <button style='padding: 0 20rpx' bindtap='showDialog1'>不显示cancel </button>
 </view>
 
 <view style='margin-top: 30rpx'>
-        <button style='padding: 0 20rpx' bindtap='showDialog2'>不显示确定</button>
+    <button style='padding: 0 20rpx' bindtap='showDialog2'>不显示确定</button>
 </view>
 
 <view style='margin-top: 30rpx'>
-        <button style='padding: 0 20rpx' bindtap='showDialog3'>自定义buttons </button>
+    <button style='padding: 0 20rpx' bindtap='showDialog3'>自定义buttons </button>
 </view>
 
-<dialog class="dialog6"/>
+<dialog class="dialog6" bindmark="markTap"/>
 <view style='margin-top: 30rpx'>
-        <button style='padding: 0 20rpx' bindtap='showDialog6'>获取userInfo</button>
-</view>
-
-<view style='margin-top: 30rpx'>
-        <table data="{{dialogAPIData.attributes}}" title="属性" />
+    <button style='padding: 0 20rpx' bindtap='showDialog6'>获取userInfo</button>
 </view>
 
 <view style='margin-top: 30rpx'>
-        <table data="{{dialogAPIData.method}}" title="方法" />
+    <table data="{{dialogAPIData.attributes}}" title="属性" />
+</view>
+
+<view style='margin-top: 30rpx'>
+    <table data="{{dialogAPIData.method}}" title="方法" />
 </view>

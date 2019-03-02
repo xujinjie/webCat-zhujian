@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "my-icon": "../../components/my-icon/my-icon",
+        "my-label": "../../components/my-label/my-label",
+        "cascader": "../../components/cascader/cascader"
+    }
+}

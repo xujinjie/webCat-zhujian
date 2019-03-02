@@ -1,16 +1,18 @@
-<my-row >
-        <block wx:for="{{iconData}}" wx:key="{{index}}">
-                <my-col span="12">
-                        <view class="icon_con">
-                                <view class='icon_1 is_display'>
-                                        <text class='iconfont {{item.icon_text}}'></text>
-                                </view>
-                                <view class='icon-text'>
-                                        <view>{{item.icon_name}}</view>
-                                        <view>{{item.icon_text}}</view>
-                                </view>
-                        </view>
-                </my-col>
-        </block>
+<my-row>
+    <block wx:for="{{iconData}}" wx:key="{{index}}">
+        <my-col span="12">
+            <view class="icon_con">
+                <view class='icon_1 is_display'>
+                    <text class='iconfont icon-{{item.icon_text}}'></text>
+                </view>
+                <view class='icon-text'>
+                    <view class='line_count_1'>{{item.icon_name}}</view>
+                    <view class='line_count_1'>{{item.icon_text}}</view>
+                </view>
+            </view>
+        </my-col>
+    </block>
 
 </my-row>
+
+

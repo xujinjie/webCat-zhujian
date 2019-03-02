@@ -1,85 +1,134 @@
-/* 颜色 */
-@import "./color.wxss";
-/* 字体 */
-@import "./other.wxss";
+
 
 view {
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        font-size: 28rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 28rpx;
 }
 
 page {
-        background: #f0f0f0;
+    letter-spacing: 1rpx;
+    font-family: "Microsoft YaHei";
+    background: #f0f0f0;
+    height: 100%;
+    width: 100%;
 }
 
+/* 弹性布局 */
+
 .is_display {
-        display: flex;
-        display: -webkit-flex;
+    display: flex;
+    display: -webkit-flex;
 }
 
 .is_both_center {
-        display: flex;
-        display: -webkit-flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .is_row_center {
-        display: flex;
-        display: -webkit-flex;
-        align-items: center;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
 }
 
 .is_col_center {
-        display: flex;
-        display: -webkit-flex;
-        justify-content: center;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
 }
 
-.is_border_box{
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
+.is_border_box {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
-.is_content_box{
-        box-sizing: content-box;
-        -webkit-box-sizing: content-box;
+.is_content_box {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
 }
+/* 弹性布局 */
 
 /* 字体 */
-        .h0 {
-                font-size: 40rpx;
-        }
 
-        .h1 {
-                font-size: 36rpx;
-        }
+.h0 {
+    font-size: 40rpx;
+}
 
-        .h2 {
-                font-size: 32rpx;
-        }
+.h1 {
+    font-size: 36rpx;
+}
 
-        .h3 {
-                font-size: 28rpx;
-        }
+.h2 {
+    font-size: 32rpx;
+}
 
-        .h4 {
-                font-size: 24rpx;
-        }
+.h3 {
+    font-size: 28rpx;
+}
 
-        .h5 {
-                font-size: 20rpx;
-        }
+.h4 {
+    font-size: 24rpx;
+}
 
-        .font_content {
-                font-size: 28rpx;
-                color: #495060;
-        }
+.h5 {
+    font-size: 20rpx;
+}
 
-        .font_title {
-                font-size: 32rpx;
-                color: #1c2438;
-        }
+.font_content {
+    font-size: 28rpx;
+    color: #495060;
+}
 
+.font_title {
+    font-size: 32rpx;
+    color: #1c2438;
+}
+/* 字体 */
 
+/* 提交按钮 */
+
+.submit_btn {
+    margin-top: 30rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+}
+
+.submit_btn button {
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    font-size: 30rpx;
+    background-color: #dc4225;
+    color: #fff;
+    border-radius: 10rpx;
+}
+/* 提交按钮 */
+
+/* 文本省略 */
+
+.line_count {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.line_count_1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.line_count_2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+/* 文本省略 */

@@ -1,9 +1,0 @@
-{
-    "navigationBarTitleText": "商品列表",    
-  "component": true,
-  "usingComponents": {
-    "my-goods-list": "../../components/my-goods-list/my-goods-list",
-    "table": "../../components/table/table",
-    "my-icon": "../../components/my-icon/my-icon"
-  }
-}

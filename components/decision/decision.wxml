@@ -1,15 +1,15 @@
 <view class="decision" style='width: {{width}}px;height: {{height}}px' wx:if="{{isShow}}">
-  <view class='decision_mark {{markAnimated}}' catchtap='hideDecision'></view>
-  <view class='decison_container {{animated}}' wx:if="{{!isSlot}}">
-    <view class='container_top'>
-      <view class='decision_title' wx:if="{{type=='simple'}}">{{title}}</view>
-      <view class='decision_confirm' data-type='confirm' catchtap='buttonTap' wx:if="{{type=='simple'}}">{{confirmText}}</view>
-      <block wx:for="{{buttons}}" wx:key="{{item.type}}">
-      <view class='decision_button' style='color: {{item.color || "#909399"}}' bindtap='buttonTap' data-type='{{item.type}}' wx:if="{{type=='button'}}">
-        <text>{{item.text}}</text>
-      </view>
-      </block>
+    <view class='decision_mark {{markAnimated}}' catchtap='hideDecision'></view>
+    <view class='decison_container {{animated}}' wx:if="{{!isSlot}}">
+        <view class='container_top'>
+            <view class='decision_title' wx:if="{{type=='simple'}}">{{title}}</view>
+            <view class='decision_confirm' data-type='confirm' catchtap='buttonTap' wx:if="{{type=='simple'}}">{{confirmText}}</view>
+            <block wx:for="{{buttons}}" wx:key="{{item.type}}">
+                <view class='decision_button' style='color: {{item.color || "#909399"}}' bindtap='buttonTap' data-type='{{item.type}}' wx:if="{{type=='button'}}">
+                    <text>{{item.text}}</text>
+                </view>
+            </block>
+        </view>
+        <view class='decision_cancel' catchtap='hideDecision' data-type='cancel' catchtap='buttonTap'>{{cancelText}}</view>
     </view>
-    <view class='decision_cancel' catchtap='hideDecision' data-type='cancel' catchtap='buttonTap'>{{cancelText}}</view>
-  </view>
 </view>

@@ -3,6 +3,9 @@
   "usingComponents": {
     "my-list": "../../components/my-list/my-list",
     "my-collapse": "../../components/my-collapse/my-collapse",
-    "my-collapse-item": "../../components/my-collapse-item/my-collapse-item"
+    "my-collapse-item": "../../components/my-collapse-item/my-collapse-item",
+    "my-icon": "../../components/my-icon/my-icon",
+    "my-row": "../../components/my-row/my-row",
+    "my-col": "../../components/my-col/my-col"
   }
 }

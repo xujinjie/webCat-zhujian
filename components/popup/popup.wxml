@@ -1,6 +1,6 @@
-<view class="popup {{rootAnimated}}"  style='width: {{width}}px;height: {{height}}px;z-index: {{zIndex || 9999}}' wx:if="{{isShow}}">
-  <view class='popup_mark' style='width: {{width}}px;height: {{height}}px' catchtap='hidePopup'/>
-  <view class='popup_container popup_container-{{direction}} {{animated}}' style='{{selfFixed}};'>
-    <slot></slot>
-  </view>
+<view class="popup {{rootAnimated}}" style='width: {{width}}px;height: {{height}}px;z-index: {{zIndex || 9999}}' wx:if="{{isShow}}">
+    <view class='popup_mark' style='width: {{width}}px;height: {{height}}px' catchtap='hidePopup' />
+    <view class='popup_container popup_container-{{direction}} {{animated}}' style='{{selfFixed}};'>
+        <slot></slot>
+    </view>
 </view>

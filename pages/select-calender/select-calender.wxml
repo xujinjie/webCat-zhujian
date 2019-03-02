@@ -1,6 +1,6 @@
 <select-calender bindcomplete="calenderChange"  bindmax="calenderMax" max="{{max}}" type="{{type}}"/>
 
-<view style='margin: 20rpx 40rpx;'>
+<!-- <view style='margin: 20rpx 40rpx;'>
         <button bindtap='changeMax'>切换max: {{max}}</button>
 </view>
 
@@ -20,4 +20,4 @@
 
 <view style='margin-top: 30rpx'>
         <table data="{{selectCalenderAPIData.method}}" title="方法" />
-</view>
+</view> -->

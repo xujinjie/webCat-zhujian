@@ -1,15 +1,15 @@
 <!--plugin/components/my-collapse-item/my-collapse-item.wxml-->
 <view class='collapse-item border_{{border}}' style='margin: {{margin}}'>
-  <view class='collapse-item-top' bindtap='doSomeThing'>
-    <view class='collapse-title'>
-      <slot name="title"></slot>
+    <view class='collapse-item-top' bindtap='doSomeThing'>
+        <view class='collapse-title'>
+            <slot name="title"></slot>
+        </view>
+        <view class='collapse-title' wx:if="{{title}}">{{title}}</view>
+        <my-icon type="{{rightIcon}}" class='icon-arrow' size='36' animation="{{arrowAnimationData}}" wx:if="{{rightIcon}}" />
     </view>
-    <view class='collapse-title' wx:if="{{title}}">{{title}}</view>
-    <my-icon type="{{rightIcon}}" class='icon-arrow' size='36' animation="{{arrowAnimationData}}" wx:if="{{rightIcon}}"/>
-  </view>
-  <view class='collapse-item-content' style='height: {{itemHeight}}px; transition: height {{transitionTime}} linear'>
-    <view class='content'>
-      <slot name="content"></slot>
+    <view class='collapse-item-content' style='height: {{itemHeight}}px; transition: height {{transitionTime}} linear'>
+        <view class='content'>
+            <slot name="content"></slot>
+        </view>
     </view>
-  </view>
 </view>

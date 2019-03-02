@@ -1,0 +1,7 @@
+{
+      "usingComponents": {
+            "my-icon": "/components/my-icon/my-icon",
+            "swiper-out": "/components/swiper-out/swiper-out",
+            "null": "/components/null/null"
+      }
+}

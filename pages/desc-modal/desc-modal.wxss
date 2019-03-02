@@ -1,87 +1,89 @@
 .desc-modal-content {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 20px 10px;
-  background-color: #fff;
-  border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px 10px;
+      background-color: #fff;
+      border-radius: 5px;
 }
+
 .store-name-modal {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 0 10px 0;
-  font-size: 38rpx;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 0 10px 0;
+      font-size: 38rpx;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1;
 }
+
 .desc-modal-detail {
-  width: 100%;
-  display: flex;
-  margin-top: 10px;
+      width: 100%;
+      display: flex;
+      margin-top: 10px;
 }
 
 .desc-item {
-  flex: 1;
+      flex: 1;
 }
 
 .desc-item>text {
-  text-align: center;
-  display: block;
+      text-align: center;
+      display: block;
 }
 
 .desc-item>text:first-child {
-  font-size: 32rpx;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 2px;
+      font-size: 32rpx;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 2px;
 }
 
 .desc-item>text:last-child {
-  font-size: 28rpx;
-  color: #999;
+      font-size: 28rpx;
+      color: #999;
 }
 
 .desc-gonggao {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  background-image: linear-gradient(90deg, #fff, #333 50%, #fff);
-  background-size: 100% 1px;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  margin: 10px auto 5px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      background-image: linear-gradient(90deg, #fff, #333 50%, #fff);
+      background-size: 100% 1px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      margin: 10px auto 5px;
 }
 
 .desc-gonggao>text {
-  display: inline-block;
-  width: 100rpx;
-  background-color: #fff;
-  color: #999;
-  font-size: 28rpx;
-  line-height: 200%;
+      display: inline-block;
+      width: 100rpx;
+      background-color: #fff;
+      color: #999;
+      font-size: 28rpx;
+      line-height: 200%;
 }
 
 .hide-modal {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 
 .desc-delete-icon {
-  width: 60rpx;
-  height: 60rpx;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 60rpx;
-  border: 1px solid #fff;
+      width: 60rpx;
+      height: 60rpx;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 60rpx;
+      border: 1px solid #fff;
 }
 
 .stroe-desc {
-  text-align: center;
-  width: 80%;
-  font-size: 24rpx;
-  margin: 0 auto;
-  color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      width: 80%;
+      font-size: 24rpx;
+      margin: 0 auto;
+      color: rgba(0, 0, 0, 0.6);
 }

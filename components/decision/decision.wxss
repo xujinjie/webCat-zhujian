@@ -1,68 +1,70 @@
 @import "../assets/animatied.wxss";
+
 .decision {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9997;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9997;
 }
 
-.decision_mark{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9998;
-  opacity: 0
+.decision_mark {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    opacity: 0;
 }
 
 .decison_container {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 90%;
-  margin-left: 5%;
-  z-index: 9999
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    margin-left: 5%;
+    z-index: 9999;
 }
 
 .container_top, .decision_cancel {
-  background-color: #fff;
-  border-radius: 10rpx;
-  text-align: center;
+    background-color: #fff;
+    border-radius: 10rpx;
+    text-align: center;
 }
 
 .container_top {
-  margin-bottom: 20rpx;
+    margin-bottom: 20rpx;
 }
 
-.decision_title, .decision_confirm, .decision_cancel,.decision_button {
-  height: 100rpx;
-  width: 100%;
-  line-height: 100rpx;
-  box-sizing: border-box;
-  padding: 0 40rpx;
-  color: #606266;
+.decision_title, .decision_confirm, .decision_cancel, .decision_button {
+    height: 100rpx;
+    width: 100%;
+    line-height: 100rpx;
+    box-sizing: border-box;
+    padding: 0 40rpx;
+    color: #606266;
 }
 
-.decision_button{
-  border-top: 1rpx solid #f0f0f0;
+.decision_button {
+    border-top: 1rpx solid #f0f0f0;
 }
-.decision_button:first-child{
-  border-top: none
+
+.decision_button:first-child {
+    border-top: none;
 }
+
 .decision_title {
-  font-size: 14px;
-  color: #909399;
-  border-bottom: 1rpx solid #f0f0f0;
+    font-size: 14px;
+    color: #909399;
+    border-bottom: 1rpx solid #f0f0f0;
 }
 
 .decision_cancel {
-  margin-bottom: 20rpx;
+    margin-bottom: 20rpx;
 }
 
 .is-tap {
-  background-color: #dedede;
-  color: rgba(0, 0, 0, 0.6);
+    background-color: #dedede;
+    color: rgba(0, 0, 0, 0.6);
 }
-

@@ -1,24 +1,22 @@
-
 Component({
-  options: {
-    multipleSlots: true 
-  },
-  relations: {
-    '../my-col/my-col': {
-      type: 'child' 
-    }
-  },
-  properties: {
-    gutter: {
-      type: Number
+    options: {
+        multipleSlots: true
     },
-    bottom: {
-      type: Number
+    relations: {
+        '../my-col/my-col': {
+            type: 'child'
+        }
+    },
+    properties: {
+        gutter: {
+            type: Number
+        },
+        bottom: {
+            type: Number
+        }
+    },
+    data: {
+
     }
-  },
-  data: {
-    
-  }
 
 })
-

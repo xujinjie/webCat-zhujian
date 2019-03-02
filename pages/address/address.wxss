@@ -1,1 +1,104 @@
-/* pages/address/address.wxss */
+page {
+    letter-spacing: 1rpx;
+    font-family: "Microsoft YaHei";
+    background: #f0f0f0;
+}
+
+.swipe-out{
+    border-radius: 20rpx!important;
+}
+.address_con {
+    width: 100%;
+    padding-bottom: 140rpx;
+}
+
+.address_content {
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.delete_con {
+    height: 100%;
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.is_default_con {
+    background: #5887f4;
+    height: 100%;
+    width: 80px;
+}
+
+.is_delete {
+    width: 60px;
+    background: #dc4225;
+    height: 100%;
+    color: #fff;
+}
+
+.address_item_top {
+    padding-bottom: 10rpx;
+}
+
+.address_item_bottom {
+    padding-bottom: 5rpx;
+}
+
+.user_name {
+    font-size: 30rpx;
+    font-weight: 600;
+    padding-right: 30rpx;
+}
+
+.user_phone {
+    font-size: 28rpx;
+    font-weight: 600;
+}
+
+.label_con {
+    align-self: flex-start;
+    flex: 1;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    padding-left: 15rpx;
+}
+
+.label_con>my-label {
+    margin-right: 15rpx;
+    padding: 0;
+}
+
+.is_row_center {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.address_detail {
+    font-size: 24rpx;
+    flex: 1;
+    padding-right: 15rpx;
+    color: #252525;
+}
+
+
+.add_address_con{
+    width: 100%;
+    padding: 30rpx 20%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.add_address_box{
+    height: 80rpx;
+    width: 100%;
+    border-radius: 80rpx;
+    background: #dc4225;
+    color: #fff;
+}

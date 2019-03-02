@@ -1,6 +1,6 @@
 {
-        "component": true,
-        "usingComponents": {
-                "my-icon": "../my-icon/my-icon"
-        }
+    "component": true,
+    "usingComponents": {
+        "my-icon": "../my-icon/my-icon"
+    }
 }

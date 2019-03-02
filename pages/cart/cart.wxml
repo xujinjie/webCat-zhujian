@@ -1,0 +1,85 @@
+<view class='cart'>
+      <view class='goods_con' wx:if="{{cart.length}}">
+            <block wx:for="{{cart}}" wx:key="{{index}}">
+                  <swiper-out width="{{60}}" is-delete="{{isDelete}}" bindchange="swiperChange" data-index="{{index}}" value="{{item.value}}" self-style="{{selfStyle}}">
+
+                        <view slot="content" class='cart_item is_row_center'>
+                              <view class="good_item_left is_both_center" catchtap='changeItemSelect' data-index='{{index}}'>
+                                    <my-icon type='{{item.isSelect?"roundcheckfill":"round"}}' color='#{{item.isSelect?"dc4225":"f0f0f0"}}' size='40' />
+                              </view>
+
+                              <view class='good_item_right is_display'>
+                                    <view class='good_img_con'>
+                                          <image src='{{item.src}}' mode='widthFix'></image>
+                                    </view>
+
+                                    <view class='good_detail_con is_display'>
+
+                                          <view class='good_intro line_count_2'>
+                                                <text>{{item.detail}}</text>
+                                          </view>
+
+                                          <view style="flex: 1"></view>
+                                          <view class='good_bottom is_row_center'>
+                                                <view class='good_price'>
+                                                      <text>￥{{item.price}}</text>
+                                                </view>
+
+                                                <view class='good_count is_row_center'>
+                                                      <view class='sub_con'>
+                                                            <image src='/public/imgs/sub_icon.png'></image>
+                                                      </view>
+                                                      <text class='good_count_text'>{{item.count}}</text>
+                                                      <view class='add_con'>
+                                                            <image src='/public/imgs/add_icon.png'></image>
+                                                      </view>
+                                                </view>
+                                          </view>
+                                    </view>
+                              </view>
+                        </view>
+
+                        <view class='delete_con is_both_center' slot="dots">
+                              <!-- <view class='is_default_con is_both_center'>
+                    <text>添加收藏</text>
+                    </view> -->
+                              <view class='is_delete is_both_center' data-index='{{index}}' catchtap='deleteItem'>
+                                    <text>删除</text>
+                              </view>
+                        </view>
+
+                  </swiper-out>
+            </block>
+      </view>
+
+      <view class="bottom_nav is_row_center">
+            <view class="bottom_nav_left is_row_center">
+                  <view class="select_img_con is_both_center" catchtap='selectAll'>
+                        <view class="select_img_box is_row_center">
+                              <my-icon type='{{isAllSelect?"roundcheckfill":"round"}}' color='#{{isAllSelect?"dc4225":"f0f0f0"}}' size='40' />
+                        </view>
+
+                        <view class="select_all_text is_row_center">
+                              <text>全选</text>
+                        </view>
+                  </view>
+                  <view class="total_message is_row_center">
+                        <view>
+                              <view class="total_price_item">
+                                    <text>合计: </text>
+                                    <text class="total_price_text">￥{{totalPrice}}</text>
+                              </view>
+                        </view>
+                  </view>
+
+            </view>
+            <view class="bottom_nav_right">
+                  <text>去结算</text>
+                  <text>({{totalCount}})</text>
+            </view>
+      </view>
+</view>
+
+<view style='width: 100%;height: 100%;padding-bottom: 100rpx' wx:if="{{!cart.length}}">
+      <null url="/public/imgs/null.png" text="购物车为空"></null>
+</view>

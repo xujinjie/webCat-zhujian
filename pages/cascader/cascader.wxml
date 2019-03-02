@@ -1,12 +1,12 @@
-
-<button bindtap='cascaderTap'>{{cascader}}</button>
-<cascader  class="cascader" options="{{cascaderOptions}}" bindchange="selectChange" bindcomplete="selectComplete" bindcancel="cancel" bindconfirm="confirm"/>
+<button bindtap='cascaderTap'>
+    {{cascader}}</button>
+<cascader class="cascader" options="{{cascaderOptions}}" bindchange="selectChange" bindcomplete="selectComplete" bindcancel="cancel" bindconfirm="confirm" />
 
 
 <view style='margin-top: 30rpx'>
-  <table data="{{cascaderAPIData.attributes}}" title="属性"/>
+    <table data="{{cascaderAPIData.attributes}}" title="属性" />
 </view>
 
 <view style='margin-top: 30rpx'>
-  <table data="{{cascaderAPIData.method}}" title="方法"/>
+    <table data="{{cascaderAPIData.method}}" title="方法" />
 </view>

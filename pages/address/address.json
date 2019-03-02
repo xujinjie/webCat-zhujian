@@ -1,8 +1,10 @@
 {
-  "navigationBarTitleText": "地址管理",
-  "component": true,
-  "usingComponents": {
-    "address": "../../components/address/address",
-    "table": "../../components/table/table"
-  }
+    "navigationBarTitleText": "地址管理",
+    "component": true,
+    "usingComponents": {
+        "my-icon": "/components/my-icon/my-icon",
+        "swiper-out": "/components/swiper-out/swiper-out",
+        "my-label": "/components/my-label/my-label",
+        "null": "/components/null/null"
+    }
 }

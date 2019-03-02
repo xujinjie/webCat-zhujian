@@ -1,17 +1,26 @@
-let descModal = require("../../components/componentsAPI.js").descModal
+let descModal = require("../../components/componentsAPI.js").descModal;
 Page({
 
-  data: {
-    descModal
-  },
+    data: {
+        descModal
+    },
 
+    onReady(){
+        this.$detailModal = this.selectComponent(".desc-modal");
+    },
+    buttonTap() {
+        this.$detailModal.show({
+            mark: true
+        })
+    },
 
-  buttonTap(){
-    let $detailModal = this.selectComponent(".desc-modal")
-    $detailModal.toggle()
-  },
-  showDetailmModal(){
-    let $detailModal = this.selectComponent(".desc-modal")
-    $detailModal.toggle()
-  }
+    markTap(e){
+        wx.showToast({
+            title: '点击了mark',
+        })
+
+        setTimeout(()=>{
+            this.$detailModal.hide()
+        },200)
+    }
 })

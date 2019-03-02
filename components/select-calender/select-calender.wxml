@@ -1,17 +1,21 @@
-<view class="calender">
-        <view class='calender-week'>
-                <block wx:for="{{cWeekText}}" wx:key="{{index}}">
-                        <view class='week-item'>{{item}}</view>
-                </block>
-        </view>
-        <block wx:for="{{monthData}}" wx:key="{{index}}" wx:for-item="monthItem" wx:for-index="monthDataIndex">
-                <view class='calender-nav'>
-                        <view class='calender-nav-text'>{{monthItem.currentYear}}年{{monthItem.currentMonth}}月</view>
-                </view>
-                <view class='calender-days {{type=="radio"?"is-radio-rctive":"is-checkbox-active"}}'>
-                        <block wx:for="{{monthItem.currentMonthData}}" wx:key="{{index}}">
-                                <view class='days-item {{type=="checkbox"?item.times?item.times == beginSelect.times?"is-checkbox-first-active":item.times==endSelect.times?"is-checkbox-last-active":item.times>beginSelect.times&&item.times<endSelect.times?"checkbox-disabled":"":"":""}} {{type=="radio"?item.times==beginSelect.times?"is-radio-both-active":"":""}}' catchtap='dayItemTap' data-year="{{monthItem.currentYear}}" data-month="{{monthItem.currentMonth}}" data-day="{{item.value}}" data-disabled="{{item == ' '?true:false}}" data-times="{{item.times}}">{{item.value}}</view>
-                        </block>
-                </view>
+<scroll-view class="calender" scroll-y bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower">
+    <view class='calender-week'>
+        <block wx:for="{{cWeekText}}" wx:key="{{index}}">
+            <view class='week-item'>{{item}}</view>
         </block>
-</view>
+    </view>
+    <view class='calender-data'>
+        <block wx:for="{{monthData}}" wx:for-item="monthItem" wx:for-index="monthDataIndex" wx:key="{{monthDataIndex}}">
+            <view class='calender-nav'>
+                <view class='calender-nav-text'>{{monthItem.currentYear}}年{{monthItem.currentMonth>9?monthItem.currentMonth:'0'+monthItem.currentMonth}}月</view>
+            </view>
+            <view class='calender-days {{type=="radio"?"is-radio-rctive":"is-checkbox-active"}}'>
+                <block wx:for="{{monthItem.currentMonthData}}" wx:for-item="dayItem" wx:for-index="dayIndex" wx:key="{{dayIndex}}">
+                    <view class='days-item {{type=="checkbox"?dayItem.times?dayItem.times == beginSelect.times?"is-checkbox-first-active":dayItem.times==endSelect.times?"is-checkbox-last-active":dayItem.times>beginSelect.times&&dayItem.times<endSelect.times?"checkbox-disabled":"":"":""}} {{type=="radio"?dayItem.times==beginSelect.times?"is-radio-both-active":"":""}}'
+                        catchtap='dayItemTap' data-year="{{monthItem.currentYear}}" data-month="{{monthItem.currentMonth}}" data-day="{{dayItem.day}}" data-disabled="{{!dayItem?true:false}}" data-times="{{dayItem.times}}">{{dayItem.day}}</view>
+                </block>
+            </view>
+        </block>
+    </view>
+
+</scroll-view>

@@ -1,0 +1,46 @@
+<view class="add_address_con">
+    <form class="from_con" bindsubmit="formSubmit">
+
+        <view class="top_item">
+
+            <view class="from_item is_row_center">
+                <input type="text" placeholder="收货人" name="name" value="{{address['name']}}" bindinput='nameInput'/>
+            </view>
+
+            <view class="from_item is_row_center">
+                <input type="number" placeholder="手机号码" name="phone" value="{{address['phone']}}" bindinput='phoneInput'/>
+            </view>
+
+            <view class="from_item is_row_center" catchtap='selectAddress'>
+                <text style='color: #18acff' wx:if="{{ !address['city'] }}">{{addressTips}}</text>
+                <block wx:if="{{ address['city'] }}">
+                    <view style='flex: 1;padding: 0 20rpx' class='is_row_center'>
+                        <text style='color: #18acff'>{{ address['province'] }}</text>
+                        <text style='color: #18acff'>{{ address['city'] }}</text>
+                        <text style='color: #18acff'>{{ address['district'] }}</text>
+                    </view>
+                </block>
+                <my-icon type='jiantouyou' size='35' color='#f0f0f0'/>
+            </view>
+
+            <view class="from_textarea">
+                <textarea placeholder="详细地址" name="detail" value="{{ address['detail'] }}" bindinput='detailInput'/>
+            </view>
+
+        </view>
+
+
+        <view class="from_item set_default is_row_center" style="margin-top: 20rpx">
+            <text>设为默认</text>
+            <switch name="isDefault" checked="{{ address['isDefault'] }}" bindchange='switchChange'/>
+        </view>
+
+        <view class="submit_btn">
+            <button type="default" formType="submit">提 交</button>
+        </view>
+
+    </form>
+</view>
+
+
+<cascader  class="cascader" options="{{city}}" bindchange="selectChange" bindcomplete="selectComplete" bindcancel="selectCancel" bindconfirm="selectConfirm"/>

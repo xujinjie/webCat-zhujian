@@ -1,8 +1,0 @@
-{
-      "navigationBarTitleText": "提示框",
-  "component": true,
-  "usingComponents": {
-    "my-alert": "../../components/my-alert/my-alert",
-    "table": "../../components/table/table"
-  }
-}

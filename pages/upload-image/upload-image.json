@@ -1,8 +1,8 @@
 {
-      "navigationBarTitleText": "图片上传界面",
-  "component": true,
-  "usingComponents": {
-    "upload-image": "../../components/upload-image/upload-image",
-    "table": "../../components/table/table"
-  }
+    "navigationBarTitleText": "图片上传界面",
+    "component": true,
+    "usingComponents": {
+        "upload-image": "../../components/upload-image/upload-image",
+        "table": "../../components/table/table"
+    }
 }

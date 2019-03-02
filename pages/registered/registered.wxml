@@ -1,0 +1,36 @@
+<view class="login">
+    <view class="top_avatar is_both_center">
+        <image src="{{logo}}" mode="widthFix" />
+    </view>
+
+    <form class="from_con">
+        <view class='form_item_con'>
+
+            <view class="from_item">
+                <input type='number' confirm-type="next" class='from_item_input' name="phone" bindinput='phoneInput' placeholder='手机号' focus='{{phoneFocus}}' value="{{phone}}" maxlength='11' />
+                <my-icon type='close' size='28' color='#999' class='from_item_text' wx:if="{{phone}}" catchtap='deletePhone' />
+            </view>
+
+            <view class="from_item">
+                <input type='number' bindinput='codeInput' class='from_item_input' name="code" placeholder='请输入验证码' maxlength='6' />
+                <view class='right_line'></view>
+                <text class='form_item_right is_send_code' catchtap='changeCodeText'>{{codeText}}</text>
+            </view>
+
+
+            <view class="from_item">
+                <input type='text' bindinput='repasswordInput' password='{{isRePassword}}' class='from_item_input' name="rePassword" placeholder='请设置密码' maxlength='16' />
+                <my-icon type='{{isRePasswordIcon}}' size='28' color='#999' class='from_item_text' bindtap='changereIcon' />
+            </view>
+
+
+
+
+            <view class='submit_btn'>
+                <button bindtap='fromSubmit'>注册</button>
+            </view>
+
+
+        </view>
+    </form>
+</view>
